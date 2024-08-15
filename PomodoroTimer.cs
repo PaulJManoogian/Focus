@@ -247,7 +247,9 @@ namespace FocusApp
 
             Console.WriteLine();
             DateTime endTime = DateTime.Now;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"Task '{taskDescription}' completed. Total time: {TimeSpan.FromSeconds(seconds):hh\\:mm\\:ss}");
+            Console.ResetColor();
 
             // Log the task
             taskManager.AddTaskWithTime(taskDescription, taskTag, startTime, endTime);

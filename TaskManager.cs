@@ -34,7 +34,7 @@ namespace FocusApp
                 StartDate = startTime,
                 EndDate = endTime,
                 Tag = tag,
-                Status = "completed"
+                Status = "Completed"
             };
             tasks.Add(task);
             SaveTasks("tasks.txt"); // Automatically save the task after completion
@@ -69,17 +69,18 @@ namespace FocusApp
 
         public void ListTasks()
         {
-            Console.WriteLine("┌─────────────────────────────────────────────────────────────────────────────────────────────────────┐");
-            Console.WriteLine("| # | TASK NAME           | START DATE            | END DATE              | TAGGED       | STATUS     |");
-            Console.WriteLine("├─────────────────────────────────────────────────────────────────────────────────────────────────────┤");
+            Console.WriteLine("┌───────────────────────────────────────────────────────────────────────────────────────────────────────┐");
+            Console.WriteLine("|  #  | TASK NAME           | START DATE            | END DATE              | TAGGED       | STATUS     |");
+            Console.WriteLine("├───────────────────────────────────────────────────────────────────────────────────────────────────────┤");
 
 
             for (int i = 0; i < tasks.Count; i++)
             {
                 var task = tasks[i];
-                Console.WriteLine($"| {i + 1} | {task.Description.PadRight(19)} | {task.StartDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20)} | {task.EndDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20)} | {task.Tag.PadRight(12)} | {task.Status.PadRight(10)} |");
+                var taskcounter = i + 1;
+                Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {task.Description.PadRight(19)} | {task.StartDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20)} | {task.EndDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20)} | {task.Tag.PadRight(12)} | {task.Status.PadRight(10)} |");
             }
-            Console.WriteLine("└─────────────────────────────────────────────────────────────────────────────────────────────────────┘");
+            Console.WriteLine("└───────────────────────────────────────────────────────────────────────────────────────────────────────┘");
 
         }
 
