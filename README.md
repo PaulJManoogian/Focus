@@ -62,6 +62,7 @@ This solution is a quick and simple way of watching the time you are working on 
 
 ### Let's start with STATS.
 The `stats` option is specific to the command line. You currently (v1.0.0.0) cannot see the statistics in the menu version of the application. Soon.
+
 However, the `list` option lets you see the full list of task entries and you can also use option 2 on the menu to see the same list in app mode.
 
 ***stats*** offers some specific command line options, listed above, that let you specify start and end dates to view as well as just `today` or `all-time` stats. Those are based on `Completed` tasks.
@@ -74,16 +75,16 @@ There is a Work-stop sound and a Break-Stop sound, as well. These will play when
 Sounds vary from chirping birds to rain or fireplace noises. All sounds are gentle, mostly white-noise-style, sounds to help you **Focus**. They will loop continually. They are part of the executable and don't require any other files. Currently (v1.0.0.0) you cannot play external sounds.
 
 ## Tags and Tasks
-`Tags` are just as you'd expect, they help you define customers, areas, or lists of similar things to help you sort through the projects. Currently, Focus doesn't support filtering just lists of tags, but ... soon.
-`Tasks` are the full names of your entries. These help you determine exact project tasks that you worked on.
+- `Tags` are just as you'd expect, they help you define customers, areas, or lists of similar things to help you sort through the projects. Currently, Focus doesn't support filtering just lists of tags, but ... soon.
+- `Tasks` are the full names of your entries. These help you determine exact project tasks that you worked on.
 
 Time entries are added to the tasks when they are created, and the end times are specified on the menu mode of the application for completion of the tasks.
 
 ## Timers
 **Timers** are made up of three components, based on using a Pomodoro Timer: 
-`Work Minutes` - how long your work time is.
-`Break minutes` - how long your Pomodoro break is.
-`Sessions` - How many Work and Break groupings before a long break (which is 3 times the Break minutes; a `Long Break`).
+- `Work Minutes` - how long your work time is.
+- `Break minutes` - how long your Pomodoro break is.
+- `Sessions` - How many Work and Break groupings before a long break (which is 3 times the Break minutes; a `Long Break`).
 
 You specify the time and amount for each of these when starting the timer in the menu mode, or with the command line options above.
 
