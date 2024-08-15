@@ -23,12 +23,13 @@ Menu version:
 ![image](https://github.com/user-attachments/assets/89ea320e-6a3b-456c-98b1-e99bbdc6b9f5)
 
 Command line arguments:
-![image](https://github.com/user-attachments/assets/2d59d926-2a5a-4a06-8bca-788acedfd6f5)
 
 ```
 help or ?             : Display this help screen
 
 list                  : List all tasks
+
+countup [desc] [tag]  : Start a timer that counts up, with support for pomodoro and sounds
 
 -w [minutes]          : Set the work interval in minutes (default 25)
 
@@ -87,6 +88,11 @@ Time entries are added to the tasks when they are created, and the end times are
 - `Sessions` - How many Work and Break groupings before a long break (which is 3 times the Break minutes; a `Long Break`).
 
 You specify the time and amount for each of these when starting the timer in the menu mode, or with the command line options above.
+
+Countdown versus Count-Up timers:
+
+- `Countdown` - uses the pomodoro interval, break minutes, and sessions to count time downward until it runs out. Does not complete entries.
+- `Count-up` - uses the pomodoro interval, break minutes, and sessions to count the time upward until the user hits F10 to stop the timer. When the user presses F10, the entry is marked `Completed`.
 
 -----
 ## The TASKS.TXT file format
