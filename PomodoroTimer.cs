@@ -169,6 +169,89 @@ namespace FocusApp
             Console.ResetColor();
             Console.WriteLine(); // Move to the next line after countdown completes
         }
+
+        public void StartCountUpTimer(TaskManager taskManager, string taskDescription, string taskTag)
+        {
+            Console.Clear();
+            Console.WriteLine("Starting Count-Up Timer...");
+            Console.WriteLine("Press F10 to stop the timer and log the task.");
+
+            DateTime startTime = DateTime.Now;
+            int workSessionCount = 0;
+            int seconds = 0;
+
+            if (ambientSoundPlayer != null)
+            {
+                ambientSoundPlayer.PlayLooping();  // Resume ambient sound
+            }
+            else
+            {
+                Console.WriteLine("Can't load ambient sounds.");
+            }
+
+
+            while (!Console.KeyAvailable || Console.ReadKey(true).Key != ConsoleKey.F10)
+            {
+
+                // Handle the work session
+                if (seconds % WorkInterval == 0 && seconds > 0)
+                {
+                    workSessionCount++;
+
+
+                    if (SoundSelection != "OFF" && workEndSoundPlayer != null)
+                    {
+                        workEndSoundPlayer.PlaySync();  // Play end of work session sound
+                    }
+
+                    // Handle breaks
+                    if (workSessionCount < SessionsBeforeLongBreak)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"Time for a short break (Session {workSessionCount} of {SessionsBeforeLongBreak})!");
+                        TimerCountdown("Break Time", BreakInterval);
+
+                        if (SoundSelection != "OFF" && breakEndSoundPlayer != null)
+                        {
+                            breakEndSoundPlayer.PlaySync();  // Play end of break sound
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Time for a long break!");
+                        TimerCountdown("Long Break Time", BreakInterval * 3);
+
+                        if (SoundSelection != "OFF" && breakEndSoundPlayer != null)
+                        {
+                            breakEndSoundPlayer.PlaySync();  // Play end of break sound
+                        }
+
+                        // Reset the session count after a long break
+                        workSessionCount = 0;
+                    }
+
+
+                }
+
+                TimeSpan timeElapsed = TimeSpan.FromSeconds(seconds);
+                Console.Write($"\rElapsed Time: {timeElapsed:hh\\:mm\\:ss}");
+                Thread.Sleep(1000);
+                seconds++;
+            }
+
+            if (ambientSoundPlayer != null)
+            {
+                ambientSoundPlayer.Stop(); // stop playing ambient sounds when we stop the timer
+            }
+
+            Console.WriteLine();
+            DateTime endTime = DateTime.Now;
+            Console.WriteLine($"Task '{taskDescription}' completed. Total time: {TimeSpan.FromSeconds(seconds):hh\\:mm\\:ss}");
+
+            // Log the task
+            taskManager.AddTaskWithTime(taskDescription, taskTag, startTime, endTime);
+        }
     }
 }
 

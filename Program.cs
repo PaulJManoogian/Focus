@@ -42,6 +42,17 @@ namespace FocusApp
                         taskManager.ListTasks();
                         return;
                     }
+
+                    else if (args[i] == "countup")
+                    {
+                        taskDescription = args.Length > i + 1 ? args[i + 1] : "Untitled Task";
+                        taskTag = args.Length > i + 2 ? args[i + 2] : "";
+                        timer.SetIntervals(workInterval, breakInterval);
+                        timer.SetSound(soundSelection);
+                        timer.SetSessions(sessions);
+                        timer.StartCountUpTimer(taskManager, taskDescription, taskTag);
+                        return;
+                    }
                     else if (args[i] == "stats")
                     {
                         DateTime? startDate = null;
@@ -194,7 +205,8 @@ namespace FocusApp
                 Console.WriteLine("4. Abandon Task");
                 Console.WriteLine("5. Delete Task");
                 Console.WriteLine("6. Start Pomodoro Timer");
-                Console.WriteLine("7. Exit");
+                Console.WriteLine("7. Start Count-Up Timer");
+                Console.WriteLine("8. Exit");
                 Console.WriteLine("");
                 Console.Write("Select an option: ");
 
@@ -243,6 +255,25 @@ namespace FocusApp
                         timer.Start();
                         break;
                     case "7":
+                        Console.Write("Enter task description: ");
+                        string countUpDescription = Console.ReadLine();
+                        Console.Write("Enter tag (optional): ");
+                        string countUpTag = Console.ReadLine();
+                        Console.Write("Enter work interval in minutes (default 25): ");
+                        int cuwInterval = int.TryParse(Console.ReadLine(), out wInterval) ? wInterval : 25;
+                        Console.Write("Enter break interval in minutes (default 5): ");
+                        int cubInterval = int.TryParse(Console.ReadLine(), out bInterval) ? bInterval : 5;
+                        Console.Write("Enter number of sessions before long break (default 4): ");
+                        int cusessionCount = int.TryParse(Console.ReadLine(), out sessionCount) ? sessionCount : 4;
+                        Console.Write("Select sound (1: coffee_shop, 2: rainforest, 3: wind, 4: rain, 5: summer_night, 6: fireplace, 7: frogs, 8: bird_rain, OFF): ");
+                        string cusound = Console.ReadLine().ToUpper();
+
+                        timer.SetIntervals(cuwInterval, cubInterval);
+                        timer.SetSound(cusound);
+                        timer.SetSessions(cusessionCount);
+                        timer.StartCountUpTimer(taskManager, countUpDescription, countUpTag);
+                        break;
+                    case "8":
                         taskManager.SaveTasks("tasks.txt");
                         return;
                 }
@@ -255,6 +286,7 @@ namespace FocusApp
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("help or ?             : Display this help screen");
             Console.WriteLine("list                  : List all tasks");
+            Console.WriteLine("countup [task] [tag]  : Start a count-up timer. Press F10 to stop and log the task.");
             Console.WriteLine("-w [minutes]          : Set the work interval in minutes (default 25)");
             Console.WriteLine("-b [minutes]          : Set the break interval in minutes (default 5)");
             Console.WriteLine("-s [sessions]         : Set the number of work sessions before a long break (default 4)");

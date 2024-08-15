@@ -26,6 +26,20 @@ namespace FocusApp
             tasks.Add(task);
         }
 
+        public void AddTaskWithTime(string description, string tag, DateTime startTime, DateTime endTime)
+        {
+            var task = new TaskRecord
+            {
+                Description = description,
+                StartDate = startTime,
+                EndDate = endTime,
+                Tag = tag,
+                Status = "completed"
+            };
+            tasks.Add(task);
+            SaveTasks("tasks.txt"); // Automatically save the task after completion
+        }
+
         public void CompleteTask(int taskIndex)
         {
             if (taskIndex >= 0 && taskIndex < tasks.Count)
