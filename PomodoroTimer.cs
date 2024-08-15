@@ -1,4 +1,17 @@
-﻿using System;
+﻿//---------------------------------------------------------------------------------
+// Application: Focus
+// Description: A Pomodoro Timer application based on the work of  Ayooluwa Isaiah
+// Created By : Paul J Manoogian, Manoogian Media, Inc.
+// Created    : 2024-Aug-13
+// Modified   : 2024-Aug-15
+// Language   : C#
+// File       : PomodoroTimer.cs
+// Notes      : All of the Pomodoro Timer functions and audio playback during work
+//---------------------------------------------------------------------------------
+
+
+
+using System;
 using System.Media;
 using System.Threading;
 
@@ -70,12 +83,6 @@ namespace FocusApp
             breakEndSoundPlayer = LoadSound("Focus.Resources.break_end.wav");
         }
 
-        //private SoundPlayer LoadSound(string resourceName)
-        //{
-        //    var assembly = System.Reflection.Assembly.GetExecutingAssembly();
-        //    var stream = assembly.GetManifestResourceStream(resourceName);
-        //    return stream != null ? new SoundPlayer(stream) : null;
-        //}
 
         private SoundPlayer LoadSound(string resourceName)
         {

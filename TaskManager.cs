@@ -1,4 +1,16 @@
-﻿using System;
+﻿//---------------------------------------------------------------------------------
+// Application: Focus
+// Description: A Pomodoro Timer application based on the work of  Ayooluwa Isaiah
+// Created By : Paul J Manoogian, Manoogian Media, Inc.
+// Created    : 2024-Aug-13
+// Modified   : 2024-Aug-15
+// Language   : C#
+// File       : TaskManager.cs
+// Notes      : Data file details management of time, date, desc, and status
+//---------------------------------------------------------------------------------
+
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 
