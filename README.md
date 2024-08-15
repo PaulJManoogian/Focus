@@ -5,9 +5,9 @@ The functionality of this tool is nearly identical to the work created in this r
 [Focus](https://github.com/ayoisaiah/focus)
 
 ## Purpose
-I created this version of the tool to have a C# version which will run on a Windows machine. The code will run only in console mode (just to keep the application simple), and offers a menu system and command line functionality.
+I created this version of the tool to have a C# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called `tasks.txt`. The intention here is to keep the entire solution simple and easy to update and maintain.
 
-Using the tool is simple. Here are some examples:
+#### Using the tool is simple. Here are some examples:
 
 ```
 Focus -w 20 -b 5 -s 4 --task "Work Entry" --tag "Tag Entry"
@@ -60,7 +60,7 @@ Focus stats --start '2021-08-06' --end '2021-08-07'
 ## Details
 This solution is a quick and simple way of watching the time you are working on a project. The intention of the application isn't to try to be a substitute for more robust solutions like Toggl, but to be a simple version that is easy to use and manage.
 
-### Let's start with STATS.
+### Stats
 The `stats` option is specific to the command line. You currently (v1.0.0.0) cannot see the statistics in the menu version of the application. Soon.
 
 However, the `list` option lets you see the full list of task entries and you can also use option 2 on the menu to see the same list in app mode.
@@ -72,7 +72,7 @@ The sounds option on the command line, and when you elect to `start a timer` in 
 
 There is a Work-stop sound and a Break-Stop sound, as well. These will play when your sections complete.
 
-Sounds vary from chirping birds to rain or fireplace noises. All sounds are gentle, mostly white-noise-style, sounds to help you **Focus**. They will loop continually. They are part of the executable and don't require any other files. Currently (v1.0.0.0) you cannot play external sounds.
+Sounds vary from chirping birds to rain or fireplace noises. All sounds are gentle, mostly white-noise-style, sounds to help you ***Focus***. They will loop continually. They are part of the executable and don't require any other files. Currently (v1.0.0.0) you cannot play external sounds.
 
 ## Tags and Tasks
 - `Tags` are just as you'd expect, they help you define customers, areas, or lists of similar things to help you sort through the projects. Currently, Focus doesn't support filtering just lists of tags, but ... soon.
@@ -88,6 +88,22 @@ Time entries are added to the tasks when they are created, and the end times are
 
 You specify the time and amount for each of these when starting the timer in the menu mode, or with the command line options above.
 
--=-=-=-=-=-=-=-=-
+-----
+## The TASKS.TXT file format
+
+Fields in the file are separated by the `|` (pipe) character.
+
+The format is as follows:
+`task_name|start_time|end_time|tags|status`
+
+- `task_name` Name of the task
+- `start_time` Full UTC time coding for date, time, and GMT offset for when the task was created (started)
+- `end_time` Full UTC time coding for date, time, and GMT offset for when the task was marked complete (completed)
+- `tags` Any tags to help identify the item so that it can be grouped with similar items
+- `status` One of three possible status notations: `Pending` (new or working item), `Completed` (completed work item), `Abandoned` (dead or deleted task item)
+
+ Items that don't have a status of "Completed" do not show up on the "stats" display at the command line. 
+
+-----
 
 ![Image](https://img.shields.io/badge/CSharp-Release-Green?style=plastic)
