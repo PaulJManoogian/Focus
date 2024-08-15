@@ -9,7 +9,13 @@ The functionality of this tool is nearly identical to the work created in this r
 ## Purpose
 I created this version of the tool to have a C# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called `tasks.txt`. The intention here is to keep the entire solution simple and easy to update and maintain.
 
-#### Using the tool is simple. Here are some examples:
+## Installation
+This product only runs on Windows as a console/command line executable. It requires *no DLLs* and is completely self-contained in the [Release version 1.0.0.0](https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0) listed to the right.
+
+Simply **download the executable and run it**. *IT IS NOT SIGNED.*
+
+## Usage
+Using the tool is simple. Here are some examples:
 
 ```
 Focus -w 20 -b 5 -s 4 --task "Work Entry" --tag "Tag Entry"
