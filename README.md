@@ -131,4 +131,4 @@ The format is as follows:
 
 -----
 
-![Image](https://img.shields.io/badge/CSharp-Release-Green?style=plastic)
+![Image](https://img.shields.io/badge/CSharp-Release-Green?style=plastic) ![Image](https://img.shields.io/badge/C%23-v1.0.0.0-Blue)
