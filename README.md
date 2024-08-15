@@ -58,6 +58,12 @@ Focus -w 20 -b 5 -s 4 --task "Work Entry" --tag "Tag Entry"
 Focus stats --start '2021-08-06' --end '2021-08-07'
 ```
 
+### Command Line Usage
+When using `list` or `stats` you cannot use any of the other command line options. They will be ignored or an error will be thrown.
+- `list` is exclusive to simply listing all of the entries in the tasks.txt file.
+- `stats` is used with either a `-p` (time period) as words or with the `--start` and `--end` date filters. You can use the `--start` date without specifying the end date.
+- All other arguments can be used together (as in the first example above). This includes the `countup` argument to start at count-up timer instead of a countdown timer. Otherwise, ***Focus*** defaults to countdown.
+
 ## Details
 This solution is a quick and simple way of watching the time you are working on a project. The intention of the application isn't to try to be a substitute for more robust solutions like Toggl, but to be a simple version that is easy to use and manage.
 
