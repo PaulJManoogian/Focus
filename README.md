@@ -1,5 +1,5 @@
 # Focus
-A timer tool based on the work of Ayooluwa Isaiah
+A timer tool based on the work of [Ayooluwa Isaiah](https://github.com/ayoisaiah)
 
 The functionality of this tool is nearly identical to the work created in this repository:
 [Focus](https://github.com/ayoisaiah/focus)
