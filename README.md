@@ -4,10 +4,20 @@ A timer tool based on the work of [Ayooluwa Isaiah](https://github.com/ayoisaiah
 The functionality of this tool is nearly identical to the work created in this repository:
 [Focus](https://github.com/ayoisaiah/focus)
 
+**This version (c)2024 Manoogian Media, Inc.**
+
 ## Purpose
 I created this version of the tool to have a C# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called `tasks.txt`. The intention here is to keep the entire solution simple and easy to update and maintain.
 
-#### Using the tool is simple. Here are some examples:
+## Installation
+This product only runs on Windows as a console/command line executable. It requires *no DLLs* and is completely self-contained in the [Release version 1.0.0.0](https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0) listed to the right.
+
+Simply **download the executable and run it**. *IT IS NOT SIGNED.*
+
+-----
+
+## Usage
+Using the tool is simple. Here are some examples:
 
 ```
 Focus -w 20 -b 5 -s 4 --task "Work Entry" --tag "Tag Entry"
@@ -64,6 +74,8 @@ When using `list` or `stats` you cannot use any of the other command line option
 - `stats` is used with either a `-p` (time period) as words or with the `--start` and `--end` date filters. You can use the `--start` date without specifying the end date.
 - All other arguments can be used together (as in the first example above). This includes the `countup` argument to start at count-up timer instead of a countdown timer. Otherwise, ***Focus*** defaults to countdown.
 
+-----
+
 ## Details
 This solution is a quick and simple way of watching the time you are working on a project. The intention of the application isn't to try to be a substitute for more robust solutions like Toggl, but to be a simple version that is easy to use and manage.
 
@@ -101,6 +113,7 @@ Countdown versus Count-Up timers:
 - `Count-up` - uses the pomodoro interval, break minutes, and sessions to count the time upward until the user hits F10 to stop the timer. When the user presses F10, the entry is marked `Completed`.
 
 -----
+
 ## The TASKS.TXT file format
 
 Fields in the file are separated by the `|` (pipe) character.
@@ -118,4 +131,5 @@ The format is as follows:
 
 -----
 
-![Image](https://img.shields.io/badge/CSharp-Release-Green?style=plastic)
+
+![Image](https://img.shields.io/badge/C%23-Release-blue?style=plastic&logo=csharp&logoColor=white) ![Image](https://img.shields.io/badge/C%23-v1.0.0.0-Blue?style=plastic)
