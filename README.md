@@ -14,6 +14,8 @@ This product only runs on Windows as a console/command line executable. It requi
 
 Simply **download the executable and run it**. *IT IS NOT SIGNED.*
 
+-----
+
 ## Usage
 Using the tool is simple. Here are some examples:
 
@@ -72,6 +74,8 @@ When using `list` or `stats` you cannot use any of the other command line option
 - `stats` is used with either a `-p` (time period) as words or with the `--start` and `--end` date filters. You can use the `--start` date without specifying the end date.
 - All other arguments can be used together (as in the first example above). This includes the `countup` argument to start at count-up timer instead of a countdown timer. Otherwise, ***Focus*** defaults to countdown.
 
+-----
+
 ## Details
 This solution is a quick and simple way of watching the time you are working on a project. The intention of the application isn't to try to be a substitute for more robust solutions like Toggl, but to be a simple version that is easy to use and manage.
 
@@ -109,6 +113,7 @@ Countdown versus Count-Up timers:
 - `Count-up` - uses the pomodoro interval, break minutes, and sessions to count the time upward until the user hits F10 to stop the timer. When the user presses F10, the entry is marked `Completed`.
 
 -----
+
 ## The TASKS.TXT file format
 
 Fields in the file are separated by the `|` (pipe) character.
