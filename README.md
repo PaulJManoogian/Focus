@@ -4,6 +4,8 @@ A timer tool based on the work of [Ayooluwa Isaiah](https://github.com/ayoisaiah
 The functionality of this tool is nearly identical to the work created in this repository:
 [Focus](https://github.com/ayoisaiah/focus)
 
+**This version (c)2024 Manoogian Media, Inc.**
+
 ## Purpose
 I created this version of the tool to have a C# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called `tasks.txt`. The intention here is to keep the entire solution simple and easy to update and maintain.
 
