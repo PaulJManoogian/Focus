@@ -29,10 +29,10 @@ Focus list
 If you type "help" or "?" on the command line, you'll see all of the command line options.
 If you only type FOCUS, it will bring up a menu version of the application.
 
-Menu version:
-![image](https://github.com/user-attachments/assets/89ea320e-6a3b-456c-98b1-e99bbdc6b9f5)
+### Menu version:
+![image](https://github.com/user-attachments/assets/e757942e-c463-4dc7-8e56-24a1f5c83c72)
 
-Command line arguments:
+### Command line arguments:
 
 ```
 help or ?             : Display this help screen
@@ -60,12 +60,15 @@ stats                 : Display task statistics
   --end [date]        : Specify the end date for stats (format: yyyy-MM-dd)
 -p [today|all-time]   : Show statistics for today or all time
 
+export [format] [path]: Export tasks in the specified format (csv, xml, json) to the given file path
 
 Examples:
 
-Focus -w 20 -b 5 -s 4 --task "Work Entry" --tag "Tag Entry"
-
-Focus stats --start '2021-08-06' --end '2021-08-07'
+- Focus -w 20 -b 5 -s 4 --task "Work Entry" --tag "Tag Entry" --project "My Project" --client "My Client"
+- Focus stats --start '2021-08-06' --end '2021-08-07'
+- Focus countup "My Task" "Work" "My Project" "My Client"
+- Focus export csv C:\tasks.csv
+- Focus list
 ```
 
 ### Command Line Usage
@@ -112,6 +115,14 @@ Countdown versus Count-Up timers:
 - `Countdown` - uses the pomodoro interval, break minutes, and sessions to count time downward until it runs out. Does not complete entries.
 - `Count-up` - uses the pomodoro interval, break minutes, and sessions to count the time upward until the user hits F10 to stop the timer. When the user presses F10, the entry is marked `Completed`.
 
+## Export
+Export of the data is available to simplify getting entries into another application which may support more robust reporting or billing management, spreadsheets, or databases.
+
+The following formats are available:
+- `CSV` - Standard Comma Separated Values format for import into tools such as a Spreadsheet or Database.
+- `xml` - XML formatted data for tools such as Microsoft Project or similar.
+- `JSON` - Similar to XML the JSON format is a robust text-based structured data storage format for use with spreadsheets, databases, or project management applications for reporting.
+  
 -----
 
 ## The TASKS.TXT file format
@@ -119,13 +130,15 @@ Countdown versus Count-Up timers:
 Fields in the file are separated by the `|` (pipe) character.
 
 The format is as follows:
-`task_name|start_time|end_time|tags|status`
+`task_name|start_time|end_time|tags|status|project|client`
 
 - `task_name` Name of the task
 - `start_time` Full UTC time coding for date, time, and GMT offset for when the task was created (started)
 - `end_time` Full UTC time coding for date, time, and GMT offset for when the task was marked complete (completed)
 - `tags` Any tags to help identify the item so that it can be grouped with similar items
 - `status` One of three possible status notations: `Pending` (new or working item), `Completed` (completed work item), `Abandoned` (dead or deleted task item)
+- `project` A project name associated with the task to help sort the data when used with reporting tools when the data is exported
+- `client` The client name to help group data per project source
 
  Items that don't have a status of "Completed" do not show up on the "stats" display at the command line. 
 
