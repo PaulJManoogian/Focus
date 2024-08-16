@@ -12,6 +12,8 @@ I created this version of the tool to have a C# version which will run on a Wind
 ## Installation
 This product only runs on Windows as a console/command line executable. It requires *no DLLs* and is completely self-contained in the [Release version 1.0.0.0](https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0) listed to the right.
 
+However! If you want to use the JSON export function, you will need the Newtonsoft.Json.dll file, as well.  Without it, you can still use the product and also still be able to export to CSV and XML formats.  You can find it online at [Newtonsoft.com](https://www.newtonsoft.com/json) or download it from the release repository here.
+
 Simply **download the executable and run it**. *IT IS NOT SIGNED.*
 
 -----
