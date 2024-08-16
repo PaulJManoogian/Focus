@@ -109,7 +109,7 @@ namespace FocusApp
         {
             Console.Clear();
             Console.WriteLine("Starting Pomodoro Timer...");
-            Console.WriteLine("Press F10 to stop the timer.");
+
 
                 for (int session = 1; session <= SessionsBeforeLongBreak; session++)
                 {
