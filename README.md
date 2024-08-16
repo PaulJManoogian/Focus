@@ -30,7 +30,8 @@ If you type "help" or "?" on the command line, you'll see all of the command lin
 If you only type FOCUS, it will bring up a menu version of the application.
 
 ### Menu version:
-![image](https://github.com/user-attachments/assets/e757942e-c463-4dc7-8e56-24a1f5c83c72)
+![image](https://github.com/user-attachments/assets/e5d69362-8d3d-46f4-9856-04cea0da446a)
+
 
 ### Command line arguments:
 
