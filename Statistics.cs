@@ -49,24 +49,52 @@ namespace FocusApp
 
         private void DisplayStatisticsTable(List<TaskRecord> tasks)
         {
-            Console.WriteLine("┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐");
-            Console.WriteLine("| #   | TASK NAME           | START DATE            | END DATE              | TAGGED       | STATUS    |");
-            Console.WriteLine("├──────────────────────────────────────────────────────────────────────────────────────────────────────┤");
+            Console.WriteLine("┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
+            Console.WriteLine("| #   | TASK NAME            | START DATE            | END DATE              | TAGGED       | STATUS     | PROJECT      | CLIENT       | TIME SPENT   |");
+            Console.WriteLine("├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤");
 
             for (int i = 0; i < tasks.Count; i++)
             {
                 var task = tasks[i];
                 var taskcounter = i + 1;
-                string taskName = task.Description.PadRight(19);
+
+                string taskName = task.Description.PadRight(20);
                 string startDate = task.StartDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20);
                 string endDate = task.EndDate == DateTime.MinValue ? "N/A".PadRight(20) : task.EndDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20);
                 string tagged = string.IsNullOrEmpty(task.Tag) ? "".PadRight(12) : task.Tag.PadRight(12);
-                string status = task.Status.PadRight(8);
+                string status = task.Status.PadRight(10);
+                string project = task.Project.PadRight(12);  // Display the Project
+                string client = task.Client.PadRight(12);    // Display the Client
 
-                Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {taskName} | {startDate} | {endDate} | {tagged} | {status} |");
+                // Calculate the time spent if the task is completed
+                string timeSpent = task.EndDate == DateTime.MinValue
+                    ? "N/A".PadRight(12)
+                    : (task.EndDate - task.StartDate).ToString(@"hh\:mm\:ss").PadRight(12);
+
+                Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {taskName} | {startDate} | {endDate} | {tagged} | {status} | {project} | {client} | {timeSpent} |");
+
             }
 
-            Console.WriteLine("└──────────────────────────────────────────────────────────────────────────────────────────────────────┘");
+            Console.WriteLine("└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘");
+
+            //Console.WriteLine("┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐");
+            //Console.WriteLine("| #   | TASK NAME           | START DATE            | END DATE              | TAGGED       | STATUS    |");
+            //Console.WriteLine("├──────────────────────────────────────────────────────────────────────────────────────────────────────┤");
+
+            //for (int i = 0; i < tasks.Count; i++)
+            //{
+            //    var task = tasks[i];
+            //    var taskcounter = i + 1;
+            //    string taskName = task.Description.PadRight(19);
+            //    string startDate = task.StartDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20);
+            //    string endDate = task.EndDate == DateTime.MinValue ? "N/A".PadRight(20) : task.EndDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20);
+            //    string tagged = string.IsNullOrEmpty(task.Tag) ? "".PadRight(12) : task.Tag.PadRight(12);
+            //    string status = task.Status.PadRight(8);
+
+            //    Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {taskName} | {startDate} | {endDate} | {tagged} | {status} |");
+            //}
+
+            //Console.WriteLine("└──────────────────────────────────────────────────────────────────────────────────────────────────────┘");
         }
     }
 
