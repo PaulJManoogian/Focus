@@ -130,7 +130,7 @@ The following formats are available:
 Fields in the file are separated by the `|` (pipe) character.
 
 The format is as follows:
-`task_name|start_time|end_time|tags|status`
+`task_name|start_time|end_time|tags|status|project|client`
 
 - `task_name` Name of the task
 - `start_time` Full UTC time coding for date, time, and GMT offset for when the task was created (started)
