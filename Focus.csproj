@@ -82,5 +82,10 @@
     <EmbeddedResource Include="Resources\bird_rain.wav" />
     <EmbeddedResource Include="Resources\rainforest.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

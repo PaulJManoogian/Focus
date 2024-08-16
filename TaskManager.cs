@@ -3,7 +3,7 @@
 // Description: A Pomodoro Timer application based on the work of Ayooluwa Isaiah
 // Created By : Paul J Manoogian, Manoogian Media, Inc.
 // Created    : 2024-Aug-13
-// Modified   : 2024-Aug-15
+// Modified   : 2024-Aug-16
 // Language   : C#
 // File       : TaskManager.cs
 // Notes      : Data file details management of time, date, desc, and status
@@ -14,6 +14,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
+using System.Web;
+using System.Threading.Tasks;
 
 namespace FocusApp
 {
@@ -26,7 +30,7 @@ namespace FocusApp
             get { return tasks; }
         }
 
-        public void AddTask(string description, string tag = "")
+        public void AddTask(string description, string tag = "", string project = "", string client = "")
         {
             var task = new TaskRecord
             {
@@ -34,12 +38,15 @@ namespace FocusApp
                 StartDate = DateTime.Now,
                 EndDate = DateTime.MinValue,
                 Tag = tag,
-                Status = "Pending"
+                Status = "Pending",
+                Project = project,  // Set the Project
+                Client = client     // Set the Client
             };
             tasks.Add(task);
+            SaveTasks("tasks.txt");
         }
 
-        public void AddTaskWithTime(string description, string tag, DateTime startTime, DateTime endTime)
+        public void AddTaskWithTime(string description, string tag, DateTime startTime, DateTime endTime, string project = "", string client = "")
         {
             var task = new TaskRecord
             {
@@ -47,10 +54,12 @@ namespace FocusApp
                 StartDate = startTime,
                 EndDate = endTime,
                 Tag = tag,
-                Status = "Completed"
+                Status = "Completed",
+                Project = project,  // Set the Project
+                Client = client     // Set the Client
             };
             tasks.Add(task);
-            SaveTasks("tasks.txt"); // Automatically save the task after completion
+            SaveTasks("tasks.txt");
         }
 
         public void CompleteTask(int taskIndex)
@@ -82,19 +91,28 @@ namespace FocusApp
 
         public void ListTasks()
         {
-            Console.WriteLine("┌───────────────────────────────────────────────────────────────────────────────────────────────────────┐");
-            Console.WriteLine("|  #  | TASK NAME           | START DATE            | END DATE              | TAGGED       | STATUS     |");
-            Console.WriteLine("├───────────────────────────────────────────────────────────────────────────────────────────────────────┤");
+            Console.WriteLine("┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
+            Console.WriteLine("| #   | TASK NAME           | START DATE            | END DATE              | TAGGED       | STATUS    | PROJECT     | CLIENT      |");
+            Console.WriteLine("├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤");
 
 
             for (int i = 0; i < tasks.Count; i++)
             {
                 var task = tasks[i];
                 var taskcounter = i + 1;
-                Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {task.Description.PadRight(19)} | {task.StartDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20)} | {task.EndDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20)} | {task.Tag.PadRight(12)} | {task.Status.PadRight(10)} |");
-            }
-            Console.WriteLine("└───────────────────────────────────────────────────────────────────────────────────────────────────────┘");
+                
+                string taskName = task.Description.PadRight(20);
+                string startDate = task.StartDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20);
+                string endDate = task.EndDate == DateTime.MinValue ? "N/A".PadRight(20) : task.EndDate.ToString("MMM dd, yyyy hh:mm tt").PadRight(20);
+                string tagged = string.IsNullOrEmpty(task.Tag) ? "".PadRight(12) : task.Tag.PadRight(12);
+                string status = task.Status.PadRight(10);
+                string project = task.Project.PadRight(12);  // Display the Project
+                string client = task.Client.PadRight(12);    // Display the Client
 
+                Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {taskName} | {startDate} | {endDate} | {tagged} | {status} | {project} | {client} |");
+            }
+
+            Console.WriteLine("└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘");
         }
 
         public List<TaskRecord> GetTasksCompletedToday()
@@ -125,11 +143,12 @@ namespace FocusApp
             {
                 foreach (var task in tasks)
                 {
-                    string line = $"{task.Description}|{task.StartDate:O}|{task.EndDate:O}|{task.Tag}|{task.Status}";
+                    string line = $"{task.Description}|{task.StartDate:O}|{task.EndDate:O}|{task.Tag}|{task.Status}|{task.Project}|{task.Client}";
                     writer.WriteLine(line);
                 }
             }
         }
+
 
         public void LoadTasks(string filePath)
         {
@@ -140,7 +159,7 @@ namespace FocusApp
                 foreach (var line in lines)
                 {
                     string[] parts = line.Split('|');
-                    if (parts.Length == 5)
+                    if (parts.Length == 7)  // Updated to expect 7 parts
                     {
                         tasks.Add(new TaskRecord
                         {
@@ -148,21 +167,57 @@ namespace FocusApp
                             StartDate = DateTime.Parse(parts[1]),
                             EndDate = DateTime.Parse(parts[2]),
                             Tag = parts[3],
-                            Status = parts[4]
+                            Status = parts[4],
+                            Project = parts[5],  // Load the Project
+                            Client = parts[6]    // Load the Client
                         });
                     }
                 }
             }
         }
+
+
+        public void ExportTasksToCsv(string filePath)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath))
+            {
+                writer.WriteLine("Description,StartDate,EndDate,Tag,Status,Project,Client");
+                foreach (var task in tasks)
+                {
+                    string line = $"{task.Description},{task.StartDate:O},{task.EndDate:O},{task.Tag},{task.Status},{task.Project},{task.Client}";
+                    writer.WriteLine(line);
+                }
+            }
+        }
+
+
+        public void ExportTasksToXml(string filePath)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<TaskRecord>));
+                using (StreamWriter writer = new StreamWriter(filePath))
+                {
+                    serializer.Serialize(writer, tasks);
+                }
+        }
+
+        public void ExportTasksToJson(string filePath)
+        {
+            string json = JsonConvert.SerializeObject(tasks, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+        }
+
     }
 
-    public class TaskRecord
+
+public class TaskRecord
     {
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Tag { get; set; }
         public string Status { get; set; }
+        public string Project { get; set; }  // New property for Project
+        public string Client { get; set; }   // New property for Client
     }
 
 

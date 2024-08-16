@@ -3,7 +3,7 @@
 // Description: A Pomodoro Timer application based on the work of Ayooluwa Isaiah
 // Created By : Paul J Manoogian, Manoogian Media, Inc.
 // Created    : 2024-Aug-13
-// Modified   : 2024-Aug-15
+// Modified   : 2024-Aug-16
 // Language   : C#
 // File       : Program.cs
 // Notes      : Main application to start the Focus solution, menu, and cmd line
@@ -40,6 +40,8 @@ namespace FocusApp
 
             string taskDescription = null;
             string taskTag = null;
+            string project = null;
+            string client = null;
             int workInterval = 25;  // Default to 25 minutes
             int breakInterval = 5;  // Default to 5 minutes
             int sessions = 4;       // Default to 4 work sessions before a long break
@@ -47,6 +49,33 @@ namespace FocusApp
 
             if (args.Length > 0)
             {
+                if (args[0].Equals("export", StringComparison.OrdinalIgnoreCase) && args.Length > 2)
+                {
+                    string format = args[1].ToLower();
+                    string filePath = args[2];
+
+                    switch (format)
+                    {
+                        case "csv":
+                            taskManager.ExportTasksToCsv(filePath);
+                            Console.WriteLine($"Tasks exported to CSV file at {filePath}");
+                            break;
+                        case "xml":
+                            taskManager.ExportTasksToXml(filePath);
+                            Console.WriteLine($"Tasks exported to XML file at {filePath}");
+                            break;
+                        case "json":
+                            taskManager.ExportTasksToJson(filePath);
+                            Console.WriteLine($"Tasks exported to JSON file at {filePath}");
+                            break;
+                        default:
+                            Console.WriteLine("Unsupported export format. Please use 'csv', 'xml', or 'json'.");
+                            break;
+                    }
+                    return;
+                }
+
+
                 for (int i = 0; i < args.Length; i++)
                 {
 
@@ -134,6 +163,14 @@ namespace FocusApp
                     {
                         taskTag = args[i + 1];
                     }
+                    else if (args[i] == "--project" && i + 1 < args.Length)
+                    {
+                        project = args[i + 1];
+                    }
+                    else if (args[i] == "--client" && i + 1 < args.Length)
+                    {
+                        client = args[i + 1];
+                    }
                     else if (args[i] == "--sound" && i + 1 < args.Length)
                     {
                         soundSelection = args[i + 1].ToUpper();
@@ -142,14 +179,15 @@ namespace FocusApp
 
                 if (!string.IsNullOrEmpty(taskDescription))
                 {
-                    taskManager.AddTask(taskDescription, taskTag);
-                    Console.WriteLine($"Task '{taskDescription}' with tag '{taskTag}' added.");
+                    taskManager.AddTask(taskDescription, taskTag, project, client);
+                    Console.WriteLine($"Task '{taskDescription}' with tag '{taskTag}' added under project '{project}' for client '{client}'.");
                     timer.SetIntervals(workInterval, breakInterval);
                     timer.SetSound(soundSelection);
                     timer.SetSessions(sessions);
                     timer.Start();
                     taskManager.CompleteTask(taskManager.Tasks.Count - 1);  // Completing the most recent task
                     taskManager.SaveTasks("tasks.txt");
+                    Console.ReadLine();
                     return;
                 }
             }
@@ -219,8 +257,8 @@ namespace FocusApp
                 Console.WriteLine("5. Delete Task");
                 Console.WriteLine("6. Start Pomodoro Timer");
                 Console.WriteLine("7. Start Count-Up Timer");
-                Console.WriteLine("8. Exit");
-                Console.WriteLine("");
+                Console.WriteLine("8. Export Tasks");
+                Console.WriteLine("9. Exit");
                 Console.Write("Select an option: ");
 
                 string option = Console.ReadLine();
@@ -286,7 +324,37 @@ namespace FocusApp
                         timer.SetSessions(cusessionCount);
                         timer.StartCountUpTimer(taskManager, countUpDescription, countUpTag);
                         break;
+
                     case "8":
+                        Console.Write("Enter export format (csv, xml, json): ");
+                        string format = Console.ReadLine().ToLower();
+                        Console.Write("Enter file path to save the export: ");
+                        string filePath = Console.ReadLine();
+
+                        switch (format)
+                        {
+                            case "csv":
+                                taskManager.ExportTasksToCsv(filePath);
+                                Console.WriteLine($"Tasks exported to CSV file at {filePath}");
+                                break;
+                            case "xml":
+                                taskManager.ExportTasksToXml(filePath);
+                                Console.WriteLine($"Tasks exported to XML file at {filePath}");
+                                break;
+                            case "json":
+                                taskManager.ExportTasksToJson(filePath);
+                                Console.WriteLine($"Tasks exported to JSON file at {filePath}");
+                                break;
+                            default:
+                                Console.WriteLine("Unsupported export format. Please use 'csv', 'xml', or 'json'.");
+                                break;
+                        }
+
+                        Console.WriteLine("Press any key to return to the main menu...");
+                        Console.ReadKey();
+                        break;
+
+                    case "9":
                         taskManager.SaveTasks("tasks.txt");
                         return;
                 }
@@ -305,6 +373,8 @@ namespace FocusApp
             Console.WriteLine("-s [sessions]         : Set the number of work sessions before a long break (default 4)");
             Console.WriteLine("--task [description]  : Set the task description");
             Console.WriteLine("--tag [tag]           : Set a tag for the task (optional)");
+            Console.WriteLine("--project [project]   : Set the project associated with the task");
+            Console.WriteLine("--client [client]     : Set the client associated with the task");
             Console.WriteLine("--sound [option]      : Set the ambient sound (1-8 or OFF)");
             Console.WriteLine("                       1: coffee_shop, 2: rainforest, 3: wind");
             Console.WriteLine("                       4: rain, 5: summer_night, 6: fireplace, 7: frogs, 8: bird_rain");
@@ -312,10 +382,16 @@ namespace FocusApp
             Console.WriteLine("  --start [date]      : Specify the start date for stats (format: yyyy-MM-dd)");
             Console.WriteLine("  --end [date]        : Specify the end date for stats (format: yyyy-MM-dd)");
             Console.WriteLine("-p [today|all-time]   : Show statistics for today or all time");
+            Console.WriteLine("export [format] [path]: Export tasks in the specified format (csv, xml, json) to the given file path");
+
             Console.WriteLine();
             Console.WriteLine("Examples:");
-            Console.WriteLine("Focus -w 20 -b 5 -s 4 --task \"Work Entry\" --tag \"Tag Entry\"");
+            Console.WriteLine("Focus -w 20 -b 5 -s 4 --task \"Work Entry\" --tag \"Tag Entry\" --project \"My Project\" --client \"My Client\"");
             Console.WriteLine("Focus stats --start '2021-08-06' --end '2021-08-07'");
+            Console.WriteLine("Focus countup \"My Task\" \"Work\" \"My Project\" \"My Client\"");
+            Console.WriteLine("Focus export csv C:\\tasks.csv");
+            Console.WriteLine("Focus list");
+
         }
     }
 
