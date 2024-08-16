@@ -196,16 +196,26 @@ namespace FocusApp
             while (true)
             {
                 Console.Clear();
-                Console.ForegroundColor = ConsoleColor.Black;
-                Console.BackgroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine(" _____   ___     __  __ __  _____");
-                Console.WriteLine("|     | /   \\   /  ]|  |  |/ ___/");
-                Console.WriteLine("|   __||     | /  / |  |  (   \\_ ");
-                Console.WriteLine("|  |_  |  O  |/  /  |  |  |\\__  |");
-                Console.WriteLine("|   _] |     /   \\_ |  :  |/  \\ |");
-                Console.WriteLine("|  |   |     \\     ||     |\\    |");
-                Console.WriteLine("|__|    \\___/ \\____| \\__,_| \\___|");
-                Console.WriteLine("                                 ");
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
+                //Console.BackgroundColor = ConsoleColor.DarkGray;
+                Console.WriteLine("");
+                Console.WriteLine("███████╗ ██████╗  ██████╗██╗   ██╗███████╗");
+                Console.WriteLine("██╔════╝██╔═══██╗██╔════╝██║   ██║██╔════╝");
+                Console.WriteLine("█████╗  ██║   ██║██║     ██║   ██║███████╗");
+                Console.WriteLine("██╔══╝  ██║   ██║██║     ██║   ██║╚════██║");
+                Console.WriteLine("██║     ╚██████╔╝╚██████╗╚██████╔╝███████║");
+                Console.WriteLine("╚═╝      ╚═════╝  ╚═════╝ ╚═════╝ ╚══════╝");
+                //Console.WriteLine("                                          ");
+
+
+                //Console.WriteLine(" _____   ___     __  __ __  _____");
+                //Console.WriteLine("|     | /   \\   /  ]|  |  |/ ___/");
+                //Console.WriteLine("|   __||     | /  / |  |  (   \\_ ");
+                //Console.WriteLine("|  |_  |  O  |/  /  |  |  |\\__  |");
+                //Console.WriteLine("|   _] |     /   \\_ |  :  |/  \\ |");
+                //Console.WriteLine("|  |   |     \\     ||     |\\    |");
+                //Console.WriteLine("|__|    \\___/ \\____| \\__,_| \\___|");
+                //Console.WriteLine("                                 ");
                 Console.ResetColor();
                 Console.WriteLine("");
 
@@ -259,6 +269,7 @@ namespace FocusApp
                 Console.WriteLine("7. Start Count-Up Timer");
                 Console.WriteLine("8. Export Tasks");
                 Console.WriteLine("9. Exit");
+                Console.WriteLine();
                 Console.Write("Select an option: ");
 
                 string option = Console.ReadLine();
