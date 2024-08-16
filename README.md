@@ -90,6 +90,8 @@ However, the `list` option lets you see the full list of task entries and you ca
 
 ***stats*** offers some specific command line options, listed above, that let you specify start and end dates to view as well as just `today` or `all-time` stats. Those are based on `Completed` tasks.
 
+#### Items that don't have a status of "Completed" do not show up on the "stats" display at the command line. 
+
 ![image](https://github.com/user-attachments/assets/921a4564-b597-4639-bae5-449d850660d8)
 
 
@@ -146,7 +148,6 @@ The format is as follows:
 - `project` A project name associated with the task to help sort the data when used with reporting tools when the data is exported
 - `client` The client name to help group data per project source
 
- Items that don't have a status of "Completed" do not show up on the "stats" display at the command line. 
 
 -----
 
