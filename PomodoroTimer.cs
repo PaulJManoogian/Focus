@@ -3,7 +3,7 @@
 // Description: A Pomodoro Timer application based on the work of Ayooluwa Isaiah
 // Created By : Paul J Manoogian, Manoogian Media, Inc.
 // Created    : 2024-Aug-13
-// Modified   : 2024-Aug-15
+// Modified   : 2024-Aug-16
 // Language   : C#
 // File       : PomodoroTimer.cs
 // Notes      : All of the Pomodoro Timer functions and audio playback during work
@@ -109,53 +109,68 @@ namespace FocusApp
         {
             Console.Clear();
             Console.WriteLine("Starting Pomodoro Timer...");
+            Console.WriteLine("Press F10 to stop the timer.");
 
-            for (int session = 1; session <= SessionsBeforeLongBreak; session++)
-            {
-                if (ambientSoundPlayer != null)
+                for (int session = 1; session <= SessionsBeforeLongBreak; session++)
                 {
-                    ambientSoundPlayer.PlayLooping();
-                }
-
-                Console.WriteLine($"Work Session {session} of {SessionsBeforeLongBreak}");
-                TimerCountdown("Work Time", WorkInterval);
-
-                if (SoundSelection != "OFF" && workEndSoundPlayer != null)
-                {
-                    workEndSoundPlayer.Play();
-                }
-
-                if (ambientSoundPlayer != null)
-                {
-                    ambientSoundPlayer.Stop();
-                }
-
-                if (session < SessionsBeforeLongBreak)
-                {
-                    Console.ForegroundColor= ConsoleColor.Black;
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("Time for a short break!");
-                    Console.ResetColor();
-                    TimerCountdown("Break Time", BreakInterval);
-
-                    if (SoundSelection != "OFF" && breakEndSoundPlayer != null)
+                    if (ambientSoundPlayer != null)
                     {
-                        breakEndSoundPlayer.Play();
+                        ambientSoundPlayer.PlayLooping();
                     }
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.BackgroundColor = ConsoleColor.Magenta;
-                    Console.WriteLine("Time for a long break!");
-                    Console.ResetColor();
-                    TimerCountdown("Long Break Time", BreakInterval * 3); // Example: Long break is 3 times the short break
-                    if (SoundSelection != "OFF" && breakEndSoundPlayer != null)
+                
+
+                    Console.WriteLine($"Work Session {session} of {SessionsBeforeLongBreak}");
+                    TimerCountdown("Work Time", WorkInterval);
+
+                    if (SoundSelection != "OFF" && workEndSoundPlayer != null)
                     {
-                        breakEndSoundPlayer.Play();
+                        if (ambientSoundPlayer != null)
+                        {
+                            ambientSoundPlayer.Stop();
+                        }
+
+                        workEndSoundPlayer.Play();
                     }
+
+
+
+                    if (session < SessionsBeforeLongBreak)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.BackgroundColor = ConsoleColor.Yellow;
+                            Console.WriteLine("Time for a short break!");
+                            Console.ResetColor();
+                            TimerCountdown("Break Time", BreakInterval);
+
+                            if (SoundSelection != "OFF" && breakEndSoundPlayer != null)
+                            {
+                                if (ambientSoundPlayer != null)
+                                {
+                                    ambientSoundPlayer.Stop();
+                                }
+
+                                breakEndSoundPlayer.Play();
+                            }
+                        }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.BackgroundColor = ConsoleColor.Magenta;
+                            Console.WriteLine("Time for a long break!");
+                            Console.ResetColor();
+                            TimerCountdown("Long Break Time", BreakInterval * 3); // Example: Long break is 3 times the short break
+                            if (SoundSelection != "OFF" && breakEndSoundPlayer != null)
+                            {
+                                if (ambientSoundPlayer != null)
+                                {
+                                    ambientSoundPlayer.Stop();
+                                }
+
+                                breakEndSoundPlayer.Play();
+                            }
+                        }
                 }
-            }
+            
             Console.ReadLine();
         }
 

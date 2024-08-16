@@ -91,9 +91,9 @@ namespace FocusApp
 
         public void ListTasks()
         {
-            Console.WriteLine("┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
-            Console.WriteLine("| #   | TASK NAME           | START DATE            | END DATE              | TAGGED       | STATUS    | PROJECT     | CLIENT      |");
-            Console.WriteLine("├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤");
+            Console.WriteLine("┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
+            Console.WriteLine("| #   | TASK NAME            | START DATE            | END DATE              | TAGGED       | STATUS     | PROJECT      | CLIENT       |");
+            Console.WriteLine("├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤");
 
 
             for (int i = 0; i < tasks.Count; i++)
@@ -112,7 +112,7 @@ namespace FocusApp
                 Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {taskName} | {startDate} | {endDate} | {tagged} | {status} | {project} | {client} |");
             }
 
-            Console.WriteLine("└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘");
+            Console.WriteLine("└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘");
         }
 
         public List<TaskRecord> GetTasksCompletedToday()
