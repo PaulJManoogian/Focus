@@ -91,10 +91,9 @@ namespace FocusApp
 
         public void ListTasks()
         {
-            Console.WriteLine("┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
-            Console.WriteLine("| #   | TASK NAME            | START DATE            | END DATE              | TAGGED       | STATUS     | PROJECT      | CLIENT       |");
-            Console.WriteLine("├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤");
-
+            Console.WriteLine("┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
+            Console.WriteLine("| #   | TASK NAME            | START DATE            | END DATE              | TAGGED       | STATUS     | PROJECT      | CLIENT       | TIME SPENT   |");
+            Console.WriteLine("├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤");
 
             for (int i = 0; i < tasks.Count; i++)
             {
@@ -109,10 +108,16 @@ namespace FocusApp
                 string project = task.Project.PadRight(12);  // Display the Project
                 string client = task.Client.PadRight(12);    // Display the Client
 
-                Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {taskName} | {startDate} | {endDate} | {tagged} | {status} | {project} | {client} |");
+                // Calculate the time spent if the task is completed
+                string timeSpent = task.EndDate == DateTime.MinValue
+                    ? "N/A".PadRight(12)
+                    : (task.EndDate - task.StartDate).ToString(@"hh\:mm\:ss").PadRight(12);
+
+                Console.WriteLine($"| {taskcounter.ToString().PadRight(3)} | {taskName} | {startDate} | {endDate} | {tagged} | {status} | {project} | {client} | {timeSpent} |");
+
             }
 
-            Console.WriteLine("└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘");
+            Console.WriteLine("└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘");
         }
 
         public List<TaskRecord> GetTasksCompletedToday()
