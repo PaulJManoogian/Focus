@@ -29,10 +29,10 @@ Focus list
 If you type "help" or "?" on the command line, you'll see all of the command line options.
 If you only type FOCUS, it will bring up a menu version of the application.
 
-Menu version:
-![image](https://github.com/user-attachments/assets/89ea320e-6a3b-456c-98b1-e99bbdc6b9f5)
+### Menu version:
+![image](https://github.com/user-attachments/assets/e757942e-c463-4dc7-8e56-24a1f5c83c72)
 
-Command line arguments:
+### Command line arguments:
 
 ```
 help or ?             : Display this help screen
