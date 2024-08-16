@@ -90,6 +90,11 @@ However, the `list` option lets you see the full list of task entries and you ca
 
 ***stats*** offers some specific command line options, listed above, that let you specify start and end dates to view as well as just `today` or `all-time` stats. Those are based on `Completed` tasks.
 
+![image](https://github.com/user-attachments/assets/921a4564-b597-4639-bae5-449d850660d8)
+
+
+
+
 ### Sounds
 The sounds option on the command line, and when you elect to `start a timer` in the menu mode, lets you choose an ambient sound to play while you're using the timer. As a note: it will stop during the breaks.
 
