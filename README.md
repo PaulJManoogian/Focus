@@ -44,6 +44,18 @@ list                  : List all tasks
 
 countup [desc] [tag]  : Start a timer that counts up, with support for pomodoro and sounds
 
+task                  : Add, complete, list, and delete tasks without starting timer.
+  add [description] [tag] [project] [client]
+
+                      : Add a new task.
+
+  done [#]            : Complete the task with the given number.
+
+  list                : List all tasks.(same as 'list' option.
+
+  delete [#]          : Deletes the task item from the task file list.
+
+
 -w [minutes]          : Set the work interval in minutes (default 25)
 
 -b [minutes]          : Set the break interval in minutes (default 5)
