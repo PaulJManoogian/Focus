@@ -12,6 +12,8 @@ I created this version of the tool to have a C# version which will run on a Wind
 ## Installation
 This product only runs on Windows as a console/command line executable. It requires *no DLLs* and is completely self-contained in the [Release version 1.0.0.0](https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0) listed to the right.
 
+However! If you want to use the JSON export function, you will need the Newtonsoft.Json.dll file, as well.  Without it, you can still use the product and also still be able to export to CSV and XML formats.  You can find it online at [Newtonsoft.com](https://www.newtonsoft.com/json) or download it from the release repository here.
+
 Simply **download the executable and run it**. *IT IS NOT SIGNED.*
 
 -----
@@ -41,6 +43,18 @@ help or ?             : Display this help screen
 list                  : List all tasks
 
 countup [desc] [tag]  : Start a timer that counts up, with support for pomodoro and sounds
+
+task                  : Add, complete, list, and delete tasks without starting timer.
+  add [description] [tag] [project] [client]
+
+                      : Add a new task.
+
+  done [#]            : Complete the task with the given number.
+
+  list                : List all tasks.(same as 'list' option.
+
+  delete [#]          : Deletes the task item from the task file list.
+
 
 -w [minutes]          : Set the work interval in minutes (default 25)
 
@@ -89,6 +103,13 @@ The `stats` option is specific to the command line. You currently (v1.0.0.0) can
 However, the `list` option lets you see the full list of task entries and you can also use option 2 on the menu to see the same list in app mode.
 
 ***stats*** offers some specific command line options, listed above, that let you specify start and end dates to view as well as just `today` or `all-time` stats. Those are based on `Completed` tasks.
+
+#### Items that don't have a status of "Completed" do not show up on the "stats" display at the command line. 
+
+![image](https://github.com/user-attachments/assets/921a4564-b597-4639-bae5-449d850660d8)
+
+
+
 
 ### Sounds
 The sounds option on the command line, and when you elect to `start a timer` in the menu mode, lets you choose an ambient sound to play while you're using the timer. As a note: it will stop during the breaks.
@@ -141,7 +162,6 @@ The format is as follows:
 - `project` A project name associated with the task to help sort the data when used with reporting tools when the data is exported
 - `client` The client name to help group data per project source
 
- Items that don't have a status of "Completed" do not show up on the "stats" display at the command line. 
 
 -----
 
