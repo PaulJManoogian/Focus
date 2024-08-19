@@ -3,7 +3,7 @@
 // Description: A Pomodoro Timer application based on the work of Ayooluwa Isaiah
 // Created By : Paul J Manoogian, Manoogian Media, Inc.
 // Created    : 2024-Aug-13
-// Modified   : 2024-Aug-16
+// Modified   : 2024-Aug-18
 // Language   : C#
 // File       : TaskManager.cs
 // Notes      : Data file details management of time, date, desc, and status
@@ -69,6 +69,7 @@ namespace FocusApp
                 tasks[taskIndex].EndDate = DateTime.Now;
                 tasks[taskIndex].Status = "Completed";
             }
+            SaveTasks("tasks.txt");
         }
 
 
@@ -87,6 +88,7 @@ namespace FocusApp
             {
                 tasks.RemoveAt(taskIndex);
             }
+            SaveTasks("tasks.txt");
         }
 
         public void ListTasks()

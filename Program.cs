@@ -3,7 +3,7 @@
 // Description: A Pomodoro Timer application based on the work of Ayooluwa Isaiah
 // Created By : Paul J Manoogian, Manoogian Media, Inc.
 // Created    : 2024-Aug-13
-// Modified   : 2024-Aug-16
+// Modified   : 2024-Aug-18
 // Language   : C#
 // File       : Program.cs
 // Notes      : Main application to start the Focus solution, menu, and cmd line
@@ -49,8 +49,75 @@ namespace FocusApp
 
             if (args.Length > 0)
             {
-                if (args[0].Equals("export", StringComparison.OrdinalIgnoreCase) && args.Length > 2)
+
+
+                if (args[0].Equals("task", StringComparison.OrdinalIgnoreCase))
                 {
+                    if (args.Length > 1)
+                    {
+                        if (args[1].Equals("add", StringComparison.OrdinalIgnoreCase) && args.Length > 2)
+                        {
+                            // Expecting: "Focus task add 'New Task Item' 'Tag' 'Project' 'Client'"
+                            string description = args[2];
+                            string tag = args.Length > 3 ? args[3] : "";
+                            string xproject = args.Length > 4 ? args[4] : "";
+                            string xclient = args.Length > 5 ? args[5] : "";
+
+                            taskManager.AddTask(description, tag, xproject, xclient);
+                            Console.WriteLine($"Task '{description}' added successfully.");
+                            return;
+                        }
+                        else if (args[1].Equals("done", StringComparison.OrdinalIgnoreCase) && args.Length > 2)
+                        {
+                            // Expecting: "Focus task done '#'"
+                            if (int.TryParse(args[2], out int taskNumber))
+                            {
+                                taskManager.CompleteTask(taskNumber - 1);  // Convert to zero-based index
+                                Console.WriteLine($"Task #{taskNumber} completed successfully.");
+                                return;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Invalid task number format. Please provide a valid number.");
+                            }
+                            return;
+                        }
+                        else if (args[1].Equals("delete", StringComparison.OrdinalIgnoreCase) && args.Length > 2)
+                        {
+                            // Expecting: "Focus task delete '#'"
+                            if (int.TryParse(args[2], out int taskNumber))
+                            {
+                                taskManager.DeleteTask(taskNumber - 1);  // Convert to zero-based index
+                                Console.WriteLine($"Task #{taskNumber} deleted successfully.");
+                                return;
+                            }
+                            else
+                            {
+                                Console.WriteLine("Invalid task number format. Please provide a valid number.");
+                            }
+                            return;
+                        }
+                        else if (args[1].Equals("list", StringComparison.OrdinalIgnoreCase))
+                        {
+                            taskManager.ListTasks();
+                        }
+                        else
+                        {
+                            Console.WriteLine("Invalid task command. Use 'add', 'done', or 'list'.");
+                        }
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incomplete task command. Use 'add', 'done', or 'list'.");
+                        return;
+
+                    }
+                }
+
+
+                    if (args[0].Equals("export", StringComparison.OrdinalIgnoreCase) && args.Length > 2)
+                    {
                     string format = args[1].ToLower();
                     string filePath = args[2];
 
@@ -379,6 +446,12 @@ namespace FocusApp
             Console.WriteLine("help or ?             : Display this help screen");
             Console.WriteLine("list                  : List all tasks");
             Console.WriteLine("countup [task] [tag]  : Start a count-up timer. Press F10 to stop and log the task.");
+            Console.WriteLine("task                  : Add, complete, list, and delete tasks without starting timer.");
+            Console.WriteLine("  add [description] [tag] [project] [client]");
+            Console.WriteLine("                      : Add a new task.");
+            Console.WriteLine("  done [#]            : Complete the task with the given number.");
+            Console.WriteLine("  list                : List all tasks.(same as 'list' option.");
+            Console.WriteLine("  delete [#]          : Deletes the task item in list with the number given.");
             Console.WriteLine("-w [minutes]          : Set the work interval in minutes (default 25)");
             Console.WriteLine("-b [minutes]          : Set the break interval in minutes (default 5)");
             Console.WriteLine("-s [sessions]         : Set the number of work sessions before a long break (default 4)");
