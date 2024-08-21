@@ -1,0 +1,159 @@
+\chapter{Focus}
+\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e}{}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e}\index{Focus@{Focus}}
+\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_focus}%
+\Hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_focus}%
+
+
+A timer tool based on the work of \href{https://github.com/ayoisaiah}{\texttt{ Ayooluwa Isaiah}}
+
+The functionality of this tool is nearly identical to the work created in this repository\+: \href{https://github.com/ayoisaiah/focus}{\texttt{ Focus}}
+
+{\bfseries{This version (c)2024 Manoogian Media, Inc.}}\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_purpose}{}\doxysection{\texorpdfstring{Purpose}{Purpose}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_purpose}
+I created this version of the tool to have a C\# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called {\ttfamily tasks.\+txt}. The intention here is to keep the entire solution simple and easy to update and maintain.\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_installation}{}\doxysection{\texorpdfstring{Installation}{Installation}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_installation}
+This product only runs on Windows as a console/command line executable. It requires {\itshape no DLLs} and is completely self-\/contained in the \href{https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0}{\texttt{ Release version 1.\+0.\+0.\+0}} listed to the right.
+
+However! If you want to use the JSON export function, you will need the Newtonsoft.\+Json.\+dll file, as well. Without it, you can still use the product and also still be able to export to CSV and XML formats. You can find it online at \href{https://www.newtonsoft.com/json}{\texttt{ Newtonsoft.\+com}} or download it from the release repository here.
+
+Simply {\bfseries{download the executable and run it}}. {\itshape IT IS NOT SIGNED.}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_usage}{}\doxysection{\texorpdfstring{Usage}{Usage}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_usage}
+Using the tool is simple. Here are some examples\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Focus\ -\/w\ 20\ -\/b\ 5\ -\/s\ 4\ -\/-\/task\ "{}Work\ Entry"{}\ -\/-\/tag\ "{}Tag\ Entry"{}}
+\DoxyCodeLine{Focus\ stats\ -\/-\/start\ '2021-\/08-\/06'\ -\/-\/end\ '2021-\/08-\/07'}
+\DoxyCodeLine{Focus\ help}
+\DoxyCodeLine{Focus\ list}
+
+\end{DoxyCode}
+
+
+If you type "{}help"{} or "{}?"{} on the command line, you\textquotesingle{}ll see all of the command line options. If you only type FOCUS, it will bring up a menu version of the application.\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_menu-version}{}\doxysubsection{\texorpdfstring{Menu version\+:}{Menu version\+:}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_menu-version}
+\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_command-line-arguments}{}\doxysubsection{\texorpdfstring{Command line arguments\+:}{Command line arguments\+:}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_command-line-arguments}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{help\ or\ ?\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Display\ this\ help\ screen}
+\DoxyCodeLine{}
+\DoxyCodeLine{list\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ List\ all\ tasks}
+\DoxyCodeLine{}
+\DoxyCodeLine{countup\ [desc]\ [tag]\ \ :\ Start\ a\ timer\ that\ counts\ up,\ with\ support\ for\ pomodoro\ and\ sounds}
+\DoxyCodeLine{}
+\DoxyCodeLine{task\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Add,\ complete,\ list,\ and\ delete\ tasks\ without\ starting\ timer.}
+\DoxyCodeLine{\ \ add\ [description]\ [tag]\ [project]\ [client]}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Add\ a\ new\ task.}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ done\ [\#]\ \ \ \ \ \ \ \ \ \ \ \ :\ Complete\ the\ task\ with\ the\ given\ number.}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ list\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ List\ all\ tasks.(same\ as\ 'list'\ option.}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ delete\ [\#]\ \ \ \ \ \ \ \ \ \ :\ Deletes\ the\ task\ item\ from\ the\ task\ file\ list.}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/w\ [minutes]\ \ \ \ \ \ \ \ \ \ :\ Set\ the\ work\ interval\ in\ minutes\ (default\ 25)}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/b\ [minutes]\ \ \ \ \ \ \ \ \ \ :\ Set\ the\ break\ interval\ in\ minutes\ (default\ 5)}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/s\ [sessions]\ \ \ \ \ \ \ \ \ :\ Set\ the\ number\ of\ work\ sessions\ before\ a\ long\ break\ (default\ 4)}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/task\ [description]\ \ :\ Set\ the\ task\ description}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/tag\ [tag]\ \ \ \ \ \ \ \ \ \ \ :\ Set\ a\ tag\ for\ the\ task\ (optional)}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/-\/sound\ [option]\ \ \ \ \ \ :\ Set\ the\ ambient\ sound\ (1-\/8\ or\ OFF)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1:\ coffee\_shop,\ 2:\ rainforest,\ 3:\ wind}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4:\ rain,\ 5:\ summer\_night,\ 6:\ fireplace,\ 7:\ frogs,\ 8:\ bird\_rain}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{stats\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Display\ task\ statistics}
+\DoxyCodeLine{\ \ -\/-\/start\ [date]\ \ \ \ \ \ :\ Specify\ the\ start\ date\ for\ stats\ (format:\ yyyy-\/MM-\/dd)}
+\DoxyCodeLine{\ \ -\/-\/end\ [date]\ \ \ \ \ \ \ \ :\ Specify\ the\ end\ date\ for\ stats\ (format:\ yyyy-\/MM-\/dd)}
+\DoxyCodeLine{-\/p\ [today|all-\/time]\ \ \ :\ Show\ statistics\ for\ today\ or\ all\ time}
+\DoxyCodeLine{}
+\DoxyCodeLine{export\ [format]\ [path]:\ Export\ tasks\ in\ the\ specified\ format\ (csv,\ xml,\ json)\ to\ the\ given\ file\ path}
+\DoxyCodeLine{}
+\DoxyCodeLine{Examples:}
+\DoxyCodeLine{}
+\DoxyCodeLine{-\/\ Focus\ -\/w\ 20\ -\/b\ 5\ -\/s\ 4\ -\/-\/task\ "{}Work\ Entry"{}\ -\/-\/tag\ "{}Tag\ Entry"{}\ -\/-\/project\ "{}My\ Project"{}\ -\/-\/client\ "{}My\ Client"{}}
+\DoxyCodeLine{-\/\ Focus\ stats\ -\/-\/start\ '2021-\/08-\/06'\ -\/-\/end\ '2021-\/08-\/07'}
+\DoxyCodeLine{-\/\ Focus\ countup\ "{}My\ Task"{}\ "{}Work"{}\ "{}My\ Project"{}\ "{}My\ Client"{}}
+\DoxyCodeLine{-\/\ Focus\ export\ csv\ C:\(\backslash\)tasks.csv}
+\DoxyCodeLine{-\/\ Focus\ list}
+
+\end{DoxyCode}
+\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_command-line-usage}{}\doxysubsection{\texorpdfstring{Command Line Usage}{Command Line Usage}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_command-line-usage}
+When using {\ttfamily list} or {\ttfamily stats} you cannot use any of the other command line options. They will be ignored or an error will be thrown.
+\begin{DoxyItemize}
+\item {\ttfamily list} is exclusive to simply listing all of the entries in the tasks.\+txt file.
+\item {\ttfamily stats} is used with either a {\ttfamily -\/p} (time period) as words or with the {\ttfamily -\/-\/start} and {\ttfamily -\/-\/end} date filters. You can use the {\ttfamily -\/-\/start} date without specifying the end date.
+\item All other arguments can be used together (as in the first example above). This includes the {\ttfamily countup} argument to start at count-\/up timer instead of a countdown timer. Otherwise, {\itshape {\bfseries{Focus}}} defaults to countdown.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_details}{}\doxysection{\texorpdfstring{Details}{Details}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_details}
+This solution is a quick and simple way of watching the time you are working on a project. The intention of the application isn\textquotesingle{}t to try to be a substitute for more robust solutions like Toggl, but to be a simple version that is easy to use and manage.\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_stats}{}\doxysubsection{\texorpdfstring{Stats}{Stats}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_stats}
+The {\ttfamily stats} option is specific to the command line. You currently (v1.\+0.\+0.\+0) cannot see the statistics in the menu version of the application. Soon.
+
+However, the {\ttfamily list} option lets you see the full list of task entries and you can also use option 2 on the menu to see the same list in app mode.
+
+{\itshape {\bfseries{stats}}} offers some specific command line options, listed above, that let you specify start and end dates to view as well as just {\ttfamily today} or {\ttfamily all-\/time} stats. Those are based on {\ttfamily Completed} tasks.\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_items-that-dont-have-a-status-of-completed-do-not-show-up-on-the-stats-display-at-the-command-line}{}\doxysubsubsection{\texorpdfstring{Items that don\textquotesingle{}t have a status of "{}\+Completed"{} do not show up on the "{}stats"{} display at the command line.}{Items that don\textquotesingle{}t have a status of "{}\+Completed"{} do not show up on the "{}stats"{} display at the command line.}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_items-that-dont-have-a-status-of-completed-do-not-show-up-on-the-stats-display-at-the-command-line}
+\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_sounds}{}\doxysubsection{\texorpdfstring{Sounds}{Sounds}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_sounds}
+The sounds option on the command line, and when you elect to {\ttfamily start a timer} in the menu mode, lets you choose an ambient sound to play while you\textquotesingle{}re using the timer. As a note\+: it will stop during the breaks.
+
+There is a Work-\/stop sound and a Break-\/\+Stop sound, as well. These will play when your sections complete.
+
+Sounds vary from chirping birds to rain or fireplace noises. All sounds are gentle, mostly white-\/noise-\/style, sounds to help you {\itshape {\bfseries{Focus}}}. They will loop continually. They are part of the executable and don\textquotesingle{}t require any other files. Currently (v1.\+0.\+0.\+0) you cannot play external sounds.\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_tags-and-tasks}{}\doxysection{\texorpdfstring{Tags and Tasks}{Tags and Tasks}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_tags-and-tasks}
+
+\begin{DoxyItemize}
+\item {\ttfamily Tags} are just as you\textquotesingle{}d expect, they help you define customers, areas, or lists of similar things to help you sort through the projects. Currently, Focus doesn\textquotesingle{}t support filtering just lists of tags, but ... soon.
+\item {\ttfamily Tasks} are the full names of your entries. These help you determine exact project tasks that you worked on.
+\end{DoxyItemize}
+
+Time entries are added to the tasks when they are created, and the end times are specified on the menu mode of the application for completion of the tasks.\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_timers}{}\doxysection{\texorpdfstring{Timers}{Timers}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_timers}
+{\bfseries{Timers}} are made up of three components, based on using a Pomodoro Timer\+:
+\begin{DoxyItemize}
+\item {\ttfamily Work Minutes} -\/ how long your work time is.
+\item {\ttfamily Break minutes} -\/ how long your Pomodoro break is.
+\item {\ttfamily Sessions} -\/ How many Work and Break groupings before a long break (which is 3 times the Break minutes; a {\ttfamily Long Break}).
+\end{DoxyItemize}
+
+You specify the time and amount for each of these when starting the timer in the menu mode, or with the command line options above.
+
+Countdown versus Count-\/\+Up timers\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Countdown} -\/ uses the pomodoro interval, break minutes, and sessions to count time downward until it runs out. Does not complete entries.
+\item {\ttfamily Count-\/up} -\/ uses the pomodoro interval, break minutes, and sessions to count the time upward until the user hits F10 to stop the timer. When the user presses F10, the entry is marked {\ttfamily Completed}.
+\end{DoxyItemize}\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_export}{}\doxysection{\texorpdfstring{Export}{Export}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_export}
+Export of the data is available to simplify getting entries into another application which may support more robust reporting or billing management, spreadsheets, or databases.
+
+The following formats are available\+:
+\begin{DoxyItemize}
+\item {\ttfamily CSV} -\/ Standard Comma Separated Values format for import into tools such as a Spreadsheet or Database.
+\item {\ttfamily xml} -\/ XML formatted data for tools such as Microsoft Project or similar.
+\item {\ttfamily JSON} -\/ Similar to XML the JSON format is a robust text-\/based structured data storage format for use with spreadsheets, databases, or project management applications for reporting.
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+\hypertarget{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_the-taskstxt-file-format}{}\doxysection{\texorpdfstring{The TASKS.\+TXT file format}{The TASKS.\+TXT file format}}\label{md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_the-taskstxt-file-format}
+Fields in the file are separated by the {\ttfamily \texorpdfstring{$\vert$}{|}} (pipe) character.
+
+The format is as follows\+: {\ttfamily task\+\_\+name\texorpdfstring{$\vert$}{|}start\+\_\+time\texorpdfstring{$\vert$}{|}end\+\_\+time\texorpdfstring{$\vert$}{|}tags\texorpdfstring{$\vert$}{|}status\texorpdfstring{$\vert$}{|}project\texorpdfstring{$\vert$}{|}client}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily task\+\_\+name} Name of the task
+\item {\ttfamily start\+\_\+time} Full UTC time coding for date, time, and GMT offset for when the task was created (started)
+\item {\ttfamily end\+\_\+time} Full UTC time coding for date, time, and GMT offset for when the task was marked complete (completed)
+\item {\ttfamily tags} Any tags to help identify the item so that it can be grouped with similar items
+\item {\ttfamily status} One of three possible status notations\+: {\ttfamily Pending} (new or working item), {\ttfamily Completed} (completed work item), {\ttfamily Abandoned} (dead or deleted task item)
+\item {\ttfamily project} A project name associated with the task to help sort the data when used with reporting tools when the data is exported
+\item {\ttfamily client} The client name to help group data per project source
+\end{DoxyItemize}
+
+\DoxyHorRuler{0}
+
+
+  

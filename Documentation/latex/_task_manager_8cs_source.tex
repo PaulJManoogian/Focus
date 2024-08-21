@@ -1,0 +1,295 @@
+\doxysection{Task\+Manager.\+cs}
+\hypertarget{_task_manager_8cs_source}{}\label{_task_manager_8cs_source}\index{C:/Users/paulj/source/repos/Focus/TaskManager.cs@{C:/Users/paulj/source/repos/Focus/TaskManager.cs}}
+\mbox{\hyperlink{_task_manager_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00001}00001\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00002}00002\ \textcolor{comment}{//\ Application:\ Focus}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00003}00003\ \textcolor{comment}{//\ Description:\ A\ Pomodoro\ Timer\ application\ based\ on\ the\ work\ of\ Ayooluwa\ Isaiah}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00004}00004\ \textcolor{comment}{//\ Created\ By\ :\ Paul\ J\ Manoogian,\ Manoogian\ Media,\ Inc.}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00005}00005\ \textcolor{comment}{//\ Created\ \ \ \ :\ 2024-\/Aug-\/13}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00006}00006\ \textcolor{comment}{//\ Modified\ \ \ :\ 2024-\/Aug-\/18}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00007}00007\ \textcolor{comment}{//\ Language\ \ \ :\ C\#}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00008}00008\ \textcolor{comment}{//\ File\ \ \ \ \ \ \ :\ TaskManager.cs}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00009}00009\ \textcolor{comment}{//\ Notes\ \ \ \ \ \ :\ Data\ file\ details\ management\ of\ time,\ date,\ desc,\ and\ status}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00010}00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00014}00014\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00015}00015\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00016}00016\ \textcolor{keyword}{using\ }System.IO;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00017}00017\ \textcolor{keyword}{using\ }System.Xml.Serialization;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00018}00018\ \textcolor{keyword}{using\ }Newtonsoft.Json;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00019}00019\ \textcolor{keyword}{using\ }System.Web;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00020}00020\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00035}00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_focus_app}{FocusApp}}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00037}\mbox{\hyperlink{class_focus_app_1_1_task_manager}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_focus_app_1_1_task_manager}{TaskManager}}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00038}00038\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<TaskRecord>\ tasks\ =\ \textcolor{keyword}{new}\ List<TaskRecord>();}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00041}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d72c9b6b9cfaf53bdbb6e58013bd24c}{00041}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<TaskRecord>\ Tasks}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ tasks;\ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00057}\mbox{\hyperlink{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}{00057}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}{AddTask}}(\textcolor{keywordtype}{string}\ description,\ \textcolor{keywordtype}{string}\ tag\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{string}\ project\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{string}\ client\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ var\ task\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_focus_app_1_1_task_record}{TaskRecord}}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ description,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartDate\ =\ DateTime.Now,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EndDate\ =\ DateTime.MinValue,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tag\ =\ tag,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ \textcolor{stringliteral}{"{}Pending"{}},}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Project\ =\ project,\ \ \textcolor{comment}{//\ Set\ the\ Project}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Client\ =\ client\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ Client}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ tasks.Add(task);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00087}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a39677f6aafa80fbbc49f23d984e3cc2c}{00087}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a39677f6aafa80fbbc49f23d984e3cc2c}{AddTaskWithTime}}(\textcolor{keywordtype}{string}\ description,\ \textcolor{keywordtype}{string}\ tag,\ DateTime\ startTime,\ DateTime\ endTime,\ \textcolor{keywordtype}{string}\ project\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{string}\ client\ =\ \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ var\ task\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_focus_app_1_1_task_record}{TaskRecord}}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ description,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartDate\ =\ startTime,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EndDate\ =\ endTime,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tag\ =\ tag,}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ \textcolor{stringliteral}{"{}Completed"{}},}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Project\ =\ project,\ \ \textcolor{comment}{//\ Set\ the\ Project}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Client\ =\ client\ \ \ \ \ \textcolor{comment}{//\ Set\ the\ Client}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ tasks.Add(task);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00112}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}{00112}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}{CompleteTask}}(\textcolor{keywordtype}{int}\ taskIndex)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (taskIndex\ >=\ 0\ \&\&\ taskIndex\ <\ tasks.Count)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks[taskIndex].EndDate\ =\ DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks[taskIndex].Status\ =\ \textcolor{stringliteral}{"{}Completed"{}};}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00130}\mbox{\hyperlink{class_focus_app_1_1_task_manager_ac248b348e3201542eda9870a3022de06}{00130}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_ac248b348e3201542eda9870a3022de06}{AbandonTask}}(\textcolor{keywordtype}{int}\ taskIndex)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (taskIndex\ >=\ 0\ \&\&\ taskIndex\ <\ tasks.Count)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks[taskIndex].EndDate\ =\ DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks[taskIndex].Status\ =\ \textcolor{stringliteral}{"{}Abandoned"{}};}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00147}\mbox{\hyperlink{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd}{00147}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd}{DeleteTask}}(\textcolor{keywordtype}{int}\ taskIndex)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (taskIndex\ >=\ 0\ \&\&\ taskIndex\ <\ tasks.Count)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks.RemoveAt(taskIndex);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00163}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}{00163}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}{ListTasks}}()}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}|\ \#\ \ \ |\ TASK\ NAME\ \ \ \ \ \ \ \ \ \ \ \ |\ START\ DATE\ \ \ \ \ \ \ \ \ \ \ \ |\ END\ DATE\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\ TAGGED\ \ \ \ \ \ \ |\ STATUS\ \ \ \ \ |\ PROJECT\ \ \ \ \ \ |\ CLIENT\ \ \ \ \ \ \ |\ TIME\ SPENT\ \ \ |"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ tasks.Count;\ i++)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ task\ =\ tasks[i];}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ taskcounter\ =\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ taskName\ =\ task.Description.PadRight(20);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ startDate\ =\ task.StartDate.ToString(\textcolor{stringliteral}{"{}MMM\ dd,\ yyyy\ hh:mm\ tt"{}}).PadRight(20);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ endDate\ =\ task.EndDate\ ==\ DateTime.MinValue\ ?\ \textcolor{stringliteral}{"{}N/A"{}}.PadRight(20)\ :\ task.EndDate.ToString(\textcolor{stringliteral}{"{}MMM\ dd,\ yyyy\ hh:mm\ tt"{}}).PadRight(20);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ tagged\ =\ \textcolor{keywordtype}{string}.IsNullOrEmpty(task.Tag)\ ?\ \textcolor{stringliteral}{"{}"{}}.PadRight(12)\ :\ task.Tag.PadRight(12);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ status\ =\ task.Status.PadRight(10);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ project\ =\ task.Project.PadRight(12);\ \ \textcolor{comment}{//\ Display\ the\ Project}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ client\ =\ task.Client.PadRight(12);\ \ \ \ \textcolor{comment}{//\ Display\ the\ Client}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calculate\ the\ time\ spent\ if\ the\ task\ is\ completed}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ timeSpent\ =\ task.EndDate\ ==\ DateTime.MinValue}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ?\ \textcolor{stringliteral}{"{}N/A"{}}.PadRight(12)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ (task.EndDate\ -\/\ task.StartDate).ToString(\textcolor{stringliteral}{@"{}hh\(\backslash\):mm\(\backslash\):ss"{}}).PadRight(12);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}|\ \{taskcounter.ToString().PadRight(3)\}\ |\ \{taskName\}\ |\ \{startDate\}\ |\ \{endDate\}\ |\ \{tagged\}\ |\ \{status\}\ |\ \{project\}\ |\ \{client\}\ |\ \{timeSpent\}\ |"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00202}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a648864648a2a0898fa2eed67ee8f5022}{00202}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<TaskRecord>\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a648864648a2a0898fa2eed67ee8f5022}{GetTasksCompletedToday}}()}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ DateTime\ today\ =\ DateTime.Today;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tasks.FindAll(task\ =>\ task.Status\ ==\ \textcolor{stringliteral}{"{}Completed"{}}\ \&\&\ task.EndDate.Date\ ==\ today);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00216}\mbox{\hyperlink{class_focus_app_1_1_task_manager_af1f385f2a385f80468eb805aeca15e8a}{00216}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<TaskRecord>\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_af1f385f2a385f80468eb805aeca15e8a}{GetTasksCompletedAllTime}}()}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tasks.FindAll(task\ =>\ task.Status\ ==\ \textcolor{stringliteral}{"{}Completed"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00229}\mbox{\hyperlink{class_focus_app_1_1_task_manager_aa91eea5b4b68954258a8d95cc7ef97de}{00229}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ List<TaskRecord>\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_aa91eea5b4b68954258a8d95cc7ef97de}{GetTasksByDateRange}}(DateTime\ startDate,\ DateTime?\ endDate\ =\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (endDate\ ==\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ endDate\ =\ DateTime.MaxValue;}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00235}00235\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tasks.FindAll(task\ =>\ task.StartDate\ >=\ startDate\ \&\&\ task.StartDate\ <=\ endDate);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00238}00238\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00248}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{00248}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{keywordtype}{string}\ filePath)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (StreamWriter\ writer\ =\ \textcolor{keyword}{new}\ StreamWriter(filePath))}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ task\ \textcolor{keywordflow}{in}\ tasks)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line\ =\ \$\textcolor{stringliteral}{"{}\{task.Description\}|\{task.StartDate:O\}|\{task.EndDate:O\}|\{task.Tag\}|\{task.Status\}|\{task.Project\}|\{task.Client\}"{}};}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ writer.WriteLine(line);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00269}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a945e5275cbe6baa72092811124ebd22b}{00269}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a945e5275cbe6baa72092811124ebd22b}{LoadTasks}}(\textcolor{keywordtype}{string}\ filePath)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00270}00270\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (File.Exists(filePath))}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks.Clear();}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ lines\ =\ File.ReadAllLines(filePath);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ line\ \textcolor{keywordflow}{in}\ lines)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ parts\ =\ line.Split(\textcolor{charliteral}{'|'});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (parts.Length\ ==\ 7)\ \ \textcolor{comment}{//\ Updated\ to\ expect\ 7\ parts}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tasks.Add(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_focus_app_1_1_task_record}{TaskRecord}}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Description\ =\ parts[0],}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StartDate\ =\ DateTime.Parse(parts[1]),}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EndDate\ =\ DateTime.Parse(parts[2]),}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Tag\ =\ parts[3],}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Status\ =\ parts[4],}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Project\ =\ parts[5],\ \ \textcolor{comment}{//\ Load\ the\ Project}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Client\ =\ parts[6]\ \ \ \ \textcolor{comment}{//\ Load\ the\ Client}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00291}00291\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00296}00296\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00303}00303\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00304}\mbox{\hyperlink{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d}{00304}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d}{ExportTasksToCsv}}(\textcolor{keywordtype}{string}\ filePath)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (StreamWriter\ writer\ =\ \textcolor{keyword}{new}\ StreamWriter(filePath))}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ writer.WriteLine(\textcolor{stringliteral}{"{}Description,StartDate,EndDate,Tag,Status,Project,Client"{}});}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ task\ \textcolor{keywordflow}{in}\ tasks)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00311}00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line\ =\ \$\textcolor{stringliteral}{"{}\{task.Description\},\{task.StartDate:O\},\{task.EndDate:O\},\{task.Tag\},\{task.Status\},\{task.Project\},\{task.Client\}"{}};}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ writer.WriteLine(line);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00316}00316\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00324}00324\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00326}\mbox{\hyperlink{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a}{00326}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a}{ExportTasksToXml}}(\textcolor{keywordtype}{string}\ filePath)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ XmlSerializer\ serializer\ =\ \textcolor{keyword}{new}\ XmlSerializer(typeof(List<TaskRecord>));}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{using}\ (StreamWriter\ writer\ =\ \textcolor{keyword}{new}\ StreamWriter(filePath))}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ serializer.Serialize(writer,\ tasks);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00333}00333\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/21/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00341}00341\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/21/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00342}00342\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00343}\mbox{\hyperlink{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe}{00343}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe}{ExportTasksToJson}}(\textcolor{keywordtype}{string}\ filePath)}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ json\ =\ JsonConvert.SerializeObject(tasks,\ Formatting.Indented);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ File.WriteAllText(filePath,\ json);}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00347}00347\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00348}00348\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00349}00349\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00350}00350\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00351}00351\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00352}\mbox{\hyperlink{class_focus_app_1_1_task_record}{00352}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_focus_app_1_1_task_record}{TaskRecord}}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00353}00353\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00354}\mbox{\hyperlink{class_focus_app_1_1_task_record_ab0b7e977985d1853db4893807a84321c}{00354}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_focus_app_1_1_task_record_ab0b7e977985d1853db4893807a84321c}{Description}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00355}\mbox{\hyperlink{class_focus_app_1_1_task_record_aee8991d0068eb40009e5317d3441963e}{00355}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DateTime\ \mbox{\hyperlink{class_focus_app_1_1_task_record_aee8991d0068eb40009e5317d3441963e}{StartDate}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00356}\mbox{\hyperlink{class_focus_app_1_1_task_record_a5f2fcfe4324cc86606abbc2046146bb8}{00356}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ DateTime\ \mbox{\hyperlink{class_focus_app_1_1_task_record_a5f2fcfe4324cc86606abbc2046146bb8}{EndDate}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00357}\mbox{\hyperlink{class_focus_app_1_1_task_record_a5b2e8c3e9272179aec636f3b2c6ff91b}{00357}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_focus_app_1_1_task_record_a5b2e8c3e9272179aec636f3b2c6ff91b}{Tag}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00358}\mbox{\hyperlink{class_focus_app_1_1_task_record_a6aaf78e7fdcea1bf650db6fa08c38dc2}{00358}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_focus_app_1_1_task_record_a6aaf78e7fdcea1bf650db6fa08c38dc2}{Status}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00359}\mbox{\hyperlink{class_focus_app_1_1_task_record_afd92b43ef493520dc68e91605cf4ae7b}{00359}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_focus_app_1_1_task_record_afd92b43ef493520dc68e91605cf4ae7b}{Project}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \ \textcolor{comment}{//\ New\ property\ for\ Project}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00360}\mbox{\hyperlink{class_focus_app_1_1_task_record_aae3146f9a0a165b38553128e7ca820e7}{00360}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_focus_app_1_1_task_record_aae3146f9a0a165b38553128e7ca820e7}{Client}}\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ \ \ \textcolor{comment}{//\ New\ property\ for\ Client}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00361}00361\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00362}00362\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00363}00363\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00364}00364\ }
+\DoxyCodeLine{\Hypertarget{_task_manager_8cs_source_l00365}00365\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,337 @@
+\doxysection{Focus\+App.\+Task\+Manager Class Reference}
+\hypertarget{class_focus_app_1_1_task_manager}{}\label{class_focus_app_1_1_task_manager}\index{FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}{Add\+Task}} (string description, string tag="{}"{}, string project="{}"{}, string client="{}"{})
+\begin{DoxyCompactList}\small\item\em Add\+Task creates a task with just project information and sets it to Pending. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_a39677f6aafa80fbbc49f23d984e3cc2c}{Add\+Task\+With\+Time}} (string description, string tag, Date\+Time start\+Time, Date\+Time end\+Time, string project="{}"{}, string client="{}"{})
+\begin{DoxyCompactList}\small\item\em Add\+Task\+With\+Time creates a task in the tasks file without starting a timer. but does add a time start entry. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}{Complete\+Task}} (int task\+Index)
+\begin{DoxyCompactList}\small\item\em Complete\+Task\+: Mark the task Completed as indicated by the index number of the task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_ac248b348e3201542eda9870a3022de06}{Abandon\+Task}} (int task\+Index)
+\begin{DoxyCompactList}\small\item\em Abandon\+Task\+: Mark the task Abandoned as indicated by the index number of the task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd}{Delete\+Task}} (int task\+Index)
+\begin{DoxyCompactList}\small\item\em Delete\+Task\+: Remove the task (delete it) as indicated by the index number of the task. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}{List\+Tasks}} ()
+\begin{DoxyCompactList}\small\item\em List\+Tasks\+: Displays (in a chart) the tasks in the task file in the order they were added. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a648864648a2a0898fa2eed67ee8f5022}{Get\+Tasks\+Completed\+Today}} ()
+\begin{DoxyCompactList}\small\item\em Completed\+Today For the -\/p parameter, list the task record completed with today\textquotesingle{}s date. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ \mbox{\hyperlink{class_focus_app_1_1_task_manager_af1f385f2a385f80468eb805aeca15e8a}{Get\+Tasks\+Completed\+All\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Complated\+All\+Time For the -\/p parameter, list all of the completed task records. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ \mbox{\hyperlink{class_focus_app_1_1_task_manager_aa91eea5b4b68954258a8d95cc7ef97de}{Get\+Tasks\+By\+Date\+Range}} (Date\+Time start\+Date, Date\+Time? end\+Date=null)
+\begin{DoxyCompactList}\small\item\em Date\+Range For the --start and --end parameters, list all of the completed task records. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{Save\+Tasks}} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Saves the task file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_a945e5275cbe6baa72092811124ebd22b}{Load\+Tasks}} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Loads the tasks file from the full file path. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d}{Export\+Tasks\+To\+Csv}} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Exports the full task list data to a CSV format fie based on the file path name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a}{Export\+Tasks\+To\+Xml}} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Exports the full task list data to a XML format fie based on the file path name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe}{Export\+Tasks\+To\+Json}} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Exports the full task list data serialized to a JSON format fie based on the file path name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ \mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d72c9b6b9cfaf53bdbb6e58013bd24c}{Tasks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_focus_app_1_1_task_manager_ac248b348e3201542eda9870a3022de06}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!AbandonTask@{AbandonTask}}
+\index{AbandonTask@{AbandonTask}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{AbandonTask()}{AbandonTask()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_ac248b348e3201542eda9870a3022de06} 
+void Focus\+App.\+Task\+Manager.\+Abandon\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Abandon\+Task\+: Mark the task Abandoned as indicated by the index number of the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+Index} & \+: Index number of the item in the task list\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00130}{130}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!AddTask@{AddTask}}
+\index{AddTask@{AddTask}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{AddTask()}{AddTask()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb} 
+void Focus\+App.\+Task\+Manager.\+Add\+Task (\begin{DoxyParamCaption}\item[{string}]{description}{, }\item[{string}]{tag}{ = {\ttfamily "{}"{}}, }\item[{string}]{project}{ = {\ttfamily "{}"{}}, }\item[{string}]{client}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Add\+Task creates a task with just project information and sets it to Pending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & \+: Describes the task item\\
+\hline
+{\em tag} & \+: A searchable tag for grouping elements\\
+\hline
+{\em project} & \+: The Project name to associate the task\\
+\hline
+{\em client} & \+: The client name or code to group the tasks\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_a39677f6aafa80fbbc49f23d984e3cc2c}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!AddTaskWithTime@{AddTaskWithTime}}
+\index{AddTaskWithTime@{AddTaskWithTime}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{AddTaskWithTime()}{AddTaskWithTime()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a39677f6aafa80fbbc49f23d984e3cc2c} 
+void Focus\+App.\+Task\+Manager.\+Add\+Task\+With\+Time (\begin{DoxyParamCaption}\item[{string}]{description}{, }\item[{string}]{tag}{, }\item[{Date\+Time}]{start\+Time}{, }\item[{Date\+Time}]{end\+Time}{, }\item[{string}]{project}{ = {\ttfamily "{}"{}}, }\item[{string}]{client}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Add\+Task\+With\+Time creates a task in the tasks file without starting a timer. but does add a time start entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em description} & \+: Describes the task item\\
+\hline
+{\em tag} & \+: A searchable tag for grouping elements\\
+\hline
+{\em start\+Time} & \+: The starting time (automatically entered)\\
+\hline
+{\em end\+Time} & \+: The end time (current end time and \textquotesingle{}Completed\textquotesingle{})\\
+\hline
+{\em project} & \+: The Project name to associate the task\\
+\hline
+{\em client} & \+: The client name or code to group the tasks\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00087}{87}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!CompleteTask@{CompleteTask}}
+\index{CompleteTask@{CompleteTask}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{CompleteTask()}{CompleteTask()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf} 
+void Focus\+App.\+Task\+Manager.\+Complete\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Complete\+Task\+: Mark the task Completed as indicated by the index number of the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+Index} & \+: Index number of the item in the task list\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00112}{112}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!DeleteTask@{DeleteTask}}
+\index{DeleteTask@{DeleteTask}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{DeleteTask()}{DeleteTask()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd} 
+void Focus\+App.\+Task\+Manager.\+Delete\+Task (\begin{DoxyParamCaption}\item[{int}]{task\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Delete\+Task\+: Remove the task (delete it) as indicated by the index number of the task. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+Index} & \+: Index number of the item in the task list\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00147}{147}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ExportTasksToCsv@{ExportTasksToCsv}}
+\index{ExportTasksToCsv@{ExportTasksToCsv}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{ExportTasksToCsv()}{ExportTasksToCsv()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d} 
+void Focus\+App.\+Task\+Manager.\+Export\+Tasks\+To\+Csv (\begin{DoxyParamCaption}\item[{string}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Exports the full task list data to a CSV format fie based on the file path name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \+: Full file name and path for the CSV export\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00304}{304}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ExportTasksToJson@{ExportTasksToJson}}
+\index{ExportTasksToJson@{ExportTasksToJson}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{ExportTasksToJson()}{ExportTasksToJson()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe} 
+void Focus\+App.\+Task\+Manager.\+Export\+Tasks\+To\+Json (\begin{DoxyParamCaption}\item[{string}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Exports the full task list data serialized to a JSON format fie based on the file path name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \+: Full file name and path for the JSON export\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00343}{343}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ExportTasksToXml@{ExportTasksToXml}}
+\index{ExportTasksToXml@{ExportTasksToXml}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{ExportTasksToXml()}{ExportTasksToXml()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a} 
+void Focus\+App.\+Task\+Manager.\+Export\+Tasks\+To\+Xml (\begin{DoxyParamCaption}\item[{string}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Exports the full task list data to a XML format fie based on the file path name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \+: Full file name and path for the XML export\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00326}{326}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_aa91eea5b4b68954258a8d95cc7ef97de}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!GetTasksByDateRange@{GetTasksByDateRange}}
+\index{GetTasksByDateRange@{GetTasksByDateRange}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetTasksByDateRange()}{GetTasksByDateRange()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_aa91eea5b4b68954258a8d95cc7ef97de} 
+List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ Focus\+App.\+Task\+Manager.\+Get\+Tasks\+By\+Date\+Range (\begin{DoxyParamCaption}\item[{Date\+Time}]{start\+Date}{, }\item[{Date\+Time?}]{end\+Date}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Date\+Range For the --start and --end parameters, list all of the completed task records. 
+
+\begin{DoxyReturn}{Returns}
+Returns all tasks completed within the date range
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00229}{229}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_af1f385f2a385f80468eb805aeca15e8a}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!GetTasksCompletedAllTime@{GetTasksCompletedAllTime}}
+\index{GetTasksCompletedAllTime@{GetTasksCompletedAllTime}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetTasksCompletedAllTime()}{GetTasksCompletedAllTime()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_af1f385f2a385f80468eb805aeca15e8a} 
+List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ Focus\+App.\+Task\+Manager.\+Get\+Tasks\+Completed\+All\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Complated\+All\+Time For the -\/p parameter, list all of the completed task records. 
+
+\begin{DoxyReturn}{Returns}
+Returns all tasks completed
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00216}{216}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_a648864648a2a0898fa2eed67ee8f5022}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!GetTasksCompletedToday@{GetTasksCompletedToday}}
+\index{GetTasksCompletedToday@{GetTasksCompletedToday}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{GetTasksCompletedToday()}{GetTasksCompletedToday()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a648864648a2a0898fa2eed67ee8f5022} 
+List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ Focus\+App.\+Task\+Manager.\+Get\+Tasks\+Completed\+Today (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Completed\+Today For the -\/p parameter, list the task record completed with today\textquotesingle{}s date. 
+
+\begin{DoxyReturn}{Returns}
+Returns all tasks completed that have today\textquotesingle{}s date
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00202}{202}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ListTasks@{ListTasks}}
+\index{ListTasks@{ListTasks}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{ListTasks()}{ListTasks()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d} 
+void Focus\+App.\+Task\+Manager.\+List\+Tasks (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+List\+Tasks\+: Displays (in a chart) the tasks in the task file in the order they were added. 
+
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00163}{163}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_a945e5275cbe6baa72092811124ebd22b}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!LoadTasks@{LoadTasks}}
+\index{LoadTasks@{LoadTasks}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{LoadTasks()}{LoadTasks()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a945e5275cbe6baa72092811124ebd22b} 
+void Focus\+App.\+Task\+Manager.\+Load\+Tasks (\begin{DoxyParamCaption}\item[{string}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Loads the tasks file from the full file path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \+: The full file path and file name of the tasks file\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00269}{269}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+\Hypertarget{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!SaveTasks@{SaveTasks}}
+\index{SaveTasks@{SaveTasks}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{SaveTasks()}{SaveTasks()}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf} 
+void Focus\+App.\+Task\+Manager.\+Save\+Tasks (\begin{DoxyParamCaption}\item[{string}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Saves the task file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & \+: The full file path and file name of the tasks file\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00248}{248}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_focus_app_1_1_task_manager_a3d72c9b6b9cfaf53bdbb6e58013bd24c}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!Tasks@{Tasks}}
+\index{Tasks@{Tasks}!FocusApp.TaskManager@{FocusApp.TaskManager}}
+\doxysubsubsection{\texorpdfstring{Tasks}{Tasks}}
+{\footnotesize\ttfamily \label{class_focus_app_1_1_task_manager_a3d72c9b6b9cfaf53bdbb6e58013bd24c} 
+List$<$\mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}}$>$ Focus\+App.\+Task\+Manager.\+Tasks\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/paulj/source/repos/\+Focus/\mbox{\hyperlink{_task_manager_8cs}{Task\+Manager.\+cs}}\end{DoxyCompactItemize}

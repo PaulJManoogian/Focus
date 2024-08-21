@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_focus_app_1_1_task_record" kind="class" language="C#" prot="public">
+    <compoundname>FocusApp::TaskRecord</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_focus_app_1_1_task_record_1ab0b7e977985d1853db4893807a84321c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string FocusApp.TaskRecord.Description</definition>
+        <argsstring></argsstring>
+        <name>Description</name>
+        <qualifiedname>FocusApp.TaskRecord.Description</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="354" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="354" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_task_record_1aee8991d0068eb40009e5317d3441963e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime FocusApp.TaskRecord.StartDate</definition>
+        <argsstring></argsstring>
+        <name>StartDate</name>
+        <qualifiedname>FocusApp.TaskRecord.StartDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="355" column="25" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="355" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_task_record_1a5f2fcfe4324cc86606abbc2046146bb8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime FocusApp.TaskRecord.EndDate</definition>
+        <argsstring></argsstring>
+        <name>EndDate</name>
+        <qualifiedname>FocusApp.TaskRecord.EndDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="356" column="25" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="356" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_task_record_1a5b2e8c3e9272179aec636f3b2c6ff91b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string FocusApp.TaskRecord.Tag</definition>
+        <argsstring></argsstring>
+        <name>Tag</name>
+        <qualifiedname>FocusApp.TaskRecord.Tag</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="357" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="357" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_task_record_1a6aaf78e7fdcea1bf650db6fa08c38dc2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string FocusApp.TaskRecord.Status</definition>
+        <argsstring></argsstring>
+        <name>Status</name>
+        <qualifiedname>FocusApp.TaskRecord.Status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="358" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="358" bodyend="358"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_task_record_1afd92b43ef493520dc68e91605cf4ae7b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string FocusApp.TaskRecord.Project</definition>
+        <argsstring></argsstring>
+        <name>Project</name>
+        <qualifiedname>FocusApp.TaskRecord.Project</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="359" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="359" bodyend="359"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_task_record_1aae3146f9a0a165b38553128e7ca820e7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string FocusApp.TaskRecord.Client</definition>
+        <argsstring></argsstring>
+        <name>Client</name>
+        <qualifiedname>FocusApp.TaskRecord.Client</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="360" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="360" bodyend="360"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="352" column="7" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="353" bodyend="361"/>
+    <listofallmembers>
+      <member refid="class_focus_app_1_1_task_record_1aae3146f9a0a165b38553128e7ca820e7" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>Client</name></member>
+      <member refid="class_focus_app_1_1_task_record_1ab0b7e977985d1853db4893807a84321c" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>Description</name></member>
+      <member refid="class_focus_app_1_1_task_record_1a5f2fcfe4324cc86606abbc2046146bb8" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>EndDate</name></member>
+      <member refid="class_focus_app_1_1_task_record_1afd92b43ef493520dc68e91605cf4ae7b" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>Project</name></member>
+      <member refid="class_focus_app_1_1_task_record_1aee8991d0068eb40009e5317d3441963e" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>StartDate</name></member>
+      <member refid="class_focus_app_1_1_task_record_1a6aaf78e7fdcea1bf650db6fa08c38dc2" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>Status</name></member>
+      <member refid="class_focus_app_1_1_task_record_1a5b2e8c3e9272179aec636f3b2c6ff91b" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>Tag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

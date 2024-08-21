@@ -19,6 +19,19 @@ using Newtonsoft.Json;
 using System.Web;
 using System.Threading.Tasks;
 
+
+/*! 
+ *  \brief     Task Manager Class.
+ *  \details   Task Manager Class: This class is used to manage all timer functions.
+ *  \author    Paul J Manoogian
+ *  \author    Manoogian Media, Inc.
+ *  \version   v1.0.0.0
+ *  \date      2024-Aug-21
+ *  \pre       First initialize the system.
+ *  \bug       TaskManager: None
+ *  \warning   Improper use of JSON without the Newtonsoft DLL will crash the application.
+ *  \copyright (c) 2024 Manoogian Media, Inc.
+ */
 namespace FocusApp
 {
     public class TaskManager
@@ -30,6 +43,17 @@ namespace FocusApp
             get { return tasks; }
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// AddTask creates a task with just project information and sets it to Pending.
+        /// </summary>
+        /// <param name="description"> : Describes the task item</param>
+        /// <param name="tag"> : A searchable tag for grouping elements</param>
+        /// <param name="project"> : The Project name to associate the task</param>
+        /// <param name="client"> : The client name or code to group the tasks</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void AddTask(string description, string tag = "", string project = "", string client = "")
         {
             var task = new TaskRecord
@@ -46,6 +70,20 @@ namespace FocusApp
             SaveTasks("tasks.txt");
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// AddTaskWithTime creates a task in the tasks file without starting a timer.
+        /// but does add a time start entry.
+        /// </summary>
+        /// <param name="description"> : Describes the task item</param>
+        /// <param name="tag"> : A searchable tag for grouping elements</param>
+        /// <param name="startTime"> : The starting time (automatically entered)</param>
+        /// <param name="endTime"> : The end time (current end time and 'Completed')</param>
+        /// <param name="project"> : The Project name to associate the task</param>
+        /// <param name="client"> : The client name or code to group the tasks</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void AddTaskWithTime(string description, string tag, DateTime startTime, DateTime endTime, string project = "", string client = "")
         {
             var task = new TaskRecord
@@ -62,6 +100,15 @@ namespace FocusApp
             SaveTasks("tasks.txt");
         }
 
+
+        // ********************************************************************************
+        /// <summary>
+        /// CompleteTask: Mark the task Completed as indicated by the index number of the task
+        /// </summary>
+        /// <param name="taskIndex"> : Index number of the item in the task list</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void CompleteTask(int taskIndex)
         {
             if (taskIndex >= 0 && taskIndex < tasks.Count)
@@ -72,7 +119,14 @@ namespace FocusApp
             SaveTasks("tasks.txt");
         }
 
-
+        // ********************************************************************************
+        /// <summary>
+        /// AbandonTask: Mark the task Abandoned as indicated by the index number of the task
+        /// </summary>
+        /// <param name="taskIndex"> : Index number of the item in the task list</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void AbandonTask(int taskIndex)
         {
             if (taskIndex >= 0 && taskIndex < tasks.Count)
@@ -82,6 +136,14 @@ namespace FocusApp
             }
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// DeleteTask: Remove the task (delete it) as indicated by the index number of the task
+        /// </summary>
+        /// <param name="taskIndex"> : Index number of the item in the task list</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void DeleteTask(int taskIndex)
         {
             if (taskIndex >= 0 && taskIndex < tasks.Count)
@@ -91,6 +153,13 @@ namespace FocusApp
             SaveTasks("tasks.txt");
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// ListTasks: Displays (in a chart) the tasks in the task file in the order they were added
+        /// </summary>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void ListTasks()
         {
             Console.WriteLine("┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐");
@@ -122,17 +191,41 @@ namespace FocusApp
             Console.WriteLine("└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘");
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// CompletedToday For the -p parameter, list the task record completed with today's date
+        /// </summary>
+        /// <returns>Returns all tasks completed that have today's date</returns>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public List<TaskRecord> GetTasksCompletedToday()
         {
             DateTime today = DateTime.Today;
             return tasks.FindAll(task => task.Status == "Completed" && task.EndDate.Date == today);
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// ComplatedAllTime For the -p parameter, list all of the completed task records
+        /// </summary>
+        /// <returns>Returns all tasks completed</returns>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public List<TaskRecord> GetTasksCompletedAllTime()
         {
             return tasks.FindAll(task => task.Status == "Completed");
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// DateRange For the --start and --end parameters, list all of the completed task records
+        /// </summary>
+        /// <returns>Returns all tasks completed within the date range</returns>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public List<TaskRecord> GetTasksByDateRange(DateTime startDate, DateTime? endDate = null)
         {
             if (endDate == null)
@@ -144,6 +237,14 @@ namespace FocusApp
         }
 
 
+        // ********************************************************************************
+        /// <summary>
+        /// Saves the task file
+        /// </summary>
+        /// <param name="filePath"> : The full file path and file name of the tasks file</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void SaveTasks(string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
@@ -157,6 +258,14 @@ namespace FocusApp
         }
 
 
+        // ********************************************************************************
+        /// <summary>
+        /// Loads the tasks file from the full file path
+        /// </summary>
+        /// <param name="filePath">: The full file path and file name of the tasks file</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void LoadTasks(string filePath)
         {
             if (File.Exists(filePath))
@@ -184,6 +293,14 @@ namespace FocusApp
         }
 
 
+        // ********************************************************************************
+        /// <summary>
+        /// Exports the full task list data to a CSV format fie based on the file path name
+        /// </summary>
+        /// <param name="filePath"> : Full file name and path for the CSV export</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void ExportTasksToCsv(string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
@@ -198,6 +315,14 @@ namespace FocusApp
         }
 
 
+        // ********************************************************************************
+        /// <summary>
+        /// Exports the full task list data to a XML format fie based on the file path name
+        /// </summary>
+        /// <param name="filePath"> : Full file name and path for the XML export</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void ExportTasksToXml(string filePath)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(List<TaskRecord>));
@@ -207,6 +332,14 @@ namespace FocusApp
                 }
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// Exports the full task list data serialized to a JSON format fie based on the file path name
+        /// </summary>
+        /// <param name="filePath"> : Full file name and path for the JSON export</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void ExportTasksToJson(string filePath)
         {
             string json = JsonConvert.SerializeObject(tasks, Formatting.Indented);

@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e" kind="page">
+    <compoundname>md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e</compoundname>
+    <title>Focus</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1focus"/></para>
+<para>A timer tool based on the work of <ulink url="https://github.com/ayoisaiah">Ayooluwa Isaiah</ulink></para>
+<para>The functionality of this tool is nearly identical to the work created in this repository: <ulink url="https://github.com/ayoisaiah/focus">Focus</ulink></para>
+<para><bold>This version (c)2024 Manoogian Media, Inc.</bold></para>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1purpose">
+<title>Purpose</title><para>I created this version of the tool to have a C# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called <computeroutput>tasks.txt</computeroutput>. The intention here is to keep the entire solution simple and easy to update and maintain.</para>
+</sect1>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1installation">
+<title>Installation</title><para>This product only runs on Windows as a console/command line executable. It requires <emphasis>no DLLs</emphasis> and is completely self-contained in the <ulink url="https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0">Release version 1.0.0.0</ulink> listed to the right.</para>
+<para>However! If you want to use the JSON export function, you will need the Newtonsoft.Json.dll file, as well. Without it, you can still use the product and also still be able to export to CSV and XML formats. You can find it online at <ulink url="https://www.newtonsoft.com/json">Newtonsoft.com</ulink> or download it from the release repository here.</para>
+<para>Simply <bold>download the executable and run it</bold>. <emphasis>IT IS NOT SIGNED.</emphasis></para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1usage">
+<title>Usage</title><para>Using the tool is simple. Here are some examples:</para>
+<para><programlisting><codeline><highlight class="normal">Focus<sp/>-w<sp/>20<sp/>-b<sp/>5<sp/>-s<sp/>4<sp/>--task<sp/>&quot;Work<sp/>Entry&quot;<sp/>--tag<sp/>&quot;Tag<sp/>Entry&quot;</highlight></codeline>
+<codeline><highlight class="normal">Focus<sp/>stats<sp/>--start<sp/>&apos;2021-08-06&apos;<sp/>--end<sp/>&apos;2021-08-07&apos;</highlight></codeline>
+<codeline><highlight class="normal">Focus<sp/>help</highlight></codeline>
+<codeline><highlight class="normal">Focus<sp/>list</highlight></codeline>
+</programlisting></para>
+<para>If you type &quot;help&quot; or &quot;?&quot; on the command line, you&apos;ll see all of the command line options. If you only type FOCUS, it will bring up a menu version of the application.</para>
+<sect2 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1menu-version">
+<title>Menu version:</title><para><image type="html" name="https://github.com/user-attachments/assets/e5d69362-8d3d-46f4-9856-04cea0da446a" alt="image" inline="yes"></image>
+</para>
+</sect2>
+<sect2 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1command-line-arguments">
+<title>Command line arguments:</title><para><programlisting><codeline><highlight class="normal">help<sp/>or<sp/>?<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Display<sp/>this<sp/>help<sp/>screen</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">list<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>List<sp/>all<sp/>tasks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">countup<sp/>[desc]<sp/>[tag]<sp/><sp/>:<sp/>Start<sp/>a<sp/>timer<sp/>that<sp/>counts<sp/>up,<sp/>with<sp/>support<sp/>for<sp/>pomodoro<sp/>and<sp/>sounds</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">task<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Add,<sp/>complete,<sp/>list,<sp/>and<sp/>delete<sp/>tasks<sp/>without<sp/>starting<sp/>timer.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>add<sp/>[description]<sp/>[tag]<sp/>[project]<sp/>[client]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Add<sp/>a<sp/>new<sp/>task.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>done<sp/>[#]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Complete<sp/>the<sp/>task<sp/>with<sp/>the<sp/>given<sp/>number.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>list<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>List<sp/>all<sp/>tasks.(same<sp/>as<sp/>&apos;list&apos;<sp/>option.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>delete<sp/>[#]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Deletes<sp/>the<sp/>task<sp/>item<sp/>from<sp/>the<sp/>task<sp/>file<sp/>list.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-w<sp/>[minutes]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>work<sp/>interval<sp/>in<sp/>minutes<sp/>(default<sp/>25)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-b<sp/>[minutes]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>break<sp/>interval<sp/>in<sp/>minutes<sp/>(default<sp/>5)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-s<sp/>[sessions]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>number<sp/>of<sp/>work<sp/>sessions<sp/>before<sp/>a<sp/>long<sp/>break<sp/>(default<sp/>4)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--task<sp/>[description]<sp/><sp/>:<sp/>Set<sp/>the<sp/>task<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--tag<sp/>[tag]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>a<sp/>tag<sp/>for<sp/>the<sp/>task<sp/>(optional)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--sound<sp/>[option]<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>ambient<sp/>sound<sp/>(1-8<sp/>or<sp/>OFF)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1:<sp/>coffee_shop,<sp/>2:<sp/>rainforest,<sp/>3:<sp/>wind</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4:<sp/>rain,<sp/>5:<sp/>summer_night,<sp/>6:<sp/>fireplace,<sp/>7:<sp/>frogs,<sp/>8:<sp/>bird_rain</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">stats<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Display<sp/>task<sp/>statistics</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>--start<sp/>[date]<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Specify<sp/>the<sp/>start<sp/>date<sp/>for<sp/>stats<sp/>(format:<sp/>yyyy-MM-dd)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>--end<sp/>[date]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Specify<sp/>the<sp/>end<sp/>date<sp/>for<sp/>stats<sp/>(format:<sp/>yyyy-MM-dd)</highlight></codeline>
+<codeline><highlight class="normal">-p<sp/>[today|all-time]<sp/><sp/><sp/>:<sp/>Show<sp/>statistics<sp/>for<sp/>today<sp/>or<sp/>all<sp/>time</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">export<sp/>[format]<sp/>[path]:<sp/>Export<sp/>tasks<sp/>in<sp/>the<sp/>specified<sp/>format<sp/>(csv,<sp/>xml,<sp/>json)<sp/>to<sp/>the<sp/>given<sp/>file<sp/>path</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Examples:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>-w<sp/>20<sp/>-b<sp/>5<sp/>-s<sp/>4<sp/>--task<sp/>&quot;Work<sp/>Entry&quot;<sp/>--tag<sp/>&quot;Tag<sp/>Entry&quot;<sp/>--project<sp/>&quot;My<sp/>Project&quot;<sp/>--client<sp/>&quot;My<sp/>Client&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>stats<sp/>--start<sp/>&apos;2021-08-06&apos;<sp/>--end<sp/>&apos;2021-08-07&apos;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>countup<sp/>&quot;My<sp/>Task&quot;<sp/>&quot;Work&quot;<sp/>&quot;My<sp/>Project&quot;<sp/>&quot;My<sp/>Client&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>export<sp/>csv<sp/>C:\tasks.csv</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>list</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1command-line-usage">
+<title>Command Line Usage</title><para>When using <computeroutput>list</computeroutput> or <computeroutput>stats</computeroutput> you cannot use any of the other command line options. They will be ignored or an error will be thrown.<itemizedlist>
+<listitem><para><computeroutput>list</computeroutput> is exclusive to simply listing all of the entries in the tasks.txt file.</para>
+</listitem><listitem><para><computeroutput>stats</computeroutput> is used with either a <computeroutput>-p</computeroutput> (time period) as words or with the <computeroutput>--start</computeroutput> and <computeroutput>--end</computeroutput> date filters. You can use the <computeroutput>--start</computeroutput> date without specifying the end date.</para>
+</listitem><listitem><para>All other arguments can be used together (as in the first example above). This includes the <computeroutput>countup</computeroutput> argument to start at count-up timer instead of a countdown timer. Otherwise, <emphasis><bold>Focus</bold></emphasis> defaults to countdown.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1details">
+<title>Details</title><para>This solution is a quick and simple way of watching the time you are working on a project. The intention of the application isn&apos;t to try to be a substitute for more robust solutions like Toggl, but to be a simple version that is easy to use and manage.</para>
+<sect2 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1stats">
+<title>Stats</title><para>The <computeroutput>stats</computeroutput> option is specific to the command line. You currently (v1.0.0.0) cannot see the statistics in the menu version of the application. Soon.</para>
+<para>However, the <computeroutput>list</computeroutput> option lets you see the full list of task entries and you can also use option 2 on the menu to see the same list in app mode.</para>
+<para><emphasis><bold>stats</bold></emphasis> offers some specific command line options, listed above, that let you specify start and end dates to view as well as just <computeroutput>today</computeroutput> or <computeroutput>all-time</computeroutput> stats. Those are based on <computeroutput>Completed</computeroutput> tasks.</para>
+<sect3 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1items-that-dont-have-a-status-of-completed-do-not-show-up-on-the-stats-display-at-the-command-line">
+<title>Items that don&apos;t have a status of &quot;Completed&quot; do not show up on the &quot;stats&quot; display at the command line.</title><para><image type="html" name="https://github.com/user-attachments/assets/921a4564-b597-4639-bae5-449d850660d8" alt="image" inline="yes"></image>
+</para>
+</sect3>
+</sect2>
+<sect2 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1sounds">
+<title>Sounds</title><para>The sounds option on the command line, and when you elect to <computeroutput>start a timer</computeroutput> in the menu mode, lets you choose an ambient sound to play while you&apos;re using the timer. As a note: it will stop during the breaks.</para>
+<para>There is a Work-stop sound and a Break-Stop sound, as well. These will play when your sections complete.</para>
+<para>Sounds vary from chirping birds to rain or fireplace noises. All sounds are gentle, mostly white-noise-style, sounds to help you <emphasis><bold>Focus</bold></emphasis>. They will loop continually. They are part of the executable and don&apos;t require any other files. Currently (v1.0.0.0) you cannot play external sounds.</para>
+</sect2>
+</sect1>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1tags-and-tasks">
+<title>Tags and Tasks</title><para><itemizedlist>
+<listitem><para><computeroutput>Tags</computeroutput> are just as you&apos;d expect, they help you define customers, areas, or lists of similar things to help you sort through the projects. Currently, Focus doesn&apos;t support filtering just lists of tags, but ... soon.</para>
+</listitem><listitem><para><computeroutput>Tasks</computeroutput> are the full names of your entries. These help you determine exact project tasks that you worked on.</para>
+</listitem></itemizedlist>
+</para>
+<para>Time entries are added to the tasks when they are created, and the end times are specified on the menu mode of the application for completion of the tasks.</para>
+</sect1>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1timers">
+<title>Timers</title><para><bold>Timers</bold> are made up of three components, based on using a Pomodoro Timer:<itemizedlist>
+<listitem><para><computeroutput>Work Minutes</computeroutput> - how long your work time is.</para>
+</listitem><listitem><para><computeroutput>Break minutes</computeroutput> - how long your Pomodoro break is.</para>
+</listitem><listitem><para><computeroutput>Sessions</computeroutput> - How many Work and Break groupings before a long break (which is 3 times the Break minutes; a <computeroutput>Long Break</computeroutput>).</para>
+</listitem></itemizedlist>
+</para>
+<para>You specify the time and amount for each of these when starting the timer in the menu mode, or with the command line options above.</para>
+<para>Countdown versus Count-Up timers:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>Countdown</computeroutput> - uses the pomodoro interval, break minutes, and sessions to count time downward until it runs out. Does not complete entries.</para>
+</listitem><listitem><para><computeroutput>Count-up</computeroutput> - uses the pomodoro interval, break minutes, and sessions to count the time upward until the user hits F10 to stop the timer. When the user presses F10, the entry is marked <computeroutput>Completed</computeroutput>.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1export">
+<title>Export</title><para>Export of the data is available to simplify getting entries into another application which may support more robust reporting or billing management, spreadsheets, or databases.</para>
+<para>The following formats are available:<itemizedlist>
+<listitem><para><computeroutput>CSV</computeroutput> - Standard Comma Separated Values format for import into tools such as a Spreadsheet or Database.</para>
+</listitem><listitem><para><computeroutput>xml</computeroutput> - XML formatted data for tools such as Microsoft Project or similar.</para>
+</listitem><listitem><para><computeroutput>JSON</computeroutput> - Similar to XML the JSON format is a robust text-based structured data storage format for use with spreadsheets, databases, or project management applications for reporting.</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e_1the-taskstxt-file-format">
+<title>The TASKS.TXT file format</title><para>Fields in the file are separated by the <computeroutput>|</computeroutput> (pipe) character.</para>
+<para>The format is as follows: <computeroutput>task_name|start_time|end_time|tags|status|project|client</computeroutput></para>
+<para><itemizedlist>
+<listitem><para><computeroutput>task_name</computeroutput> Name of the task</para>
+</listitem><listitem><para><computeroutput>start_time</computeroutput> Full UTC time coding for date, time, and GMT offset for when the task was created (started)</para>
+</listitem><listitem><para><computeroutput>end_time</computeroutput> Full UTC time coding for date, time, and GMT offset for when the task was marked complete (completed)</para>
+</listitem><listitem><para><computeroutput>tags</computeroutput> Any tags to help identify the item so that it can be grouped with similar items</para>
+</listitem><listitem><para><computeroutput>status</computeroutput> One of three possible status notations: <computeroutput>Pending</computeroutput> (new or working item), <computeroutput>Completed</computeroutput> (completed work item), <computeroutput>Abandoned</computeroutput> (dead or deleted task item)</para>
+</listitem><listitem><para><computeroutput>project</computeroutput> A project name associated with the task to help sort the data when used with reporting tools when the data is exported</para>
+</listitem><listitem><para><computeroutput>client</computeroutput> The client name to help group data per project source</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para><image type="html" name="https://img.shields.io/badge/C%23-Release-blue?style=plastic&amp;logo=csharp&amp;logoColor=white" alt="Image" inline="yes"></image>
+ <image type="html" name="https://img.shields.io/badge/C%23-v1.0.0.0-Blue?style=plastic" alt="Image" inline="yes"></image>
+ </para>
+</sect1>
+    </detaileddescription>
+    <location file="C:/Users/paulj/source/repos/Focus/README.md"/>
+  </compounddef>
+</doxygen>

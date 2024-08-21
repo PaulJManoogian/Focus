@@ -3,7 +3,7 @@
 // Description: A Pomodoro Timer application based on the work of Ayooluwa Isaiah
 // Created By : Paul J Manoogian, Manoogian Media, Inc.
 // Created    : 2024-Aug-13
-// Modified   : 2024-Aug-18
+// Modified   : 2024-Aug-21
 // Language   : C#
 // File       : Program.cs
 // Notes      : Main application to start the Focus solution, menu, and cmd line
@@ -17,10 +17,31 @@ using System.Media;
 using System.Threading;
 using System.Reflection;
 
-
+/*! 
+ *  \brief     Program Class.
+ *  \details   Program Class: This class is used to enter the program logic and interface with the user.
+ *  \author    Paul J Manoogian
+ *  \author    Manoogian Media, Inc.
+ *  \version   v1.0.0.0
+ *  \date      2024-Aug-21
+ *  \pre       First initialize the system.
+ *  \bug       Program: JSON Export without the Newtonsoft DLL crashes application with line number details. There is no catch.
+ *  \warning   Improper use of JSON without the Newtonsoft DLL will crash the application.
+ *  \copyright (c) 2024 Manoogian Media, Inc.
+ */
 namespace FocusApp
 {
     class Program
+    // ********************************************************************************
+    /// <summary>
+    /// Application: Focus. 
+    /// Description: A Pomodoro Timer application based on the work of Ayooluwa Isaiah. 
+    /// Notes      : Main application to start the Focus solution, menu, and cmd line.
+    /// </summary>
+    // <created>PJM,8/14/2024</created>
+    // <changed>PJM,8/21/2024</changed>
+    // ********************************************************************************
+
     {
         static void Main(string[] args)
         {
@@ -259,7 +280,14 @@ namespace FocusApp
                 }
             }
 
+
             // Regular program flow...
+            /// <summary>
+            /// Regular program flow
+            /// </summary>
+            // --------------------------------------------------------------------------------
+
+
             while (true)
             {
                 Console.Clear();

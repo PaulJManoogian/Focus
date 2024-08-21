@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_focus_app_1_1_statistics" kind="class" language="C#" prot="public">
+    <compoundname>FocusApp::Statistics</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_focus_app_1_1_statistics_1a116ec03e5734b395a76836a53c3717a1" prot="private" static="no" mutable="no">
+        <type><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref></type>
+        <definition>TaskManager FocusApp.Statistics._taskManager</definition>
+        <argsstring></argsstring>
+        <name>_taskManager</name>
+        <qualifiedname>FocusApp.Statistics._taskManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/Statistics.cs" line="43" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/Statistics.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_focus_app_1_1_statistics_1aa771b8bcac4d25f49bf503bab51adf50" prot="private" static="no" mutable="no">
+        <type><ref refid="class_focus_app_1_1_pomodoro_timer" kindref="compound">PomodoroTimer</ref></type>
+        <definition>PomodoroTimer FocusApp.Statistics._timer</definition>
+        <argsstring></argsstring>
+        <name>_timer</name>
+        <qualifiedname>FocusApp.Statistics._timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/Statistics.cs" line="44" column="31" bodyfile="C:/Users/paulj/source/repos/Focus/Statistics.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_focus_app_1_1_statistics_1a1cb8c9d5f7f7a14904674c1949b7da6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>FocusApp.Statistics.Statistics</definition>
+        <argsstring>(TaskManager taskManager, PomodoroTimer timer)</argsstring>
+        <name>Statistics</name>
+        <qualifiedname>FocusApp.Statistics.Statistics</qualifiedname>
+        <param>
+          <type><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref></type>
+          <declname>taskManager</declname>
+        </param>
+        <param>
+          <type><ref refid="class_focus_app_1_1_pomodoro_timer" kindref="compound">PomodoroTimer</ref></type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>Call to the <ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> Task Manager and Timer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>taskManager</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starts the task manager</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Starts the timer</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/Statistics.cs" line="56" column="16" bodyfile="C:/Users/paulj/source/repos/Focus/Statistics.cs" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_focus_app_1_1_statistics_1aeb6e088fa431de82aefd9962628f8df9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.Statistics.ShowStatistics</definition>
+        <argsstring>(string period)</argsstring>
+        <name>ShowStatistics</name>
+        <qualifiedname>FocusApp.Statistics.ShowStatistics</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>period</declname>
+        </param>
+        <briefdescription>
+<para>ShowStatistics: Shows the statistical data based on the word for the time period. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>period</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Word based task display for reporting</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/Statistics.cs" line="70" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/Statistics.cs" bodystart="70" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_focus_app_1_1_statistics_1a119070c363176cc67aa29e9f94a78bfb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.Statistics.ShowStatisticsByDateRange</definition>
+        <argsstring>(DateTime startDate, DateTime? endDate=null)</argsstring>
+        <name>ShowStatisticsByDateRange</name>
+        <qualifiedname>FocusApp.Statistics.ShowStatisticsByDateRange</qualifiedname>
+        <param>
+          <type>DateTime</type>
+          <declname>startDate</declname>
+        </param>
+        <param>
+          <type>DateTime?</type>
+          <declname>endDate</declname>
+          <defval>null</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> By Date Range: Shows the chart of information based on the date range. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Starting date for the date range</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endDate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Ending date for the date range</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/Statistics.cs" line="94" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/Statistics.cs" bodystart="94" bodyend="98"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_focus_app_1_1_statistics_1aca308d79f67023e9d9ac94b15ccc6d23" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.Statistics.DisplayStatisticsTable</definition>
+        <argsstring>(List&lt; TaskRecord &gt; tasks)</argsstring>
+        <name>DisplayStatisticsTable</name>
+        <qualifiedname>FocusApp.Statistics.DisplayStatisticsTable</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="class_focus_app_1_1_task_record" kindref="compound">TaskRecord</ref> &gt;</type>
+          <declname>tasks</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> Table: Display the table of data with the tasks record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tasks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Requested tasks from <ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> table</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/Statistics.cs" line="108" column="22" bodyfile="C:/Users/paulj/source/repos/Focus/Statistics.cs" bodystart="108" bodyend="156"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Application: Focus. <ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> Module. <linebreak/>
+ Description: <ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> Details Visuals. Notes : Shows statistics based on the &quot;stats&quot; command line option. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/paulj/source/repos/Focus/Statistics.cs" line="31" column="11" bodyfile="C:/Users/paulj/source/repos/Focus/Statistics.cs" bodystart="41" bodyend="157"/>
+    <listofallmembers>
+      <member refid="class_focus_app_1_1_statistics_1a116ec03e5734b395a76836a53c3717a1" prot="private" virt="non-virtual"><scope>FocusApp::Statistics</scope><name>_taskManager</name></member>
+      <member refid="class_focus_app_1_1_statistics_1aa771b8bcac4d25f49bf503bab51adf50" prot="private" virt="non-virtual"><scope>FocusApp::Statistics</scope><name>_timer</name></member>
+      <member refid="class_focus_app_1_1_statistics_1aca308d79f67023e9d9ac94b15ccc6d23" prot="private" virt="non-virtual"><scope>FocusApp::Statistics</scope><name>DisplayStatisticsTable</name></member>
+      <member refid="class_focus_app_1_1_statistics_1aeb6e088fa431de82aefd9962628f8df9" prot="public" virt="non-virtual"><scope>FocusApp::Statistics</scope><name>ShowStatistics</name></member>
+      <member refid="class_focus_app_1_1_statistics_1a119070c363176cc67aa29e9f94a78bfb" prot="public" virt="non-virtual"><scope>FocusApp::Statistics</scope><name>ShowStatisticsByDateRange</name></member>
+      <member refid="class_focus_app_1_1_statistics_1a1cb8c9d5f7f7a14904674c1949b7da6e" prot="public" virt="non-virtual"><scope>FocusApp::Statistics</scope><name>Statistics</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

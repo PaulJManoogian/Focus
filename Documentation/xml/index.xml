@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.12.0" xml:lang="en-US">
+  <compound refid="class_focus_app_1_1_pomodoro_timer" kind="class"><name>FocusApp::PomodoroTimer</name>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a9b0d0c207a8ac4451dc32b91ea666d12" kind="property"><name>WorkInterval</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1af21593ea7790d3c6bc59adf40f1e292f" kind="property"><name>BreakInterval</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a8ea50bfd30ec112d0809abfc1da8663b" kind="property"><name>SessionsBeforeLongBreak</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a7f86dec5d27efb1346c0b66373b18e8d" kind="property"><name>SoundSelection</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1ad89771eea41f9cd1eb7f25c9f6f8dfbb" kind="variable"><name>ambientSoundPlayer</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a846692a03ce2d2fd4012d84c6d969b44" kind="variable"><name>workEndSoundPlayer</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a2710bbf9816a9291aa3886ae021bdd10" kind="variable"><name>breakEndSoundPlayer</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a810b0ecf2734c726ca91ebd9331cbd91" kind="function"><name>SetIntervals</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1af37aac7b13b0abcb722b5e66a130cb64" kind="function"><name>SetSound</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a8e34751a96a8982a5bdd4085041027ce" kind="function"><name>SetSessions</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a41e1eee87f91a4c25d1f39083e0a12b3" kind="function"><name>Start</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a1cc73e453f37091571b5265339ca8667" kind="function"><name>StartCountUpTimer</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1aec71a5ddfe7215c2852d60b0e3d9554a" kind="function"><name>LoadSound</name></member>
+    <member refid="class_focus_app_1_1_pomodoro_timer_1a538c630311b5879c7856c2dab3b23d7a" kind="function"><name>TimerCountdown</name></member>
+  </compound>
+  <compound refid="class_focus_app_1_1_program" kind="class"><name>FocusApp::Program</name>
+    <member refid="class_focus_app_1_1_program_1ae9e8d87876dcc3baa1ee57c63bf3ca4f" kind="function"><name>Main</name></member>
+    <member refid="class_focus_app_1_1_program_1aa68e4330bfd13640b80f86c27ed00a2a" kind="function"><name>DisplayHelp</name></member>
+  </compound>
+  <compound refid="class_focus_app_1_1_statistics" kind="class"><name>FocusApp::Statistics</name>
+    <member refid="class_focus_app_1_1_statistics_1a116ec03e5734b395a76836a53c3717a1" kind="variable"><name>_taskManager</name></member>
+    <member refid="class_focus_app_1_1_statistics_1aa771b8bcac4d25f49bf503bab51adf50" kind="variable"><name>_timer</name></member>
+    <member refid="class_focus_app_1_1_statistics_1a1cb8c9d5f7f7a14904674c1949b7da6e" kind="function"><name>Statistics</name></member>
+    <member refid="class_focus_app_1_1_statistics_1aeb6e088fa431de82aefd9962628f8df9" kind="function"><name>ShowStatistics</name></member>
+    <member refid="class_focus_app_1_1_statistics_1a119070c363176cc67aa29e9f94a78bfb" kind="function"><name>ShowStatisticsByDateRange</name></member>
+    <member refid="class_focus_app_1_1_statistics_1aca308d79f67023e9d9ac94b15ccc6d23" kind="function"><name>DisplayStatisticsTable</name></member>
+  </compound>
+  <compound refid="class_focus_app_1_1_task_manager" kind="class"><name>FocusApp::TaskManager</name>
+    <member refid="class_focus_app_1_1_task_manager_1a764f03c2d3523c686214380090aba458" kind="variable"><name>tasks</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a3d72c9b6b9cfaf53bdbb6e58013bd24c" kind="property"><name>Tasks</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1ab88782c4e956a2b1b261cb34f34f1bcb" kind="function"><name>AddTask</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a39677f6aafa80fbbc49f23d984e3cc2c" kind="function"><name>AddTaskWithTime</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a50ad21b9ac935e570035a346de436dcf" kind="function"><name>CompleteTask</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1ac248b348e3201542eda9870a3022de06" kind="function"><name>AbandonTask</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1ad9e943c502985eea9c394075244b8bcd" kind="function"><name>DeleteTask</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a3d0725db6813019db0b4b93ef891820d" kind="function"><name>ListTasks</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a648864648a2a0898fa2eed67ee8f5022" kind="function"><name>GetTasksCompletedToday</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1af1f385f2a385f80468eb805aeca15e8a" kind="function"><name>GetTasksCompletedAllTime</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1aa91eea5b4b68954258a8d95cc7ef97de" kind="function"><name>GetTasksByDateRange</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a642b07ae7ae3672a7e501ce9618c91cf" kind="function"><name>SaveTasks</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a945e5275cbe6baa72092811124ebd22b" kind="function"><name>LoadTasks</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1a4d58bc71340018bce53b9d92d0de204d" kind="function"><name>ExportTasksToCsv</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1afb3a0288f5fabc0b02dcffccea78d02a" kind="function"><name>ExportTasksToXml</name></member>
+    <member refid="class_focus_app_1_1_task_manager_1ac985d94ffc14461f5a1161557d7bb7fe" kind="function"><name>ExportTasksToJson</name></member>
+  </compound>
+  <compound refid="class_focus_app_1_1_task_record" kind="class"><name>FocusApp::TaskRecord</name>
+    <member refid="class_focus_app_1_1_task_record_1ab0b7e977985d1853db4893807a84321c" kind="property"><name>Description</name></member>
+    <member refid="class_focus_app_1_1_task_record_1aee8991d0068eb40009e5317d3441963e" kind="property"><name>StartDate</name></member>
+    <member refid="class_focus_app_1_1_task_record_1a5f2fcfe4324cc86606abbc2046146bb8" kind="property"><name>EndDate</name></member>
+    <member refid="class_focus_app_1_1_task_record_1a5b2e8c3e9272179aec636f3b2c6ff91b" kind="property"><name>Tag</name></member>
+    <member refid="class_focus_app_1_1_task_record_1a6aaf78e7fdcea1bf650db6fa08c38dc2" kind="property"><name>Status</name></member>
+    <member refid="class_focus_app_1_1_task_record_1afd92b43ef493520dc68e91605cf4ae7b" kind="property"><name>Project</name></member>
+    <member refid="class_focus_app_1_1_task_record_1aae3146f9a0a165b38553128e7ca820e7" kind="property"><name>Client</name></member>
+  </compound>
+  <compound refid="namespace_focus_app" kind="namespace"><name>FocusApp</name>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_globalization" kind="namespace"><name>System::Globalization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_media" kind="namespace"><name>System::Media</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web" kind="namespace"><name>System::Web</name>
+  </compound>
+  <compound refid="namespace_system_1_1_xml_1_1_serialization" kind="namespace"><name>System::Xml::Serialization</name>
+  </compound>
+  <compound refid="_pomodoro_timer_8cs" kind="file"><name>PomodoroTimer.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_statistics_8cs" kind="file"><name>Statistics.cs</name>
+  </compound>
+  <compound refid="_task_manager_8cs" kind="file"><name>TaskManager.cs</name>
+  </compound>
+  <compound refid="md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e" kind="page"><name>md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e</name>
+  </compound>
+  <compound refid="bug" kind="page"><name>bug</name>
+  </compound>
+  <compound refid="dir_4b52485f2dc7bfb0855281465c98a061" kind="dir"><name>C:/Users/paulj/source/repos/Focus</name>
+  </compound>
+  <compound refid="dir_5c1f77b6d547333da17420fc98c4f94a" kind="dir"><name>C:/Users/paulj/source/repos</name>
+  </compound>
+</doxygenindex>

@@ -10,25 +10,49 @@
 //---------------------------------------------------------------------------------
 
 
-
 using System;
 using System.Media;
 using System.Threading;
 
-
+/*! 
+ *  \brief     Pomodoro Timer Class.
+ *  \details   Pomodoro Timer: This class is used to manage timer logic and play sounds while the timer counts up or down
+ *  \author    Paul J Manoogian
+ *  \author    Manoogian Media, Inc.
+ *  \version   v1.0.0.0
+ *  \date      2024-Aug-21
+ *  \pre       Called from Program Class
+ *  \bug       PomodoroTimer: None
+ *  \warning   None
+ *  \copyright (c) 2024 Manoogian Media, Inc.
+ */
 namespace FocusApp
 {
     public class PomodoroTimer
     {
+
+        /// <summary>WorkInterval: Timer value * 60 seconds to create minutes of work time. Default is 60.</summary>
         private int WorkInterval { get; set; } = 25 * 60; // Default to 25 minutes
+        /// <summary>BreakInterval: Timer value * 60 for break minutes. Default is 5. </summary>
         private int BreakInterval { get; set; } = 5 * 60; // Default to 5 minutes
+        /// <summary>SessionsBeforeLongBreak: Number of loops of the work and break intervals before longer break time. Default is 4. </summary>
         private int SessionsBeforeLongBreak { get; set; } = 4; // Default to 4 sessions before long break
+        /// <summary>SoundSelection: What ambient sound number will be played for relaxation noise. Default is OFF.</summary>
         private string SoundSelection { get; set; } = "OFF";
 
         private SoundPlayer ambientSoundPlayer;
         private SoundPlayer workEndSoundPlayer;
         private SoundPlayer breakEndSoundPlayer;
 
+        // ********************************************************************************
+        /// <summary>
+        /// Interval Minutes and Break Minutes. Each work session is based on these.
+        /// </summary>
+        /// <param name="workMinutes"></param>
+        /// <param name="breakMinutes"></param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void SetIntervals(int workMinutes, int breakMinutes)
         {
             WorkInterval = workMinutes * 60;
@@ -100,6 +124,14 @@ namespace FocusApp
             return new SoundPlayer(stream);
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// Number of sessions to loop with interval work and break timers.
+        /// </summary>
+        /// <param name="sessions"></param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void SetSessions(int sessions)
         {
             SessionsBeforeLongBreak = sessions;

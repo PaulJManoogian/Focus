@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Focus</highlight></codeline>
+<codeline><highlight class="normal">A<sp/>timer<sp/>tool<sp/>based<sp/>on<sp/>the<sp/>work<sp/>of<sp/>[Ayooluwa<sp/>Isaiah](https://github.com/ayoisaiah)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>functionality<sp/>of<sp/>this<sp/>tool<sp/>is<sp/>nearly<sp/>identical<sp/>to<sp/>the<sp/>work<sp/>created<sp/>in<sp/>this<sp/>repository:</highlight></codeline>
+<codeline><highlight class="normal">[Focus](https://github.com/ayoisaiah/focus)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**This<sp/>version<sp/>(c)2024<sp/>Manoogian<sp/>Media,<sp/>Inc.**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Purpose</highlight></codeline>
+<codeline><highlight class="normal">I<sp/>created<sp/>this<sp/>version<sp/>of<sp/>the<sp/>tool<sp/>to<sp/>have<sp/>a<sp/>C#<sp/>version<sp/>which<sp/>will<sp/>run<sp/>on<sp/>a<sp/>Windows<sp/>machine.<sp/>The<sp/>code<sp/>runs<sp/>only<sp/>in<sp/>console<sp/>mode<sp/>(just<sp/>to<sp/>keep<sp/>the<sp/>application<sp/>simple),<sp/>but<sp/>offers<sp/>a<sp/>menu<sp/>system<sp/>and<sp/>command<sp/>line<sp/>functionality.<sp/>The<sp/>data<sp/>file<sp/>where<sp/>the<sp/>tasks<sp/>are<sp/>stored<sp/>is<sp/>called<sp/>`tasks.txt`.<sp/>The<sp/>intention<sp/>here<sp/>is<sp/>to<sp/>keep<sp/>the<sp/>entire<sp/>solution<sp/>simple<sp/>and<sp/>easy<sp/>to<sp/>update<sp/>and<sp/>maintain.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>product<sp/>only<sp/>runs<sp/>on<sp/>Windows<sp/>as<sp/>a<sp/>console/command<sp/>line<sp/>executable.<sp/>It<sp/>requires<sp/>*no<sp/>DLLs*<sp/>and<sp/>is<sp/>completely<sp/>self-contained<sp/>in<sp/>the<sp/>[Release<sp/>version<sp/>1.0.0.0](https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0)<sp/>listed<sp/>to<sp/>the<sp/>right.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">However!<sp/>If<sp/>you<sp/>want<sp/>to<sp/>use<sp/>the<sp/>JSON<sp/>export<sp/>function,<sp/>you<sp/>will<sp/>need<sp/>the<sp/>Newtonsoft.Json.dll<sp/>file,<sp/>as<sp/>well.<sp/><sp/>Without<sp/>it,<sp/>you<sp/>can<sp/>still<sp/>use<sp/>the<sp/>product<sp/>and<sp/>also<sp/>still<sp/>be<sp/>able<sp/>to<sp/>export<sp/>to<sp/>CSV<sp/>and<sp/>XML<sp/>formats.<sp/><sp/>You<sp/>can<sp/>find<sp/>it<sp/>online<sp/>at<sp/>[Newtonsoft.com](https://www.newtonsoft.com/json)<sp/>or<sp/>download<sp/>it<sp/>from<sp/>the<sp/>release<sp/>repository<sp/>here.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Simply<sp/>**download<sp/>the<sp/>executable<sp/>and<sp/>run<sp/>it**.<sp/>*IT<sp/>IS<sp/>NOT<sp/>SIGNED.*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-----</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">Using<sp/>the<sp/>tool<sp/>is<sp/>simple.<sp/>Here<sp/>are<sp/>some<sp/>examples:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Focus<sp/>-w<sp/>20<sp/>-b<sp/>5<sp/>-s<sp/>4<sp/>--task<sp/>&quot;Work<sp/>Entry&quot;<sp/>--tag<sp/>&quot;Tag<sp/>Entry&quot;</highlight></codeline>
+<codeline><highlight class="normal">Focus<sp/>stats<sp/>--start<sp/>&apos;2021-08-06&apos;<sp/>--end<sp/>&apos;2021-08-07&apos;</highlight></codeline>
+<codeline><highlight class="normal">Focus<sp/>help</highlight></codeline>
+<codeline><highlight class="normal">Focus<sp/>list</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>type<sp/>&quot;help&quot;<sp/>or<sp/>&quot;?&quot;<sp/>on<sp/>the<sp/>command<sp/>line,<sp/>you&apos;ll<sp/>see<sp/>all<sp/>of<sp/>the<sp/>command<sp/>line<sp/>options.</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>only<sp/>type<sp/>FOCUS,<sp/>it<sp/>will<sp/>bring<sp/>up<sp/>a<sp/>menu<sp/>version<sp/>of<sp/>the<sp/>application.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Menu<sp/>version:</highlight></codeline>
+<codeline><highlight class="normal">![image](https://github.com/user-attachments/assets/e5d69362-8d3d-46f4-9856-04cea0da446a)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Command<sp/>line<sp/>arguments:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">help<sp/>or<sp/>?<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Display<sp/>this<sp/>help<sp/>screen</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">list<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>List<sp/>all<sp/>tasks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">countup<sp/>[desc]<sp/>[tag]<sp/><sp/>:<sp/>Start<sp/>a<sp/>timer<sp/>that<sp/>counts<sp/>up,<sp/>with<sp/>support<sp/>for<sp/>pomodoro<sp/>and<sp/>sounds</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">task<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Add,<sp/>complete,<sp/>list,<sp/>and<sp/>delete<sp/>tasks<sp/>without<sp/>starting<sp/>timer.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>add<sp/>[description]<sp/>[tag]<sp/>[project]<sp/>[client]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Add<sp/>a<sp/>new<sp/>task.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>done<sp/>[#]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Complete<sp/>the<sp/>task<sp/>with<sp/>the<sp/>given<sp/>number.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>list<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>List<sp/>all<sp/>tasks.(same<sp/>as<sp/>&apos;list&apos;<sp/>option.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>delete<sp/>[#]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Deletes<sp/>the<sp/>task<sp/>item<sp/>from<sp/>the<sp/>task<sp/>file<sp/>list.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-w<sp/>[minutes]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>work<sp/>interval<sp/>in<sp/>minutes<sp/>(default<sp/>25)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-b<sp/>[minutes]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>break<sp/>interval<sp/>in<sp/>minutes<sp/>(default<sp/>5)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-s<sp/>[sessions]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>number<sp/>of<sp/>work<sp/>sessions<sp/>before<sp/>a<sp/>long<sp/>break<sp/>(default<sp/>4)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--task<sp/>[description]<sp/><sp/>:<sp/>Set<sp/>the<sp/>task<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--tag<sp/>[tag]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>a<sp/>tag<sp/>for<sp/>the<sp/>task<sp/>(optional)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">--sound<sp/>[option]<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Set<sp/>the<sp/>ambient<sp/>sound<sp/>(1-8<sp/>or<sp/>OFF)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1:<sp/>coffee_shop,<sp/>2:<sp/>rainforest,<sp/>3:<sp/>wind</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4:<sp/>rain,<sp/>5:<sp/>summer_night,<sp/>6:<sp/>fireplace,<sp/>7:<sp/>frogs,<sp/>8:<sp/>bird_rain</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">stats<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Display<sp/>task<sp/>statistics</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>--start<sp/>[date]<sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Specify<sp/>the<sp/>start<sp/>date<sp/>for<sp/>stats<sp/>(format:<sp/>yyyy-MM-dd)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>--end<sp/>[date]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>Specify<sp/>the<sp/>end<sp/>date<sp/>for<sp/>stats<sp/>(format:<sp/>yyyy-MM-dd)</highlight></codeline>
+<codeline><highlight class="normal">-p<sp/>[today|all-time]<sp/><sp/><sp/>:<sp/>Show<sp/>statistics<sp/>for<sp/>today<sp/>or<sp/>all<sp/>time</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">export<sp/>[format]<sp/>[path]:<sp/>Export<sp/>tasks<sp/>in<sp/>the<sp/>specified<sp/>format<sp/>(csv,<sp/>xml,<sp/>json)<sp/>to<sp/>the<sp/>given<sp/>file<sp/>path</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Examples:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>-w<sp/>20<sp/>-b<sp/>5<sp/>-s<sp/>4<sp/>--task<sp/>&quot;Work<sp/>Entry&quot;<sp/>--tag<sp/>&quot;Tag<sp/>Entry&quot;<sp/>--project<sp/>&quot;My<sp/>Project&quot;<sp/>--client<sp/>&quot;My<sp/>Client&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>stats<sp/>--start<sp/>&apos;2021-08-06&apos;<sp/>--end<sp/>&apos;2021-08-07&apos;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>countup<sp/>&quot;My<sp/>Task&quot;<sp/>&quot;Work&quot;<sp/>&quot;My<sp/>Project&quot;<sp/>&quot;My<sp/>Client&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>export<sp/>csv<sp/>C:\tasks.csv</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>Focus<sp/>list</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Command<sp/>Line<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">When<sp/>using<sp/>`list`<sp/>or<sp/>`stats`<sp/>you<sp/>cannot<sp/>use<sp/>any<sp/>of<sp/>the<sp/>other<sp/>command<sp/>line<sp/>options.<sp/>They<sp/>will<sp/>be<sp/>ignored<sp/>or<sp/>an<sp/>error<sp/>will<sp/>be<sp/>thrown.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`list`<sp/>is<sp/>exclusive<sp/>to<sp/>simply<sp/>listing<sp/>all<sp/>of<sp/>the<sp/>entries<sp/>in<sp/>the<sp/>tasks.txt<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`stats`<sp/>is<sp/>used<sp/>with<sp/>either<sp/>a<sp/>`-p`<sp/>(time<sp/>period)<sp/>as<sp/>words<sp/>or<sp/>with<sp/>the<sp/>`--start`<sp/>and<sp/>`--end`<sp/>date<sp/>filters.<sp/>You<sp/>can<sp/>use<sp/>the<sp/>`--start`<sp/>date<sp/>without<sp/>specifying<sp/>the<sp/>end<sp/>date.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>All<sp/>other<sp/>arguments<sp/>can<sp/>be<sp/>used<sp/>together<sp/>(as<sp/>in<sp/>the<sp/>first<sp/>example<sp/>above).<sp/>This<sp/>includes<sp/>the<sp/>`countup`<sp/>argument<sp/>to<sp/>start<sp/>at<sp/>count-up<sp/>timer<sp/>instead<sp/>of<sp/>a<sp/>countdown<sp/>timer.<sp/>Otherwise,<sp/>***Focus***<sp/>defaults<sp/>to<sp/>countdown.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-----</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Details</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>solution<sp/>is<sp/>a<sp/>quick<sp/>and<sp/>simple<sp/>way<sp/>of<sp/>watching<sp/>the<sp/>time<sp/>you<sp/>are<sp/>working<sp/>on<sp/>a<sp/>project.<sp/>The<sp/>intention<sp/>of<sp/>the<sp/>application<sp/>isn&apos;t<sp/>to<sp/>try<sp/>to<sp/>be<sp/>a<sp/>substitute<sp/>for<sp/>more<sp/>robust<sp/>solutions<sp/>like<sp/>Toggl,<sp/>but<sp/>to<sp/>be<sp/>a<sp/>simple<sp/>version<sp/>that<sp/>is<sp/>easy<sp/>to<sp/>use<sp/>and<sp/>manage.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Stats</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>`stats`<sp/>option<sp/>is<sp/>specific<sp/>to<sp/>the<sp/>command<sp/>line.<sp/>You<sp/>currently<sp/>(v1.0.0.0)<sp/>cannot<sp/>see<sp/>the<sp/>statistics<sp/>in<sp/>the<sp/>menu<sp/>version<sp/>of<sp/>the<sp/>application.<sp/>Soon.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">However,<sp/>the<sp/>`list`<sp/>option<sp/>lets<sp/>you<sp/>see<sp/>the<sp/>full<sp/>list<sp/>of<sp/>task<sp/>entries<sp/>and<sp/>you<sp/>can<sp/>also<sp/>use<sp/>option<sp/>2<sp/>on<sp/>the<sp/>menu<sp/>to<sp/>see<sp/>the<sp/>same<sp/>list<sp/>in<sp/>app<sp/>mode.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">***stats***<sp/>offers<sp/>some<sp/>specific<sp/>command<sp/>line<sp/>options,<sp/>listed<sp/>above,<sp/>that<sp/>let<sp/>you<sp/>specify<sp/>start<sp/>and<sp/>end<sp/>dates<sp/>to<sp/>view<sp/>as<sp/>well<sp/>as<sp/>just<sp/>`today`<sp/>or<sp/>`all-time`<sp/>stats.<sp/>Those<sp/>are<sp/>based<sp/>on<sp/>`Completed`<sp/>tasks.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Items<sp/>that<sp/>don&apos;t<sp/>have<sp/>a<sp/>status<sp/>of<sp/>&quot;Completed&quot;<sp/>do<sp/>not<sp/>show<sp/>up<sp/>on<sp/>the<sp/>&quot;stats&quot;<sp/>display<sp/>at<sp/>the<sp/>command<sp/>line.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![image](https://github.com/user-attachments/assets/921a4564-b597-4639-bae5-449d850660d8)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Sounds</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>sounds<sp/>option<sp/>on<sp/>the<sp/>command<sp/>line,<sp/>and<sp/>when<sp/>you<sp/>elect<sp/>to<sp/>`start<sp/>a<sp/>timer`<sp/>in<sp/>the<sp/>menu<sp/>mode,<sp/>lets<sp/>you<sp/>choose<sp/>an<sp/>ambient<sp/>sound<sp/>to<sp/>play<sp/>while<sp/>you&apos;re<sp/>using<sp/>the<sp/>timer.<sp/>As<sp/>a<sp/>note:<sp/>it<sp/>will<sp/>stop<sp/>during<sp/>the<sp/>breaks.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">There<sp/>is<sp/>a<sp/>Work-stop<sp/>sound<sp/>and<sp/>a<sp/>Break-Stop<sp/>sound,<sp/>as<sp/>well.<sp/>These<sp/>will<sp/>play<sp/>when<sp/>your<sp/>sections<sp/>complete.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Sounds<sp/>vary<sp/>from<sp/>chirping<sp/>birds<sp/>to<sp/>rain<sp/>or<sp/>fireplace<sp/>noises.<sp/>All<sp/>sounds<sp/>are<sp/>gentle,<sp/>mostly<sp/>white-noise-style,<sp/>sounds<sp/>to<sp/>help<sp/>you<sp/>***Focus***.<sp/>They<sp/>will<sp/>loop<sp/>continually.<sp/>They<sp/>are<sp/>part<sp/>of<sp/>the<sp/>executable<sp/>and<sp/>don&apos;t<sp/>require<sp/>any<sp/>other<sp/>files.<sp/>Currently<sp/>(v1.0.0.0)<sp/>you<sp/>cannot<sp/>play<sp/>external<sp/>sounds.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Tags<sp/>and<sp/>Tasks</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Tags`<sp/>are<sp/>just<sp/>as<sp/>you&apos;d<sp/>expect,<sp/>they<sp/>help<sp/>you<sp/>define<sp/>customers,<sp/>areas,<sp/>or<sp/>lists<sp/>of<sp/>similar<sp/>things<sp/>to<sp/>help<sp/>you<sp/>sort<sp/>through<sp/>the<sp/>projects.<sp/>Currently,<sp/>Focus<sp/>doesn&apos;t<sp/>support<sp/>filtering<sp/>just<sp/>lists<sp/>of<sp/>tags,<sp/>but<sp/>...<sp/>soon.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Tasks`<sp/>are<sp/>the<sp/>full<sp/>names<sp/>of<sp/>your<sp/>entries.<sp/>These<sp/>help<sp/>you<sp/>determine<sp/>exact<sp/>project<sp/>tasks<sp/>that<sp/>you<sp/>worked<sp/>on.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Time<sp/>entries<sp/>are<sp/>added<sp/>to<sp/>the<sp/>tasks<sp/>when<sp/>they<sp/>are<sp/>created,<sp/>and<sp/>the<sp/>end<sp/>times<sp/>are<sp/>specified<sp/>on<sp/>the<sp/>menu<sp/>mode<sp/>of<sp/>the<sp/>application<sp/>for<sp/>completion<sp/>of<sp/>the<sp/>tasks.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Timers</highlight></codeline>
+<codeline><highlight class="normal">**Timers**<sp/>are<sp/>made<sp/>up<sp/>of<sp/>three<sp/>components,<sp/>based<sp/>on<sp/>using<sp/>a<sp/>Pomodoro<sp/>Timer:<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Work<sp/>Minutes`<sp/>-<sp/>how<sp/>long<sp/>your<sp/>work<sp/>time<sp/>is.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Break<sp/>minutes`<sp/>-<sp/>how<sp/>long<sp/>your<sp/>Pomodoro<sp/>break<sp/>is.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Sessions`<sp/>-<sp/>How<sp/>many<sp/>Work<sp/>and<sp/>Break<sp/>groupings<sp/>before<sp/>a<sp/>long<sp/>break<sp/>(which<sp/>is<sp/>3<sp/>times<sp/>the<sp/>Break<sp/>minutes;<sp/>a<sp/>`Long<sp/>Break`).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>specify<sp/>the<sp/>time<sp/>and<sp/>amount<sp/>for<sp/>each<sp/>of<sp/>these<sp/>when<sp/>starting<sp/>the<sp/>timer<sp/>in<sp/>the<sp/>menu<sp/>mode,<sp/>or<sp/>with<sp/>the<sp/>command<sp/>line<sp/>options<sp/>above.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Countdown<sp/>versus<sp/>Count-Up<sp/>timers:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`Countdown`<sp/>-<sp/>uses<sp/>the<sp/>pomodoro<sp/>interval,<sp/>break<sp/>minutes,<sp/>and<sp/>sessions<sp/>to<sp/>count<sp/>time<sp/>downward<sp/>until<sp/>it<sp/>runs<sp/>out.<sp/>Does<sp/>not<sp/>complete<sp/>entries.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`Count-up`<sp/>-<sp/>uses<sp/>the<sp/>pomodoro<sp/>interval,<sp/>break<sp/>minutes,<sp/>and<sp/>sessions<sp/>to<sp/>count<sp/>the<sp/>time<sp/>upward<sp/>until<sp/>the<sp/>user<sp/>hits<sp/>F10<sp/>to<sp/>stop<sp/>the<sp/>timer.<sp/>When<sp/>the<sp/>user<sp/>presses<sp/>F10,<sp/>the<sp/>entry<sp/>is<sp/>marked<sp/>`Completed`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Export</highlight></codeline>
+<codeline><highlight class="normal">Export<sp/>of<sp/>the<sp/>data<sp/>is<sp/>available<sp/>to<sp/>simplify<sp/>getting<sp/>entries<sp/>into<sp/>another<sp/>application<sp/>which<sp/>may<sp/>support<sp/>more<sp/>robust<sp/>reporting<sp/>or<sp/>billing<sp/>management,<sp/>spreadsheets,<sp/>or<sp/>databases.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>following<sp/>formats<sp/>are<sp/>available:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`CSV`<sp/>-<sp/>Standard<sp/>Comma<sp/>Separated<sp/>Values<sp/>format<sp/>for<sp/>import<sp/>into<sp/>tools<sp/>such<sp/>as<sp/>a<sp/>Spreadsheet<sp/>or<sp/>Database.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`xml`<sp/>-<sp/>XML<sp/>formatted<sp/>data<sp/>for<sp/>tools<sp/>such<sp/>as<sp/>Microsoft<sp/>Project<sp/>or<sp/>similar.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`JSON`<sp/>-<sp/>Similar<sp/>to<sp/>XML<sp/>the<sp/>JSON<sp/>format<sp/>is<sp/>a<sp/>robust<sp/>text-based<sp/>structured<sp/>data<sp/>storage<sp/>format<sp/>for<sp/>use<sp/>with<sp/>spreadsheets,<sp/>databases,<sp/>or<sp/>project<sp/>management<sp/>applications<sp/>for<sp/>reporting.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-----</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>The<sp/>TASKS.TXT<sp/>file<sp/>format</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Fields<sp/>in<sp/>the<sp/>file<sp/>are<sp/>separated<sp/>by<sp/>the<sp/>`|`<sp/>(pipe)<sp/>character.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>format<sp/>is<sp/>as<sp/>follows:</highlight></codeline>
+<codeline><highlight class="normal">`task_name|start_time|end_time|tags|status|project|client`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`task_name`<sp/>Name<sp/>of<sp/>the<sp/>task</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`start_time`<sp/>Full<sp/>UTC<sp/>time<sp/>coding<sp/>for<sp/>date,<sp/>time,<sp/>and<sp/>GMT<sp/>offset<sp/>for<sp/>when<sp/>the<sp/>task<sp/>was<sp/>created<sp/>(started)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`end_time`<sp/>Full<sp/>UTC<sp/>time<sp/>coding<sp/>for<sp/>date,<sp/>time,<sp/>and<sp/>GMT<sp/>offset<sp/>for<sp/>when<sp/>the<sp/>task<sp/>was<sp/>marked<sp/>complete<sp/>(completed)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`tags`<sp/>Any<sp/>tags<sp/>to<sp/>help<sp/>identify<sp/>the<sp/>item<sp/>so<sp/>that<sp/>it<sp/>can<sp/>be<sp/>grouped<sp/>with<sp/>similar<sp/>items</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`status`<sp/>One<sp/>of<sp/>three<sp/>possible<sp/>status<sp/>notations:<sp/>`Pending`<sp/>(new<sp/>or<sp/>working<sp/>item),<sp/>`Completed`<sp/>(completed<sp/>work<sp/>item),<sp/>`Abandoned`<sp/>(dead<sp/>or<sp/>deleted<sp/>task<sp/>item)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`project`<sp/>A<sp/>project<sp/>name<sp/>associated<sp/>with<sp/>the<sp/>task<sp/>to<sp/>help<sp/>sort<sp/>the<sp/>data<sp/>when<sp/>used<sp/>with<sp/>reporting<sp/>tools<sp/>when<sp/>the<sp/>data<sp/>is<sp/>exported</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`client`<sp/>The<sp/>client<sp/>name<sp/>to<sp/>help<sp/>group<sp/>data<sp/>per<sp/>project<sp/>source</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-----</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Image](https://img.shields.io/badge/C%23-Release-blue?style=plastic&amp;logo=csharp&amp;logoColor=white)<sp/>![Image](https://img.shields.io/badge/C%23-v1.0.0.0-Blue?style=plastic)</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/paulj/source/repos/Focus/README.md"/>
+  </compounddef>
+</doxygen>

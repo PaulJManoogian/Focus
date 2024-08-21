@@ -1,0 +1,306 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_focus_app_1_1_pomodoro_timer" kind="class" language="C#" prot="public">
+    <compoundname>FocusApp::PomodoroTimer</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_focus_app_1_1_pomodoro_timer_1a9b0d0c207a8ac4451dc32b91ea666d12" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int FocusApp.PomodoroTimer.WorkInterval</definition>
+        <argsstring></argsstring>
+        <name>WorkInterval</name>
+        <qualifiedname>FocusApp.PomodoroTimer.WorkInterval</qualifiedname>
+        <initializer>= 25 * 60</initializer>
+        <briefdescription>
+<para>WorkInterval: Timer value * 60 seconds to create minutes of work time. Default is 60. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="35" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_pomodoro_timer_1af21593ea7790d3c6bc59adf40f1e292f" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int FocusApp.PomodoroTimer.BreakInterval</definition>
+        <argsstring></argsstring>
+        <name>BreakInterval</name>
+        <qualifiedname>FocusApp.PomodoroTimer.BreakInterval</qualifiedname>
+        <initializer>= 5 * 60</initializer>
+        <briefdescription>
+<para>BreakInterval: Timer value * 60 for break minutes. Default is 5. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="37" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_pomodoro_timer_1a8ea50bfd30ec112d0809abfc1da8663b" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int FocusApp.PomodoroTimer.SessionsBeforeLongBreak</definition>
+        <argsstring></argsstring>
+        <name>SessionsBeforeLongBreak</name>
+        <qualifiedname>FocusApp.PomodoroTimer.SessionsBeforeLongBreak</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>SessionsBeforeLongBreak: Number of loops of the work and break intervals before longer break time. Default is 4. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="39" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_focus_app_1_1_pomodoro_timer_1a7f86dec5d27efb1346c0b66373b18e8d" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string FocusApp.PomodoroTimer.SoundSelection</definition>
+        <argsstring></argsstring>
+        <name>SoundSelection</name>
+        <qualifiedname>FocusApp.PomodoroTimer.SoundSelection</qualifiedname>
+        <initializer>= &quot;OFF&quot;</initializer>
+        <briefdescription>
+<para>SoundSelection: What ambient sound number will be played for relaxation noise. Default is OFF. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="41" column="24" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_focus_app_1_1_pomodoro_timer_1ad89771eea41f9cd1eb7f25c9f6f8dfbb" prot="private" static="no" mutable="no">
+        <type>SoundPlayer</type>
+        <definition>SoundPlayer FocusApp.PomodoroTimer.ambientSoundPlayer</definition>
+        <argsstring></argsstring>
+        <name>ambientSoundPlayer</name>
+        <qualifiedname>FocusApp.PomodoroTimer.ambientSoundPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="43" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_focus_app_1_1_pomodoro_timer_1a846692a03ce2d2fd4012d84c6d969b44" prot="private" static="no" mutable="no">
+        <type>SoundPlayer</type>
+        <definition>SoundPlayer FocusApp.PomodoroTimer.workEndSoundPlayer</definition>
+        <argsstring></argsstring>
+        <name>workEndSoundPlayer</name>
+        <qualifiedname>FocusApp.PomodoroTimer.workEndSoundPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="44" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_focus_app_1_1_pomodoro_timer_1a2710bbf9816a9291aa3886ae021bdd10" prot="private" static="no" mutable="no">
+        <type>SoundPlayer</type>
+        <definition>SoundPlayer FocusApp.PomodoroTimer.breakEndSoundPlayer</definition>
+        <argsstring></argsstring>
+        <name>breakEndSoundPlayer</name>
+        <qualifiedname>FocusApp.PomodoroTimer.breakEndSoundPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="45" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a810b0ecf2734c726ca91ebd9331cbd91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.PomodoroTimer.SetIntervals</definition>
+        <argsstring>(int workMinutes, int breakMinutes)</argsstring>
+        <name>SetIntervals</name>
+        <qualifiedname>FocusApp.PomodoroTimer.SetIntervals</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>workMinutes</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>breakMinutes</declname>
+        </param>
+        <briefdescription>
+<para>Interval Minutes and Break Minutes. Each work session is based on these. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>workMinutes</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>breakMinutes</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="56" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="56" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1af37aac7b13b0abcb722b5e66a130cb64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.PomodoroTimer.SetSound</definition>
+        <argsstring>(string soundSelection)</argsstring>
+        <name>SetSound</name>
+        <qualifiedname>FocusApp.PomodoroTimer.SetSound</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>soundSelection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="62" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="62" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a8e34751a96a8982a5bdd4085041027ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.PomodoroTimer.SetSessions</definition>
+        <argsstring>(int sessions)</argsstring>
+        <name>SetSessions</name>
+        <qualifiedname>FocusApp.PomodoroTimer.SetSessions</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>sessions</declname>
+        </param>
+        <briefdescription>
+<para>Number of sessions to loop with interval work and break timers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sessions</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="135" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a41e1eee87f91a4c25d1f39083e0a12b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.PomodoroTimer.Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <qualifiedname>FocusApp.PomodoroTimer.Start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="140" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="140" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a1cc73e453f37091571b5265339ca8667" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.PomodoroTimer.StartCountUpTimer</definition>
+        <argsstring>(TaskManager taskManager, string taskDescription, string taskTag)</argsstring>
+        <name>StartCountUpTimer</name>
+        <qualifiedname>FocusApp.PomodoroTimer.StartCountUpTimer</qualifiedname>
+        <param>
+          <type><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref></type>
+          <declname>taskManager</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>taskDescription</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>taskTag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="227" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="227" bodyend="310"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1aec71a5ddfe7215c2852d60b0e3d9554a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SoundPlayer</type>
+        <definition>SoundPlayer FocusApp.PomodoroTimer.LoadSound</definition>
+        <argsstring>(string resourceName)</argsstring>
+        <name>LoadSound</name>
+        <qualifiedname>FocusApp.PomodoroTimer.LoadSound</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>resourceName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="111" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="111" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a538c630311b5879c7856c2dab3b23d7a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void FocusApp.PomodoroTimer.TimerCountdown</definition>
+        <argsstring>(string phase, int seconds)</argsstring>
+        <name>TimerCountdown</name>
+        <qualifiedname>FocusApp.PomodoroTimer.TimerCountdown</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>phase</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>seconds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="209" column="22" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="209" bodyend="225"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="31" column="11" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="32" bodyend="311"/>
+    <listofallmembers>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1ad89771eea41f9cd1eb7f25c9f6f8dfbb" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>ambientSoundPlayer</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a2710bbf9816a9291aa3886ae021bdd10" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>breakEndSoundPlayer</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1af21593ea7790d3c6bc59adf40f1e292f" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>BreakInterval</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1aec71a5ddfe7215c2852d60b0e3d9554a" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>LoadSound</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a8ea50bfd30ec112d0809abfc1da8663b" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>SessionsBeforeLongBreak</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a810b0ecf2734c726ca91ebd9331cbd91" prot="public" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>SetIntervals</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a8e34751a96a8982a5bdd4085041027ce" prot="public" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>SetSessions</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1af37aac7b13b0abcb722b5e66a130cb64" prot="public" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>SetSound</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a7f86dec5d27efb1346c0b66373b18e8d" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>SoundSelection</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a41e1eee87f91a4c25d1f39083e0a12b3" prot="public" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>Start</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a1cc73e453f37091571b5265339ca8667" prot="public" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>StartCountUpTimer</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a538c630311b5879c7856c2dab3b23d7a" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>TimerCountdown</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a846692a03ce2d2fd4012d84c6d969b44" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>workEndSoundPlayer</name></member>
+      <member refid="class_focus_app_1_1_pomodoro_timer_1a9b0d0c207a8ac4451dc32b91ea666d12" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>WorkInterval</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

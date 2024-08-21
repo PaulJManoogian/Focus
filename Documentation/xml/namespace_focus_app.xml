@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="namespace_focus_app" kind="namespace" language="C#">
+    <compoundname>FocusApp</compoundname>
+    <innerclass refid="class_focus_app_1_1_pomodoro_timer" prot="public">FocusApp::PomodoroTimer</innerclass>
+    <innerclass refid="class_focus_app_1_1_program" prot="public">FocusApp::Program</innerclass>
+    <innerclass refid="class_focus_app_1_1_statistics" prot="public">FocusApp::Statistics</innerclass>
+    <innerclass refid="class_focus_app_1_1_task_manager" prot="public">FocusApp::TaskManager</innerclass>
+    <innerclass refid="class_focus_app_1_1_task_record" prot="public">FocusApp::TaskRecord</innerclass>
+    <briefdescription>
+<para>Pomodoro Timer Class. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Task Manager Class.</para>
+<para><ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> Class.</para>
+<para><ref refid="class_focus_app_1_1_program" kindref="compound">Program</ref> Class.</para>
+<para>Pomodoro Timer: This class is used to manage timer logic and play sounds while the timer counts up or down <simplesect kind="author"><para>Paul J Manoogian </para>
+</simplesect>
+<simplesect kind="author"><para>Manoogian Media, Inc. </para>
+</simplesect>
+<simplesect kind="version"><para>v1.0.0.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-Aug-21 </para>
+</simplesect>
+<simplesect kind="pre"><para>Called from <ref refid="class_focus_app_1_1_program" kindref="compound">Program</ref> Class </para>
+</simplesect>
+<xrefsect id="bug_1_bug000001"><xreftitle>Bug</xreftitle><xrefdescription><para><ref refid="class_focus_app_1_1_pomodoro_timer" kindref="compound">PomodoroTimer</ref>: None </para>
+</xrefdescription></xrefsect><simplesect kind="warning"><para>None </para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2024 Manoogian Media, Inc.</para>
+</simplesect>
+<ref refid="class_focus_app_1_1_program" kindref="compound">Program</ref> Class: This class is used to enter the program logic and interface with the user. <simplesect kind="author"><para>Paul J Manoogian </para>
+</simplesect>
+<simplesect kind="author"><para>Manoogian Media, Inc. </para>
+</simplesect>
+<simplesect kind="version"><para>v1.0.0.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-Aug-21 </para>
+</simplesect>
+<simplesect kind="pre"><para>First initialize the system. </para>
+</simplesect>
+<xrefsect id="bug_1_bug000002"><xreftitle>Bug</xreftitle><xrefdescription><para><ref refid="class_focus_app_1_1_program" kindref="compound">Program</ref>: JSON Export without the Newtonsoft DLL crashes application with line number details. There is no catch. </para>
+</xrefdescription></xrefsect><simplesect kind="warning"><para>Improper use of JSON without the Newtonsoft DLL will crash the application. </para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2024 Manoogian Media, Inc.</para>
+</simplesect>
+<ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref> Class: This class is used to create a chart for the details of the tasks. <simplesect kind="author"><para>Paul J Manoogian </para>
+</simplesect>
+<simplesect kind="author"><para>Manoogian Media, Inc. </para>
+</simplesect>
+<simplesect kind="version"><para>v1.0.0.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-Aug-21 </para>
+</simplesect>
+<simplesect kind="pre"><para>First initialize the system. </para>
+</simplesect>
+<xrefsect id="bug_1_bug000003"><xreftitle>Bug</xreftitle><xrefdescription><para><ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref>: None </para>
+</xrefdescription></xrefsect><simplesect kind="warning"><para>Improper use of JSON without the Newtonsoft DLL will crash the application. </para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2024 Manoogian Media, Inc.</para>
+</simplesect>
+Task Manager Class: This class is used to manage all timer functions. <simplesect kind="author"><para>Paul J Manoogian </para>
+</simplesect>
+<simplesect kind="author"><para>Manoogian Media, Inc. </para>
+</simplesect>
+<simplesect kind="version"><para>v1.0.0.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-Aug-21 </para>
+</simplesect>
+<simplesect kind="pre"><para>First initialize the system. </para>
+</simplesect>
+<xrefsect id="bug_1_bug000004"><xreftitle>Bug</xreftitle><xrefdescription><para><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref>: None </para>
+</xrefdescription></xrefsect><simplesect kind="warning"><para>Improper use of JSON without the Newtonsoft DLL will crash the application. </para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2024 Manoogian Media, Inc. </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="29" column="1"/>
+  </compounddef>
+</doxygen>
