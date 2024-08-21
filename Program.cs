@@ -9,7 +9,7 @@
 // Notes      : Main application to start the Focus solution, menu, and cmd line
 //---------------------------------------------------------------------------------
 
-
+//TODO: Possibly add PRIORITY to the solution
 
 using System;
 using System.Globalization;
@@ -292,7 +292,7 @@ namespace FocusApp
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                //Console.BackgroundColor = ConsoleColor.DarkGray;
+
                 Console.WriteLine("");
                 Console.WriteLine("███████╗ ██████╗  ██████╗██╗   ██╗███████╗");
                 Console.WriteLine("██╔════╝██╔═══██╗██╔════╝██║   ██║██╔════╝");
@@ -300,17 +300,7 @@ namespace FocusApp
                 Console.WriteLine("██╔══╝  ██║   ██║██║     ██║   ██║╚════██║");
                 Console.WriteLine("██║     ╚██████╔╝╚██████╗╚██████╔╝███████║");
                 Console.WriteLine("╚═╝      ╚═════╝  ╚═════╝ ╚═════╝ ╚══════╝");
-                //Console.WriteLine("                                          ");
 
-
-                //Console.WriteLine(" _____   ___     __  __ __  _____");
-                //Console.WriteLine("|     | /   \\   /  ]|  |  |/ ___/");
-                //Console.WriteLine("|   __||     | /  / |  |  (   \\_ ");
-                //Console.WriteLine("|  |_  |  O  |/  /  |  |  |\\__  |");
-                //Console.WriteLine("|   _] |     /   \\_ |  :  |/  \\ |");
-                //Console.WriteLine("|  |   |     \\     ||     |\\    |");
-                //Console.WriteLine("|__|    \\___/ \\____| \\__,_| \\___|");
-                //Console.WriteLine("                                 ");
                 Console.ResetColor();
                 Console.WriteLine("");
 
@@ -348,11 +338,6 @@ namespace FocusApp
                 Console.WriteLine($"Copyright: {appCopyright}");
                 Console.WriteLine();
 
-                //Console.WriteLine("-=Focus=-");
-                //Console.WriteLine("v1.0.0.1");
-
-                //Console.WriteLine("(c)2024 Manoogian Media, Inc.");
-                //Console.WriteLine("Based off of 'Focus' by Ayooluwa Isaiah");
                 Console.ResetColor();
                 Console.WriteLine("");
                 Console.WriteLine("1. Add Task");

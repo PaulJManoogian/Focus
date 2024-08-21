@@ -28,6 +28,11 @@ using System.Threading;
  */
 namespace FocusApp
 {
+    // --------------------------------------------------------------------------------
+    /// <summary>
+    /// Pomodoro Timer Class Start
+    /// </summary>
+    // --------------------------------------------------------------------------------
     public class PomodoroTimer
     {
 
@@ -59,6 +64,14 @@ namespace FocusApp
             BreakInterval = breakMinutes * 60;
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// SetSound: Sets the sound based on the selection from the command line or menu.
+        /// </summary>
+        /// <param name="soundSelection">Number or Name of the sound that will be played as ambient background sounds.</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void SetSound(string soundSelection)
         {
             SoundSelection = soundSelection;
@@ -108,6 +121,15 @@ namespace FocusApp
         }
 
 
+        // ********************************************************************************
+        /// <summary>
+        /// SoundPlayer: Loads the sounds that will be played. Based on the work end, break end, or ambient sounds.
+        /// </summary>
+        /// <param name="resourceName">File name of the resource that will be played.</param>
+        /// <returns></returns>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         private SoundPlayer LoadSound(string resourceName)
         {
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
@@ -137,6 +159,13 @@ namespace FocusApp
             SessionsBeforeLongBreak = sessions;
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// Start: Starts the Pomodoro timer loop. Each phase is looped through here.
+        /// </summary>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void Start()
         {
             Console.Clear();
@@ -206,6 +235,15 @@ namespace FocusApp
             Console.ReadLine();
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// TimerCountdown: The actual count-down timer for the Pomodoro Timer interval
+        /// </summary>
+        /// <param name="phase">Writes the phase that the timer is in (Timer, break, session break)</param>
+        /// <param name="seconds">Shows the time in minutes and seconds from the seconds amount</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         private void TimerCountdown(string phase, int seconds)
         {
             Console.Write($"{phase}: ");
@@ -224,6 +262,17 @@ namespace FocusApp
             Console.WriteLine(); // Move to the next line after countdown completes
         }
 
+        // ********************************************************************************
+        /// <summary>
+        /// StartCountUpTimer: creates the counter which will start from zero and count up to accumulate time for the timer.
+        /// Still functions as a Pomodoro Timer with the same work/break/session intervals.
+        /// </summary>
+        /// <param name="taskManager">Creates the timer task management instance</param>
+        /// <param name="taskDescription">Creates the task that will be written to the task file</param>
+        /// <param name="taskTag">Creates the tag to associate with this task for grouping</param>
+        // <created>PJM,8/21/2024</created>
+        // <changed>PJM,8/21/2024</changed>
+        // ********************************************************************************
         public void StartCountUpTimer(TaskManager taskManager, string taskDescription, string taskTag)
         {
             Console.Clear();

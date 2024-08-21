@@ -342,7 +342,9 @@ namespace FocusApp
         // ********************************************************************************
         public void ExportTasksToJson(string filePath)
         {
+            //TODO: Wrap the JSON conversion in a TRY because, if the DLL is missing, it breaks.
             string json = JsonConvert.SerializeObject(tasks, Formatting.Indented);
+            //TODO: Wrap the JSON file write in a TRY.
             File.WriteAllText(filePath, json);
         }
 
