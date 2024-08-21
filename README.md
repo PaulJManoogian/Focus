@@ -9,6 +9,8 @@ The functionality of this tool is nearly identical to the work created in this r
 ## Purpose
 I created this version of the tool to have a C# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called `tasks.txt`. The intention here is to keep the entire solution simple and easy to update and maintain.
 
+Deep documentation of the code is here: [Focus Code Documentation](http://www.manoogianmedia.com/focus/)
+
 ## Installation
 This product only runs on Windows as a console/command line executable. It requires *no DLLs* and is completely self-contained in the [Release version 1.0.0.0](https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0) listed to the right.
 
