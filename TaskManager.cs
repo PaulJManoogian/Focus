@@ -342,10 +342,30 @@ namespace FocusApp
         // ********************************************************************************
         public void ExportTasksToJson(string filePath)
         {
-            //TODO: Wrap the JSON conversion in a TRY because, if the DLL is missing, it breaks.
-            string json = JsonConvert.SerializeObject(tasks, Formatting.Indented);
-            //TODO: Wrap the JSON file write in a TRY.
-            File.WriteAllText(filePath, json);
+            try
+            {
+                string dllfilePath = @"Newtonsoft.Json.dll";
+
+                if (File.Exists(dllfilePath))  //Check for JSON DLL
+                {
+                    Console.WriteLine("JSON Library Initialized."); // JSON DLL is there
+                }
+                else
+                {
+                    Console.WriteLine("JSON Library file does not exist."); // Missing the Newtonsoft.Json.dll file
+                }
+
+
+                string json = JsonConvert.SerializeObject(tasks, Formatting.Indented); // Serialize the tasks to JSON format
+
+
+                File.WriteAllText(filePath, json); // Write the file
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An unexpected error occurred: " + ex.Message); // Something went wrong!
+            }
+
         }
 
     }

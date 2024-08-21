@@ -121,10 +121,12 @@ namespace FocusApp
                         else if (args[1].Equals("list", StringComparison.OrdinalIgnoreCase))
                         {
                             taskManager.ListTasks();
+                            return;
                         }
                         else
                         {
                             Console.WriteLine("Invalid task command. Use 'add', 'done', or 'list'.");
+                            return;
                         }
                         
                     }
