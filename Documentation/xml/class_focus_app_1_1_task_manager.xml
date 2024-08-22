@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="39" column="22" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="39" bodyend="-1"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="51" column="22" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="51" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="property">
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="41" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="42" bodyend="44"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="53" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="54" bodyend="56"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="57" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="57" bodyend="71"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="69" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="69" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1a39677f6aafa80fbbc49f23d984e3cc2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="87" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="87" bodyend="101"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="99" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="99" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1a50ad21b9ac935e570035a346de436dcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -222,7 +222,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="112" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="112" bodyend="120"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="124" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="124" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1ac248b348e3201542eda9870a3022de06" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -251,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="130" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="130" bodyend="137"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="142" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="142" bodyend="149"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1ad9e943c502985eea9c394075244b8bcd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -280,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="147" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="147" bodyend="154"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="159" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="159" bodyend="166"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1a3d0725db6813019db0b4b93ef891820d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="163" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="163" bodyend="192"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="175" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="175" bodyend="204"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1a648864648a2a0898fa2eed67ee8f5022" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_focus_app_1_1_task_record" kindref="compound">TaskRecord</ref> &gt;</type>
@@ -313,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="202" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="202" bodyend="206"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="214" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="214" bodyend="218"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1af1f385f2a385f80468eb805aeca15e8a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_focus_app_1_1_task_record" kindref="compound">TaskRecord</ref> &gt;</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="216" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="216" bodyend="219"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="228" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="228" bodyend="231"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1aa91eea5b4b68954258a8d95cc7ef97de" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>List&lt; <ref refid="class_focus_app_1_1_task_record" kindref="compound">TaskRecord</ref> &gt;</type>
@@ -358,7 +358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="229" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="229" bodyend="237"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="241" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="241" bodyend="249"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1a642b07ae7ae3672a7e501ce9618c91cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -387,7 +387,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="248" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="248" bodyend="258"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="260" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="260" bodyend="270"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1a945e5275cbe6baa72092811124ebd22b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -416,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="269" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="269" bodyend="293"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="281" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="281" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1a4d58bc71340018bce53b9d92d0de204d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -445,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="304" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="304" bodyend="315"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="316" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="316" bodyend="327"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1afb3a0288f5fabc0b02dcffccea78d02a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -474,7 +474,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="326" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="326" bodyend="333"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="338" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="338" bodyend="345"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_task_manager_1ac985d94ffc14461f5a1161557d7bb7fe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -503,14 +503,31 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="343" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="343" bodyend="347"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="355" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="355" bodyend="381"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Task Manager Class. </para>
     </briefdescription>
     <detaileddescription>
+<para>Task Manager Class: <ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref> is the key management of all tasks being created, saved, listed, and exported. <simplesect kind="author"><para>Paul J Manoogian </para>
+</simplesect>
+<simplesect kind="author"><para>Manoogian Media, Inc. </para>
+</simplesect>
+<simplesect kind="version"><para>v1.0.0.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-Aug-21 </para>
+</simplesect>
+<simplesect kind="pre"><para>Task Managerment </para>
+</simplesect>
+<xrefsect id="bug_1_bug000005"><xreftitle>Bug</xreftitle><xrefdescription><para><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref>: None </para>
+</xrefdescription></xrefsect><simplesect kind="warning"><para>Improper use of JSON without the Newtonsoft DLL will crash the application. </para>
+</simplesect>
+<simplesect kind="copyright"><para>(c) 2024 Manoogian Media, Inc. </para>
+</simplesect>
+</para>
     </detaileddescription>
-    <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="37" column="11" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="38" bodyend="349"/>
+    <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="49" column="11" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="50" bodyend="383"/>
     <listofallmembers>
       <member refid="class_focus_app_1_1_task_manager_1ac248b348e3201542eda9870a3022de06" prot="public" virt="non-virtual"><scope>FocusApp::TaskManager</scope><name>AbandonTask</name></member>
       <member refid="class_focus_app_1_1_task_manager_1ab88782c4e956a2b1b261cb34f34f1bcb" prot="public" virt="non-virtual"><scope>FocusApp::TaskManager</scope><name>AddTask</name></member>

@@ -6,7 +6,6 @@
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Focus: FocusApp.PomodoroTimer Class Reference</title>
-<link rel="icon" href="Focus_App_Logo.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Focus_App_Logo.ico"/></td>
   <td id="projectalign">
    <div id="projectname">Focus<span id="projectnumber">&#160;v1.0.0.0</span>
    </div>
@@ -105,6 +103,9 @@ $(function(){initNavTree('class_focus_app_1_1_pomodoro_timer.html',''); initResi
   <div class="headertitle"><div class="title">FocusApp.PomodoroTimer Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Pomodoro Timer Class Start.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -112,18 +113,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a810b0ecf2734c726ca91ebd9331cbd91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interval Minutes and Break Minutes. Each work session is based on these.  <br /></td></tr>
 <tr class="separator:a810b0ecf2734c726ca91ebd9331cbd91"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af37aac7b13b0abcb722b5e66a130cb64" id="r_af37aac7b13b0abcb722b5e66a130cb64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af37aac7b13b0abcb722b5e66a130cb64">SetSound</a> (string soundSelection)</td></tr>
+<tr class="memdesc:af37aac7b13b0abcb722b5e66a130cb64"><td class="mdescLeft">&#160;</td><td class="mdescRight">SetSound: Sets the sound based on the selection from the command line or menu.  <br /></td></tr>
 <tr class="separator:af37aac7b13b0abcb722b5e66a130cb64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e34751a96a8982a5bdd4085041027ce" id="r_a8e34751a96a8982a5bdd4085041027ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e34751a96a8982a5bdd4085041027ce">SetSessions</a> (int sessions)</td></tr>
 <tr class="memdesc:a8e34751a96a8982a5bdd4085041027ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of sessions to loop with interval work and break timers.  <br /></td></tr>
 <tr class="separator:a8e34751a96a8982a5bdd4085041027ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41e1eee87f91a4c25d1f39083e0a12b3" id="r_a41e1eee87f91a4c25d1f39083e0a12b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41e1eee87f91a4c25d1f39083e0a12b3">Start</a> ()</td></tr>
+<tr class="memdesc:a41e1eee87f91a4c25d1f39083e0a12b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start: Starts the Pomodoro timer loop. Each phase is looped through here.  <br /></td></tr>
 <tr class="separator:a41e1eee87f91a4c25d1f39083e0a12b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc73e453f37091571b5265339ca8667" id="r_a1cc73e453f37091571b5265339ca8667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cc73e453f37091571b5265339ca8667">StartCountUpTimer</a> (<a class="el" href="class_focus_app_1_1_task_manager.html">TaskManager</a> taskManager, string taskDescription, string taskTag)</td></tr>
+<tr class="memdesc:a1cc73e453f37091571b5265339ca8667"><td class="mdescLeft">&#160;</td><td class="mdescRight">StartCountUpTimer: creates the counter which will start from zero and count up to accumulate time for the timer. Still functions as a Pomodoro Timer with the same work/break/session intervals.  <br /></td></tr>
 <tr class="separator:a1cc73e453f37091571b5265339ca8667"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00031">31</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
+<div class="textblock"><p>Pomodoro Timer Class Start. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00036">36</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a810b0ecf2734c726ca91ebd9331cbd91" name="a810b0ecf2734c726ca91ebd9331cbd91"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a810b0ecf2734c726ca91ebd9331cbd91">&#9670;&#160;</a></span>SetIntervals()</h2>
@@ -153,7 +158,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00056">56</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00061">61</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
 
 </div>
 </div>
@@ -180,7 +185,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00135">135</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00157">157</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
 
 </div>
 </div>
@@ -199,7 +204,15 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00062">62</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
+<p>SetSound: Sets the sound based on the selection from the command line or menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">soundSelection</td><td>Number or Name of the sound that will be played as ambient background sounds.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00075">75</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
 
 </div>
 </div>
@@ -218,7 +231,9 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00140">140</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
+<p>Start: Starts the Pomodoro timer loop. Each phase is looped through here. </p>
+
+<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00169">169</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
 
 </div>
 </div>
@@ -246,7 +261,17 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00227">227</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
+<p>StartCountUpTimer: creates the counter which will start from zero and count up to accumulate time for the timer. Still functions as a Pomodoro Timer with the same work/break/session intervals. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">taskManager</td><td>Creates the timer task management instance</td></tr>
+    <tr><td class="paramname">taskDescription</td><td>Creates the task that will be written to the task file</td></tr>
+    <tr><td class="paramname">taskTag</td><td>Creates the tag to associate with this task for grouping</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_pomodoro_timer_8cs_source.html#l00276">276</a> of file <a class="el" href="_pomodoro_timer_8cs_source.html">PomodoroTimer.cs</a>.</p>
 
 </div>
 </div>

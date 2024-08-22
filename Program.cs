@@ -175,6 +175,44 @@ namespace FocusApp
                         return;
                     }
 
+                    else if (args[i] == "ver" || args[i] == "version")
+                    {
+                        // Get the assembly that contains this code
+                        Assembly assembly = Assembly.GetExecutingAssembly();
+
+                        // Get the assembly title
+                        AssemblyTitleAttribute title = assembly.GetCustomAttribute<AssemblyTitleAttribute>();
+                        string appName = title?.Title ?? "Unknown";
+
+                        // Get the version
+                        Version version = assembly.GetName().Version;
+                        string versionNumber = version != null ? version.ToString() : "Unknown";
+
+                        // Get the description
+                        AssemblyDescriptionAttribute Appdescription = assembly.GetCustomAttribute<AssemblyDescriptionAttribute>();
+                        string appDescription = Appdescription?.Description ?? "No description available.";
+
+                        // Get the build number (AssemblyFileVersion)
+                        AssemblyFileVersionAttribute fileVersion = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
+                        string buildNumber = fileVersion?.Version ?? "Unknown";
+
+                        // Get the copyright information
+                        AssemblyCopyrightAttribute copyright = assembly.GetCustomAttribute<AssemblyCopyrightAttribute>();
+                        string appCopyright = copyright?.Copyright ?? "No copyright information available.";
+
+
+
+                        // Display the information
+                        Console.WriteLine($"-={appName}=-");
+                        Console.WriteLine($"Version: {versionNumber}");
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.WriteLine($"Build: {buildNumber}");
+                        Console.WriteLine($"Description: {appDescription}");
+                        Console.WriteLine($"Copyright: {appCopyright}");
+                        Console.WriteLine();
+                        return;
+                    }
+
                     else if (args[i] == "countup")
                     {
                         taskDescription = args.Length > i + 1 ? args[i + 1] : "Untitled Task";
@@ -459,6 +497,7 @@ namespace FocusApp
             Console.WriteLine("Focus Application - Command Line Options:");
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("help or ?             : Display this help screen");
+            Console.WriteLine("ver or version        : Display the current file version and build information");
             Console.WriteLine("list                  : List all tasks");
             Console.WriteLine("countup [task] [tag]  : Start a count-up timer. Press F10 to stop and log the task.");
             Console.WriteLine("task                  : Add, complete, list, and delete tasks without starting timer.");

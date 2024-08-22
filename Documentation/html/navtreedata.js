@@ -26,23 +26,23 @@ var NAVTREE =
 [
   [ "Focus", "index.html", [
     [ "Focus", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html", [
-      [ "Purpose", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#purpose", null ],
-      [ "Installation", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#installation", null ],
-      [ "Usage", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#usage", [
-        [ "Menu version:", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#menu-version", null ],
-        [ "Command line arguments:", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#command-line-arguments", null ],
-        [ "Command Line Usage", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#command-line-usage", null ]
+      [ "Purpose", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Installation", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md2", null ],
+      [ "Usage", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md4", [
+        [ "Menu version:", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md5", null ],
+        [ "Command line arguments:", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md6", null ],
+        [ "Command Line Usage", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md7", null ]
       ] ],
-      [ "Details", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#details", [
-        [ "Stats", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#stats", [
-          [ "Items that don't have a status of \"Completed\" do not show up on the \"stats\" display at the command li...", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#items-that-dont-have-a-status-of-completed-do-not-show-up-on-the-stats-display-at-the-command-line", null ]
+      [ "Details", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md9", [
+        [ "Stats", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md10", [
+          [ "Items that don't have a status of \"Completed\" do not show up on the \"stats\" display at the command li...", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md11", null ]
         ] ],
-        [ "Sounds", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#sounds", null ]
+        [ "Sounds", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md12", null ]
       ] ],
-      [ "Tags and Tasks", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#tags-and-tasks", null ],
-      [ "Timers", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#timers", null ],
-      [ "Export", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#export", null ],
-      [ "The TASKS.TXT file format", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#the-taskstxt-file-format", null ]
+      [ "Tags and Tasks", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md13", null ],
+      [ "Timers", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md14", null ],
+      [ "Export", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md15", null ],
+      [ "The TASKS.TXT file format", "md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_d_m_e.html#autotoc_md17", null ]
     ] ],
     [ "Bug List", "bug.html", null ],
     [ "Packages", "namespaces.html", [

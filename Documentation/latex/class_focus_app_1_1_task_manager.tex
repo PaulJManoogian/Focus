@@ -1,5 +1,10 @@
 \doxysection{Focus\+App.\+Task\+Manager Class Reference}
 \hypertarget{class_focus_app_1_1_task_manager}{}\label{class_focus_app_1_1_task_manager}\index{FocusApp.TaskManager@{FocusApp.TaskManager}}
+
+
+Task Manager Class.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -39,9 +44,33 @@ List$<$ \mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}} $>$ \mb
 
 
 \doxysubsection{Detailed Description}
+Task Manager Class. 
+
+Task Manager Class\+: \doxylink{class_focus_app_1_1_task_manager}{Task\+Manager} is the key management of all tasks being created, saved, listed, and exported. \begin{DoxyAuthor}{Author}
+Paul J Manoogian 
+
+Manoogian Media, Inc. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+v1.\+0.\+0.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/Aug-\/21 
+\end{DoxyDate}
+\begin{DoxyPrecond}{Precondition}
+Task Managerment 
+\end{DoxyPrecond}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000005}{Bug}}]\doxylink{class_focus_app_1_1_task_manager}{Task\+Manager}\+: None \end{DoxyRefDesc}
+\begin{DoxyWarning}{Warning}
+Improper use of JSON without the Newtonsoft DLL will crash the application. 
+\end{DoxyWarning}
+\begin{DoxyCopyright}{Copyright}
+(c) 2024 Manoogian Media, Inc. 
+\end{DoxyCopyright}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 
 
@@ -63,7 +92,7 @@ Abandon\+Task\+: Mark the task Abandoned as indicated by the index number of the
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00130}{130}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00142}{142}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!AddTask@{AddTask}}
 \index{AddTask@{AddTask}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -88,7 +117,7 @@ Add\+Task creates a task with just project information and sets it to Pending.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00069}{69}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_a39677f6aafa80fbbc49f23d984e3cc2c}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!AddTaskWithTime@{AddTaskWithTime}}
 \index{AddTaskWithTime@{AddTaskWithTime}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -117,7 +146,7 @@ Add\+Task\+With\+Time creates a task in the tasks file without starting a timer.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00087}{87}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00099}{99}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!CompleteTask@{CompleteTask}}
 \index{CompleteTask@{CompleteTask}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -136,7 +165,7 @@ Complete\+Task\+: Mark the task Completed as indicated by the index number of th
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00112}{112}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00124}{124}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!DeleteTask@{DeleteTask}}
 \index{DeleteTask@{DeleteTask}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -155,7 +184,7 @@ Delete\+Task\+: Remove the task (delete it) as indicated by the index number of 
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00147}{147}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00159}{159}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ExportTasksToCsv@{ExportTasksToCsv}}
 \index{ExportTasksToCsv@{ExportTasksToCsv}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -174,7 +203,7 @@ Exports the full task list data to a CSV format fie based on the file path name.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00304}{304}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00316}{316}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ExportTasksToJson@{ExportTasksToJson}}
 \index{ExportTasksToJson@{ExportTasksToJson}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -193,7 +222,7 @@ Exports the full task list data serialized to a JSON format fie based on the fil
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00343}{343}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00355}{355}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ExportTasksToXml@{ExportTasksToXml}}
 \index{ExportTasksToXml@{ExportTasksToXml}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -212,7 +241,7 @@ Exports the full task list data to a XML format fie based on the file path name.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00326}{326}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00338}{338}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_aa91eea5b4b68954258a8d95cc7ef97de}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!GetTasksByDateRange@{GetTasksByDateRange}}
 \index{GetTasksByDateRange@{GetTasksByDateRange}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -229,7 +258,7 @@ Returns all tasks completed within the date range
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00229}{229}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00241}{241}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_af1f385f2a385f80468eb805aeca15e8a}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!GetTasksCompletedAllTime@{GetTasksCompletedAllTime}}
 \index{GetTasksCompletedAllTime@{GetTasksCompletedAllTime}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -246,7 +275,7 @@ Returns all tasks completed
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00216}{216}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00228}{228}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_a648864648a2a0898fa2eed67ee8f5022}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!GetTasksCompletedToday@{GetTasksCompletedToday}}
 \index{GetTasksCompletedToday@{GetTasksCompletedToday}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -263,7 +292,7 @@ Returns all tasks completed that have today\textquotesingle{}s date
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00202}{202}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00214}{214}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!ListTasks@{ListTasks}}
 \index{ListTasks@{ListTasks}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -277,7 +306,7 @@ List\+Tasks\+: Displays (in a chart) the tasks in the task file in the order the
 
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00163}{163}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_a945e5275cbe6baa72092811124ebd22b}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!LoadTasks@{LoadTasks}}
 \index{LoadTasks@{LoadTasks}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -296,7 +325,7 @@ Loads the tasks file from the full file path.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00269}{269}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00281}{281}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}\index{FocusApp.TaskManager@{FocusApp.TaskManager}!SaveTasks@{SaveTasks}}
 \index{SaveTasks@{SaveTasks}!FocusApp.TaskManager@{FocusApp.TaskManager}}
@@ -315,7 +344,7 @@ Saves the task file.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00248}{248}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00260}{260}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 
 
@@ -328,7 +357,7 @@ List$<$\mbox{\hyperlink{class_focus_app_1_1_task_record}{Task\+Record}}$>$ Focus
 
 
 
-Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
+Definition at line \mbox{\hyperlink{_task_manager_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_task_manager_8cs_source}{Task\+Manager.\+cs}}.
 
 
 

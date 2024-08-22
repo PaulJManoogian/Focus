@@ -6,7 +6,6 @@
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Focus: Focus</title>
-<link rel="icon" href="Focus_App_Logo.ico" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +26,6 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="Focus_App_Logo.ico"/></td>
   <td id="projectalign">
    <div id="projectname">Focus<span id="projectnumber">&#160;v1.0.0.0</span>
    </div>
@@ -102,20 +100,20 @@ $(function(){initNavTree('md__c_1_2_users_2paulj_2source_2repos_2_focus_2_r_e_a_
   <div class="headertitle"><div class="title">Focus</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="focus"></a></p>
+<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a></p>
 <p>A timer tool based on the work of <a href="https://github.com/ayoisaiah">Ayooluwa Isaiah</a></p>
 <p>The functionality of this tool is nearly identical to the work created in this repository: <a href="https://github.com/ayoisaiah/focus">Focus</a></p>
 <p><b>This version (c)2024 Manoogian Media, Inc.</b></p>
-<h1><a class="anchor" id="purpose"></a>
+<h1><a class="anchor" id="autotoc_md1"></a>
 Purpose</h1>
 <p>I created this version of the tool to have a C# version which will run on a Windows machine. The code runs only in console mode (just to keep the application simple), but offers a menu system and command line functionality. The data file where the tasks are stored is called <code>tasks.txt</code>. The intention here is to keep the entire solution simple and easy to update and maintain.</p>
-<h1><a class="anchor" id="installation"></a>
+<h1><a class="anchor" id="autotoc_md2"></a>
 Installation</h1>
 <p>This product only runs on Windows as a console/command line executable. It requires <em>no DLLs</em> and is completely self-contained in the <a href="https://github.com/PaulJManoogian/Focus/releases/tag/v1.0.0.0">Release version 1.0.0.0</a> listed to the right.</p>
 <p>However! If you want to use the JSON export function, you will need the Newtonsoft.Json.dll file, as well. Without it, you can still use the product and also still be able to export to CSV and XML formats. You can find it online at <a href="https://www.newtonsoft.com/json">Newtonsoft.com</a> or download it from the release repository here.</p>
 <p>Simply <b>download the executable and run it</b>. <em>IT IS NOT SIGNED.</em></p>
 <hr  />
-<h1><a class="anchor" id="usage"></a>
+<h1><a class="anchor" id="autotoc_md4"></a>
 Usage</h1>
 <p>Using the tool is simple. Here are some examples:</p>
 <div class="fragment"><div class="line">Focus -w 20 -b 5 -s 4 --task &quot;Work Entry&quot; --tag &quot;Tag Entry&quot;</div>
@@ -123,10 +121,10 @@ Usage</h1>
 <div class="line">Focus help</div>
 <div class="line">Focus list</div>
 </div><!-- fragment --><p>If you type "help" or "?" on the command line, you'll see all of the command line options. If you only type FOCUS, it will bring up a menu version of the application.</p>
-<h2><a class="anchor" id="menu-version"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Menu version:</h2>
 <p><img src="https://github.com/user-attachments/assets/e5d69362-8d3d-46f4-9856-04cea0da446a" alt="image" class="inline"/></p>
-<h2><a class="anchor" id="command-line-arguments"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Command line arguments:</h2>
 <div class="fragment"><div class="line">help or ?             : Display this help screen</div>
 <div class="line"> </div>
@@ -174,7 +172,7 @@ Command line arguments:</h2>
 <div class="line">- Focus countup &quot;My Task&quot; &quot;Work&quot; &quot;My Project&quot; &quot;My Client&quot;</div>
 <div class="line">- Focus export csv C:\tasks.csv</div>
 <div class="line">- Focus list</div>
-</div><!-- fragment --><h2><a class="anchor" id="command-line-usage"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md7"></a>
 Command Line Usage</h2>
 <p>When using <code>list</code> or <code>stats</code> you cannot use any of the other command line options. They will be ignored or an error will be thrown.</p><ul>
 <li><code>list</code> is exclusive to simply listing all of the entries in the tasks.txt file.</li>
@@ -182,30 +180,30 @@ Command Line Usage</h2>
 <li>All other arguments can be used together (as in the first example above). This includes the <code>countup</code> argument to start at count-up timer instead of a countdown timer. Otherwise, <em><b>Focus</b></em> defaults to countdown.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="details"></a>
+<h1><a class="anchor" id="autotoc_md9"></a>
 Details</h1>
 <p>This solution is a quick and simple way of watching the time you are working on a project. The intention of the application isn't to try to be a substitute for more robust solutions like Toggl, but to be a simple version that is easy to use and manage.</p>
-<h2><a class="anchor" id="stats"></a>
+<h2><a class="anchor" id="autotoc_md10"></a>
 Stats</h2>
 <p>The <code>stats</code> option is specific to the command line. You currently (v1.0.0.0) cannot see the statistics in the menu version of the application. Soon.</p>
 <p>However, the <code>list</code> option lets you see the full list of task entries and you can also use option 2 on the menu to see the same list in app mode.</p>
 <p><em><b>stats</b></em> offers some specific command line options, listed above, that let you specify start and end dates to view as well as just <code>today</code> or <code>all-time</code> stats. Those are based on <code>Completed</code> tasks.</p>
-<h3><a class="anchor" id="items-that-dont-have-a-status-of-completed-do-not-show-up-on-the-stats-display-at-the-command-line"></a>
+<h3><a class="anchor" id="autotoc_md11"></a>
 Items that don't have a status of "Completed" do not show up on the "stats" display at the command line.</h3>
 <p><img src="https://github.com/user-attachments/assets/921a4564-b597-4639-bae5-449d850660d8" alt="image" class="inline"/></p>
-<h2><a class="anchor" id="sounds"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 Sounds</h2>
 <p>The sounds option on the command line, and when you elect to <code>start a timer</code> in the menu mode, lets you choose an ambient sound to play while you're using the timer. As a note: it will stop during the breaks.</p>
 <p>There is a Work-stop sound and a Break-Stop sound, as well. These will play when your sections complete.</p>
 <p>Sounds vary from chirping birds to rain or fireplace noises. All sounds are gentle, mostly white-noise-style, sounds to help you <em><b>Focus</b></em>. They will loop continually. They are part of the executable and don't require any other files. Currently (v1.0.0.0) you cannot play external sounds.</p>
-<h1><a class="anchor" id="tags-and-tasks"></a>
+<h1><a class="anchor" id="autotoc_md13"></a>
 Tags and Tasks</h1>
 <ul>
 <li><code>Tags</code> are just as you'd expect, they help you define customers, areas, or lists of similar things to help you sort through the projects. Currently, Focus doesn't support filtering just lists of tags, but ... soon.</li>
 <li><code>Tasks</code> are the full names of your entries. These help you determine exact project tasks that you worked on.</li>
 </ul>
 <p>Time entries are added to the tasks when they are created, and the end times are specified on the menu mode of the application for completion of the tasks.</p>
-<h1><a class="anchor" id="timers"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 Timers</h1>
 <p><b>Timers</b> are made up of three components, based on using a Pomodoro Timer:</p><ul>
 <li><code>Work Minutes</code> - how long your work time is.</li>
@@ -218,7 +216,7 @@ Timers</h1>
 <li><code>Countdown</code> - uses the pomodoro interval, break minutes, and sessions to count time downward until it runs out. Does not complete entries.</li>
 <li><code>Count-up</code> - uses the pomodoro interval, break minutes, and sessions to count the time upward until the user hits F10 to stop the timer. When the user presses F10, the entry is marked <code>Completed</code>.</li>
 </ul>
-<h1><a class="anchor" id="export"></a>
+<h1><a class="anchor" id="autotoc_md15"></a>
 Export</h1>
 <p>Export of the data is available to simplify getting entries into another application which may support more robust reporting or billing management, spreadsheets, or databases.</p>
 <p>The following formats are available:</p><ul>
@@ -227,7 +225,7 @@ Export</h1>
 <li><code>JSON</code> - Similar to XML the JSON format is a robust text-based structured data storage format for use with spreadsheets, databases, or project management applications for reporting.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="the-taskstxt-file-format"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 The TASKS.TXT file format</h1>
 <p>Fields in the file are separated by the <code>|</code> (pipe) character.</p>
 <p>The format is as follows: <code>task_name|start_time|end_time|tags|status|project|client</code></p>

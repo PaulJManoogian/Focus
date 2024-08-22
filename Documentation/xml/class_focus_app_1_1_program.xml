@@ -20,7 +20,7 @@
         <inbodydescription>
 <para>Regular program flow</para>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/Program.cs" line="46" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/Program.cs" bodystart="46" bodyend="468"/>
+        <location file="C:/Users/paulj/source/repos/Focus/Program.cs" line="46" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/Program.cs" bodystart="46" bodyend="455"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_program_1aa68e4330bfd13640b80f86c27ed00a2a" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/Program.cs" line="470" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/Program.cs" bodystart="470" bodyend="507"/>
+        <location file="C:/Users/paulj/source/repos/Focus/Program.cs" line="457" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/Program.cs" bodystart="457" bodyend="494"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -42,7 +42,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/paulj/source/repos/Focus/Program.cs" line="34" column="5" bodyfile="C:/Users/paulj/source/repos/Focus/Program.cs" bodystart="45" bodyend="508"/>
+    <location file="C:/Users/paulj/source/repos/Focus/Program.cs" line="34" column="5" bodyfile="C:/Users/paulj/source/repos/Focus/Program.cs" bodystart="45" bodyend="495"/>
     <listofallmembers>
       <member refid="class_focus_app_1_1_program_1aa68e4330bfd13640b80f86c27ed00a2a" prot="private" virt="non-virtual"><scope>FocusApp::Program</scope><name>DisplayHelp</name></member>
       <member refid="class_focus_app_1_1_program_1ae9e8d87876dcc3baa1ee57c63bf3ca4f" prot="private" virt="non-virtual"><scope>FocusApp::Program</scope><name>Main</name></member>

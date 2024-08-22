@@ -4,8 +4,8 @@
   <option  id='PROJECT_NAME' default='no' type='string'><value><![CDATA[Focus]]></value></option>
   <option  id='PROJECT_NUMBER' default='no' type='string'><value><![CDATA[v1.0.0.0]]></value></option>
   <option  id='PROJECT_BRIEF' default='no' type='string'><value><![CDATA["A Pomodoro Timer and Task Management Application"]]></value></option>
-  <option  id='PROJECT_LOGO' default='no' type='string'><value><![CDATA[C:/Users/paulj/source/repos/Focus/Resources/Focus_App_Logo.ico]]></value></option>
-  <option  id='PROJECT_ICON' default='no' type='string'><value><![CDATA[C:/Users/paulj/source/repos/Focus/Resources/Focus_App_Logo.ico]]></value></option>
+  <option  id='PROJECT_LOGO' default='yes' type='string'><value><![CDATA[]]></value></option>
+  <option  id='PROJECT_ICON' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[C:/Users/paulj/source/repos/Focus/Documentation]]></value></option>
   <option  id='CREATE_SUBDIRS' default='yes' type='bool'><value>NO</value></option>
   <option  id='CREATE_SUBDIRS_LEVEL' default='yes' type='int'><value>8</value></option>
@@ -53,7 +53,7 @@
   </option>
   <option  id='MARKDOWN_SUPPORT' default='yes' type='bool'><value>YES</value></option>
   <option  id='TOC_INCLUDE_HEADINGS' default='yes' type='int'><value>6</value></option>
-  <option  id='MARKDOWN_ID_STYLE' default='no' type='string'><value>GITHUB</value></option>
+  <option  id='MARKDOWN_ID_STYLE' default='yes' type='string'><value>DOXYGEN</value></option>
   <option  id='AUTOLINK_SUPPORT' default='yes' type='bool'><value>YES</value></option>
   <option  id='BUILTIN_STL_SUPPORT' default='yes' type='bool'><value>NO</value></option>
   <option  id='CPP_CLI_SUPPORT' default='yes' type='bool'><value>NO</value></option>

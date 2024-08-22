@@ -34,6 +34,18 @@ using System.Threading.Tasks;
  */
 namespace FocusApp
 {
+    /*! 
+    *  \brief     Task Manager Class.
+    *  \details   Task Manager Class: TaskManager is the key management of all tasks being created, saved, listed, and exported.
+    *  \author    Paul J Manoogian
+    *  \author    Manoogian Media, Inc.
+    *  \version   v1.0.0.0
+    *  \date      2024-Aug-21
+    *  \pre       Task Managerment
+    *  \bug       TaskManager: None
+    *  \warning   Improper use of JSON without the Newtonsoft DLL will crash the application.
+    *  \copyright (c) 2024 Manoogian Media, Inc.
+    */
     public class TaskManager
     {
         private List<TaskRecord> tasks = new List<TaskRecord>();
@@ -371,14 +383,29 @@ namespace FocusApp
     }
 
 
+// --------------------------------------------------------------------------------
+/*! 
+ *  \brief     Task Record Class.
+ *  \details   Task Record Class: The record structure of the Tasks.
+ *  \author    Paul J Manoogian
+ *  \author    Manoogian Media, Inc.
+ *  */
+// --------------------------------------------------------------------------------
 public class TaskRecord
     {
+        /// <summary>The Task Description. Used to identify a specific action being tracked.</summary>
         public string Description { get; set; }
+        /// <summary>Start Date of the task being tracked based on creation of new task.</summary>
         public DateTime StartDate { get; set; }
+        /// <summary>End Date for the task that is associated with the completed date and time.</summary>
         public DateTime EndDate { get; set; }
+        /// <summary>Tag is used to help sort information for it is exported to other tools. Used as a Keyword.</summary>
         public string Tag { get; set; }
+        /// <summary>Status represents the current status of the task: Pending (new), Abandoned, Completed.</summary>
         public string Status { get; set; }
+        /// <summary>Project identifies the associated project name for the task. Useful for tracking in other applications after export.</summary>
         public string Project { get; set; }  // New property for Project
+        /// <summary>Client is used to identify the name of a Client or Organization for whom tasks are being completed and used in applications after export.</summary>
         public string Client { get; set; }   // New property for Client
     }
 

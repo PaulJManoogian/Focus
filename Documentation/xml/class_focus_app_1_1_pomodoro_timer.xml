@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="35" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="35" bodyend="35"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="40" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_pomodoro_timer_1af21593ea7790d3c6bc59adf40f1e292f" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="37" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="37" bodyend="37"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="42" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="42" bodyend="42"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_pomodoro_timer_1a8ea50bfd30ec112d0809abfc1da8663b" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="39" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="39" bodyend="39"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="44" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="44" bodyend="44"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_pomodoro_timer_1a7f86dec5d27efb1346c0b66373b18e8d" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="41" column="24" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="41" bodyend="41"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="46" column="24" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="46" bodyend="46"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="43" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="43" bodyend="-1"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="48" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_focus_app_1_1_pomodoro_timer_1a846692a03ce2d2fd4012d84c6d969b44" prot="private" static="no" mutable="no">
         <type>SoundPlayer</type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="44" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="44" bodyend="-1"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="49" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_focus_app_1_1_pomodoro_timer_1a2710bbf9816a9291aa3886ae021bdd10" prot="private" static="no" mutable="no">
         <type>SoundPlayer</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="45" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="45" bodyend="-1"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="50" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="50" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="56" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="56" bodyend="60"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="61" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="61" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1af37aac7b13b0abcb722b5e66a130cb64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -163,12 +163,23 @@
           <declname>soundSelection</declname>
         </param>
         <briefdescription>
+<para>SetSound: Sets the sound based on the selection from the command line or menu. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>soundSelection</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number or Name of the sound that will be played as ambient background sounds.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="62" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="62" bodyend="108"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="75" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="75" bodyend="121"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a8e34751a96a8982a5bdd4085041027ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -196,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="135" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="135" bodyend="138"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="157" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="157" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a41e1eee87f91a4c25d1f39083e0a12b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -205,12 +216,13 @@
         <name>Start</name>
         <qualifiedname>FocusApp.PomodoroTimer.Start</qualifiedname>
         <briefdescription>
+<para>Start: Starts the Pomodoro timer loop. Each phase is looped through here. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="140" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="140" bodyend="207"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="169" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="169" bodyend="236"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a1cc73e453f37091571b5265339ca8667" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -231,12 +243,39 @@
           <declname>taskTag</declname>
         </param>
         <briefdescription>
+<para>StartCountUpTimer: creates the counter which will start from zero and count up to accumulate time for the timer. Still functions as a Pomodoro Timer with the same work/break/session intervals. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>taskManager</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Creates the timer task management instance</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taskDescription</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Creates the task that will be written to the task file</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>taskTag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Creates the tag to associate with this task for grouping</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="227" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="227" bodyend="310"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="276" column="21" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="276" bodyend="359"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -251,12 +290,25 @@
           <declname>resourceName</declname>
         </param>
         <briefdescription>
+<para>SoundPlayer: Loads the sounds that will be played. Based on the work end, break end, or ambient sounds. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>resourceName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name of the resource that will be played.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="111" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="111" bodyend="125"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="133" column="29" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="133" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="class_focus_app_1_1_pomodoro_timer_1a538c630311b5879c7856c2dab3b23d7a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -273,19 +325,39 @@
           <declname>seconds</declname>
         </param>
         <briefdescription>
+<para>TimerCountdown: The actual count-down timer for the Pomodoro Timer interval. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>phase</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Writes the phase that the timer is in (Timer, break, session break)</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>seconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shows the time in minutes and seconds from the seconds amount</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="209" column="22" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="209" bodyend="225"/>
+        <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="247" column="22" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="247" bodyend="263"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Pomodoro Timer Class Start. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="31" column="11" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="32" bodyend="311"/>
+    <location file="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" line="36" column="11" bodyfile="C:/Users/paulj/source/repos/Focus/PomodoroTimer.cs" bodystart="37" bodyend="360"/>
     <listofallmembers>
       <member refid="class_focus_app_1_1_pomodoro_timer_1ad89771eea41f9cd1eb7f25c9f6f8dfbb" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>ambientSoundPlayer</name></member>
       <member refid="class_focus_app_1_1_pomodoro_timer_1a2710bbf9816a9291aa3886ae021bdd10" prot="private" virt="non-virtual"><scope>FocusApp::PomodoroTimer</scope><name>breakEndSoundPlayer</name></member>

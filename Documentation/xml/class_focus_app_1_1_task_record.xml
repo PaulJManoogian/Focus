@@ -10,12 +10,13 @@
         <name>Description</name>
         <qualifiedname>FocusApp.TaskRecord.Description</qualifiedname>
         <briefdescription>
+<para>The Task Description. Used to identify a specific action being tracked. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="354" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="354" bodyend="354"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="397" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="397" bodyend="397"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_task_record_1aee8991d0068eb40009e5317d3441963e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>DateTime</type>
@@ -24,12 +25,13 @@
         <name>StartDate</name>
         <qualifiedname>FocusApp.TaskRecord.StartDate</qualifiedname>
         <briefdescription>
+<para>Start Date of the task being tracked based on creation of new task. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="355" column="25" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="355" bodyend="355"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="399" column="25" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="399" bodyend="399"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_task_record_1a5f2fcfe4324cc86606abbc2046146bb8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>DateTime</type>
@@ -38,12 +40,13 @@
         <name>EndDate</name>
         <qualifiedname>FocusApp.TaskRecord.EndDate</qualifiedname>
         <briefdescription>
+<para>End Date for the task that is associated with the completed date and time. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="356" column="25" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="356" bodyend="356"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="401" column="25" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="401" bodyend="401"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_task_record_1a5b2e8c3e9272179aec636f3b2c6ff91b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -52,12 +55,13 @@
         <name>Tag</name>
         <qualifiedname>FocusApp.TaskRecord.Tag</qualifiedname>
         <briefdescription>
+<para>Tag is used to help sort information for it is exported to other tools. Used as a Keyword. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="357" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="357" bodyend="357"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="403" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="403" bodyend="403"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_task_record_1a6aaf78e7fdcea1bf650db6fa08c38dc2" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -66,12 +70,13 @@
         <name>Status</name>
         <qualifiedname>FocusApp.TaskRecord.Status</qualifiedname>
         <briefdescription>
+<para>Status represents the current status of the task: Pending (new), Abandoned, Completed. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="358" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="358" bodyend="358"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="405" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="405" bodyend="405"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_task_record_1afd92b43ef493520dc68e91605cf4ae7b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -80,12 +85,13 @@
         <name>Project</name>
         <qualifiedname>FocusApp.TaskRecord.Project</qualifiedname>
         <briefdescription>
+<para>Project identifies the associated project name for the task. Useful for tracking in other applications after export. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="359" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="359" bodyend="359"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="407" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="407" bodyend="407"/>
       </memberdef>
       <memberdef kind="property" id="class_focus_app_1_1_task_record_1aae3146f9a0a165b38553128e7ca820e7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>string</type>
@@ -94,19 +100,26 @@
         <name>Client</name>
         <qualifiedname>FocusApp.TaskRecord.Client</qualifiedname>
         <briefdescription>
+<para>Client is used to identify the name of a Client or Organization for whom tasks are being completed and used in applications after export. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="360" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="360" bodyend="360"/>
+        <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="409" column="23" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="409" bodyend="409"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
+<para>Task Record Class. </para>
     </briefdescription>
     <detaileddescription>
+<para>Task Record Class: The record structure of the Tasks. <simplesect kind="author"><para>Paul J Manoogian </para>
+</simplesect>
+<simplesect kind="author"><para>Manoogian Media, Inc. </para>
+</simplesect>
+</para>
     </detaileddescription>
-    <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="352" column="7" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="353" bodyend="361"/>
+    <location file="C:/Users/paulj/source/repos/Focus/TaskManager.cs" line="394" column="7" bodyfile="C:/Users/paulj/source/repos/Focus/TaskManager.cs" bodystart="395" bodyend="410"/>
     <listofallmembers>
       <member refid="class_focus_app_1_1_task_record_1aae3146f9a0a165b38553128e7ca820e7" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>Client</name></member>
       <member refid="class_focus_app_1_1_task_record_1ab0b7e977985d1853db4893807a84321c" prot="public" virt="non-virtual"><scope>FocusApp::TaskRecord</scope><name>Description</name></member>

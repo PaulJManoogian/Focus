@@ -1,24 +1,29 @@
 \doxysection{Focus\+App.\+Pomodoro\+Timer Class Reference}
 \hypertarget{class_focus_app_1_1_pomodoro_timer}{}\label{class_focus_app_1_1_pomodoro_timer}\index{FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}}
+
+
+Pomodoro Timer Class Start.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{Set\+Intervals}} (int work\+Minutes, int break\+Minutes)
 \begin{DoxyCompactList}\small\item\em Interval Minutes and Break Minutes. Each work session is based on these. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{Set\+Sound}} (string sound\+Selection)
-\item 
+\begin{DoxyCompactList}\small\item\em Set\+Sound\+: Sets the sound based on the selection from the command line or menu. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{Set\+Sessions}} (int sessions)
 \begin{DoxyCompactList}\small\item\em Number of sessions to loop with interval work and break timers. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a41e1eee87f91a4c25d1f39083e0a12b3}{Start}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Start\+: Starts the Pomodoro timer loop. Each phase is looped through here. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a1cc73e453f37091571b5265339ca8667}{Start\+Count\+Up\+Timer}} (\mbox{\hyperlink{class_focus_app_1_1_task_manager}{Task\+Manager}} task\+Manager, string task\+Description, string task\+Tag)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Start\+Count\+Up\+Timer\+: creates the counter which will start from zero and count up to accumulate time for the timer. Still functions as a Pomodoro Timer with the same work/break/session intervals. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Pomodoro Timer Class Start. 
 
-
-Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
+Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
 
 
 
@@ -42,7 +47,7 @@ Interval Minutes and Break Minutes. Each work session is based on these.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
+Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00061}{61}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}\index{FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}!SetSessions@{SetSessions}}
 \index{SetSessions@{SetSessions}!FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}}
@@ -61,7 +66,7 @@ Number of sessions to loop with interval work and break timers.
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00135}{135}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
+Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00157}{157}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}\index{FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}!SetSound@{SetSound}}
 \index{SetSound@{SetSound}!FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}}
@@ -71,7 +76,16 @@ void Focus\+App.\+Pomodoro\+Timer.\+Set\+Sound (\begin{DoxyParamCaption}\item[{s
 
 
 
-Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
+Set\+Sound\+: Sets the sound based on the selection from the command line or menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound\+Selection} & Number or Name of the sound that will be played as ambient background sounds.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00075}{75}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_pomodoro_timer_a41e1eee87f91a4c25d1f39083e0a12b3}\index{FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}!Start@{Start}}
 \index{Start@{Start}!FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}}
@@ -81,7 +95,11 @@ void Focus\+App.\+Pomodoro\+Timer.\+Start (\begin{DoxyParamCaption}{}{}\end{Doxy
 
 
 
-Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00140}{140}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
+Start\+: Starts the Pomodoro timer loop. Each phase is looped through here. 
+
+
+
+Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00169}{169}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
 
 \Hypertarget{class_focus_app_1_1_pomodoro_timer_a1cc73e453f37091571b5265339ca8667}\index{FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}!StartCountUpTimer@{StartCountUpTimer}}
 \index{StartCountUpTimer@{StartCountUpTimer}!FocusApp.PomodoroTimer@{FocusApp.PomodoroTimer}}
@@ -91,7 +109,20 @@ void Focus\+App.\+Pomodoro\+Timer.\+Start\+Count\+Up\+Timer (\begin{DoxyParamCap
 
 
 
-Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00227}{227}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
+Start\+Count\+Up\+Timer\+: creates the counter which will start from zero and count up to accumulate time for the timer. Still functions as a Pomodoro Timer with the same work/break/session intervals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em task\+Manager} & Creates the timer task management instance\\
+\hline
+{\em task\+Description} & Creates the task that will be written to the task file\\
+\hline
+{\em task\+Tag} & Creates the tag to associate with this task for grouping\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_pomodoro_timer_8cs_source_l00276}{276}} of file \mbox{\hyperlink{_pomodoro_timer_8cs_source}{Pomodoro\+Timer.\+cs}}.
 
 
 

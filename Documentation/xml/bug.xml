@@ -11,7 +11,10 @@
 <listitem><para><anchor id="bug_1_bug000001"/><ref refid="class_focus_app_1_1_pomodoro_timer" kindref="compound">PomodoroTimer</ref>: None </para>
 <para><anchor id="bug_1_bug000002"/><ref refid="class_focus_app_1_1_program" kindref="compound">Program</ref>: JSON Export without the Newtonsoft DLL crashes application with line number details. There is no catch. </para>
 <para><anchor id="bug_1_bug000003"/><ref refid="class_focus_app_1_1_statistics" kindref="compound">Statistics</ref>: None </para>
-<para><anchor id="bug_1_bug000004"/><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref>: None </para>
+<para><anchor id="bug_1_bug000004"/><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref>: None  </para>
+</listitem>
+<varlistentry><term>Class <ref refid="class_focus_app_1_1_task_manager" kindref="compound">FocusApp.TaskManager</ref>  </term></varlistentry>
+<listitem><para><anchor id="bug_1_bug000005"/><ref refid="class_focus_app_1_1_task_manager" kindref="compound">TaskManager</ref>: None </para>
 </listitem>
 </variablelist>
 </para>
