@@ -42,7 +42,9 @@ If you only type FOCUS, it will bring up a menu version of the application.
 ```
 help or ?             : Display this help screen
 
-list                  : List all tasks
+-l or list            : List all tasks
+
+-v, ver, or version   : Show the application version and build information.
 
 countup [desc] [tag]  : Start a timer that counts up, with support for pomodoro and sounds
 
