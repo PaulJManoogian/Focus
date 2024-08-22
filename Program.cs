@@ -169,47 +169,15 @@ namespace FocusApp
                 for (int i = 0; i < args.Length; i++)
                 {
 
-                    if (args[i] == "list")
+                    if (args[i] == "list" || args[i] == "-l")
                     {
                         taskManager.ListTasks();
                         return;
                     }
 
-                    else if (args[i] == "ver" || args[i] == "version")
+                    else if (args[i] == "ver" || args[i] == "version" || args[i] == "-v")
                     {
-                        // Get the assembly that contains this code
-                        Assembly assembly = Assembly.GetExecutingAssembly();
-
-                        // Get the assembly title
-                        AssemblyTitleAttribute title = assembly.GetCustomAttribute<AssemblyTitleAttribute>();
-                        string appName = title?.Title ?? "Unknown";
-
-                        // Get the version
-                        Version version = assembly.GetName().Version;
-                        string versionNumber = version != null ? version.ToString() : "Unknown";
-
-                        // Get the description
-                        AssemblyDescriptionAttribute Appdescription = assembly.GetCustomAttribute<AssemblyDescriptionAttribute>();
-                        string appDescription = Appdescription?.Description ?? "No description available.";
-
-                        // Get the build number (AssemblyFileVersion)
-                        AssemblyFileVersionAttribute fileVersion = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
-                        string buildNumber = fileVersion?.Version ?? "Unknown";
-
-                        // Get the copyright information
-                        AssemblyCopyrightAttribute copyright = assembly.GetCustomAttribute<AssemblyCopyrightAttribute>();
-                        string appCopyright = copyright?.Copyright ?? "No copyright information available.";
-
-
-
-                        // Display the information
-                        Console.WriteLine($"-={appName}=-");
-                        Console.WriteLine($"Version: {versionNumber}");
-                        Console.ForegroundColor = ConsoleColor.DarkGray;
-                        Console.WriteLine($"Build: {buildNumber}");
-                        Console.WriteLine($"Description: {appDescription}");
-                        Console.WriteLine($"Copyright: {appCopyright}");
-                        Console.WriteLine();
+                        DisplayVersionInfo();
                         return;
                     }
 
@@ -344,41 +312,10 @@ namespace FocusApp
                 Console.ResetColor();
                 Console.WriteLine("");
 
-                // Get the assembly that contains this code
-                Assembly assembly = Assembly.GetExecutingAssembly();
 
-                // Get the assembly title
-                AssemblyTitleAttribute title = assembly.GetCustomAttribute<AssemblyTitleAttribute>();
-                string appName = title?.Title ?? "Unknown";
-
-                // Get the version
-                Version version = assembly.GetName().Version;
-                string versionNumber = version != null ? version.ToString() : "Unknown";
-
-                // Get the description
-                AssemblyDescriptionAttribute Appdescription = assembly.GetCustomAttribute<AssemblyDescriptionAttribute>();
-                string appDescription = Appdescription?.Description ?? "No description available.";
-
-                // Get the build number (AssemblyFileVersion)
-                AssemblyFileVersionAttribute fileVersion = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
-                string buildNumber = fileVersion?.Version ?? "Unknown";
-
-                // Get the copyright information
-                AssemblyCopyrightAttribute copyright = assembly.GetCustomAttribute<AssemblyCopyrightAttribute>();
-                string appCopyright = copyright?.Copyright ?? "No copyright information available.";
+                DisplayVersionInfo();
 
 
-
-                // Display the information
-                Console.WriteLine($"-={appName}=-");
-                Console.WriteLine($"Version: {versionNumber}");
-                Console.ForegroundColor = ConsoleColor.DarkGray;
-                Console.WriteLine($"Build: {buildNumber}");
-                Console.WriteLine($"Description: {appDescription}");
-                Console.WriteLine($"Copyright: {appCopyright}");
-                Console.WriteLine();
-
-                Console.ResetColor();
                 Console.WriteLine("");
                 Console.WriteLine("1. Add Task");
                 Console.WriteLine("2. List Tasks");
@@ -492,13 +429,21 @@ namespace FocusApp
             }
         }
 
+
+        // ********************************************************************************
+        /// <summary>
+        /// DisplayHelp: Shows the help text for when someone types "help" or "?" on the command line.
+        /// </summary>
+        // <created>PJM,8/22/2024</created>
+        // <changed>PJM,8/22/2024</changed>
+        // ********************************************************************************
         static void DisplayHelp()
         {
             Console.WriteLine("Focus Application - Command Line Options:");
             Console.WriteLine("----------------------------------------");
             Console.WriteLine("help or ?             : Display this help screen");
-            Console.WriteLine("ver or version        : Display the current file version and build information");
-            Console.WriteLine("list                  : List all tasks");
+            Console.WriteLine("-v, ver, or version   : Display the current file version and build information");
+            Console.WriteLine("-l or list            : List all tasks");
             Console.WriteLine("countup [task] [tag]  : Start a count-up timer. Press F10 to stop and log the task.");
             Console.WriteLine("task                  : Add, complete, list, and delete tasks without starting timer.");
             Console.WriteLine("  add [description] [tag] [project] [client]");
@@ -530,6 +475,57 @@ namespace FocusApp
             Console.WriteLine("Focus export csv C:\\tasks.csv");
             Console.WriteLine("Focus list");
 
+        }
+
+
+        // ********************************************************************************
+        /// <summary>
+        /// DisplayVersionInfo: Displays the current version and build of the Focus application.
+        /// </summary>
+        // <created>PJM,8/22/2024</created>
+        // <changed>PJM,8/22/2024</changed>
+        // ********************************************************************************
+        static void DisplayVersionInfo()
+        {
+            Console.ResetColor();
+
+            Console.WriteLine("");
+
+            // Get the assembly that contains this code
+            Assembly assembly = Assembly.GetExecutingAssembly();
+
+            // Get the assembly title
+            AssemblyTitleAttribute title = assembly.GetCustomAttribute<AssemblyTitleAttribute>();
+            string appName = title?.Title ?? "Unknown";
+
+            // Get the version
+            Version version = assembly.GetName().Version;
+            string versionNumber = version != null ? version.ToString() : "Unknown";
+
+            // Get the description
+            AssemblyDescriptionAttribute Appdescription = assembly.GetCustomAttribute<AssemblyDescriptionAttribute>();
+            string appDescription = Appdescription?.Description ?? "No description available.";
+
+            // Get the build number (AssemblyFileVersion)
+            AssemblyFileVersionAttribute fileVersion = assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
+            string buildNumber = fileVersion?.Version ?? "Unknown";
+
+            // Get the copyright information
+            AssemblyCopyrightAttribute copyright = assembly.GetCustomAttribute<AssemblyCopyrightAttribute>();
+            string appCopyright = copyright?.Copyright ?? "No copyright information available.";
+
+
+            // Display the information
+            Console.WriteLine($"-={appName}=-");
+            Console.WriteLine($"Version: {versionNumber}");
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Console.WriteLine($"Build: {buildNumber}");
+            Console.WriteLine($"Description: {appDescription}");
+            Console.WriteLine($"Copyright: {appCopyright}");
+            
+            Console.WriteLine();
+
+            Console.ResetColor();
         }
     }
 

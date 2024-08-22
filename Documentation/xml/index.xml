@@ -19,6 +19,7 @@
   <compound refid="class_focus_app_1_1_program" kind="class"><name>FocusApp::Program</name>
     <member refid="class_focus_app_1_1_program_1ae9e8d87876dcc3baa1ee57c63bf3ca4f" kind="function"><name>Main</name></member>
     <member refid="class_focus_app_1_1_program_1aa68e4330bfd13640b80f86c27ed00a2a" kind="function"><name>DisplayHelp</name></member>
+    <member refid="class_focus_app_1_1_program_1a5d98a4c673a384697ebe2eada1c1fb82" kind="function"><name>DisplayVersionInfo</name></member>
   </compound>
   <compound refid="class_focus_app_1_1_statistics" kind="class"><name>FocusApp::Statistics</name>
     <member refid="class_focus_app_1_1_statistics_1a116ec03e5734b395a76836a53c3717a1" kind="variable"><name>_taskManager</name></member>

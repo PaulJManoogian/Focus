@@ -156,329 +156,358 @@
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ args.Length;\ i++)}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00171}00171\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}list"{}})}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}list"{}}\ ||\ args[i]\ ==\ \textcolor{stringliteral}{"{}-\/l"{}})}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}{ListTasks}}();}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00177}00177\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}countup"{}})}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}ver"{}}\ ||\ args[i]\ ==\ \textcolor{stringliteral}{"{}version"{}}\ ||\ args[i]\ ==\ \textcolor{stringliteral}{"{}-\/v"{}})}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskDescription\ =\ args.Length\ >\ i\ +\ 1\ ?\ args[i\ +\ 1]\ :\ \textcolor{stringliteral}{"{}Untitled\ Task"{}};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskTag\ =\ args.Length\ >\ i\ +\ 2\ ?\ args[i\ +\ 2]\ :\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(workInterval,\ breakInterval);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(soundSelection);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(sessions);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a1cc73e453f37091571b5265339ca8667}{StartCountUpTimer}}(taskManager,\ taskDescription,\ taskTag);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}stats"{}})}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DateTime?\ startDate\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DateTime?\ endDate\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ showTodayStats\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ showAllTimeStats\ =\ \textcolor{keyword}{false};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00194}00194\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i\ +\ 1;\ j\ <\ args.Length;\ j++)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args[j]\ ==\ \textcolor{stringliteral}{"{}-\/-\/start"{}}\ \&\&\ j\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ startDate\ =\ DateTime.Parse(args[j\ +\ 1],\ CultureInfo.InvariantCulture);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[j]\ ==\ \textcolor{stringliteral}{"{}-\/-\/end"{}}\ \&\&\ j\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ endDate\ =\ DateTime.Parse(args[j\ +\ 1],\ CultureInfo.InvariantCulture);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[j]\ ==\ \textcolor{stringliteral}{"{}-\/p"{}}\ \&\&\ j\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args[j\ +\ 1].ToLower()\ ==\ \textcolor{stringliteral}{"{}today"{}})}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ showTodayStats\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[j\ +\ 1].ToLower()\ ==\ \textcolor{stringliteral}{"{}all-\/time"{}})}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ showAllTimeStats\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00217}00217\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (showTodayStats)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stats.\mbox{\hyperlink{class_focus_app_1_1_statistics_aeb6e088fa431de82aefd9962628f8df9}{ShowStatistics}}(\textcolor{stringliteral}{"{}today"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (showAllTimeStats)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stats.\mbox{\hyperlink{class_focus_app_1_1_statistics_aeb6e088fa431de82aefd9962628f8df9}{ShowStatistics}}(\textcolor{stringliteral}{"{}all-\/time"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (startDate.HasValue)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stats.\mbox{\hyperlink{class_focus_app_1_1_statistics_a119070c363176cc67aa29e9f94a78bfb}{ShowStatisticsByDateRange}}(startDate.Value,\ endDate);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Please\ provide\ a\ valid\ -\/-\/start\ date\ or\ use\ -\/p\ 'today'\ or\ -\/p\ 'all-\/time'."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/w"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ workInterval\ =\ \textcolor{keywordtype}{int}.Parse(args[i\ +\ 1]);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/b"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ breakInterval\ =\ \textcolor{keywordtype}{int}.Parse(args[i\ +\ 1]);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/s"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sessions\ =\ \textcolor{keywordtype}{int}.Parse(args[i\ +\ 1]);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/task"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskDescription\ =\ args[i\ +\ 1];}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/tag"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskTag\ =\ args[i\ +\ 1];}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/project"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ project\ =\ args[i\ +\ 1];}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/client"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ client\ =\ args[i\ +\ 1];}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/sound"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ soundSelection\ =\ args[i\ +\ 1].ToUpper();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00269}00269\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(taskDescription))}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}{AddTask}}(taskDescription,\ taskTag,\ project,\ client);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Task\ '\{taskDescription\}'\ with\ tag\ '\{taskTag\}'\ added\ under\ project\ '\{project\}'\ for\ client\ '\{client\}'."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(workInterval,\ breakInterval);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(soundSelection);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(sessions);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a41e1eee87f91a4c25d1f39083e0a12b3}{Start}}();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}{CompleteTask}}(taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d72c9b6b9cfaf53bdbb6e58013bd24c}{Tasks}}.Count\ -\/\ 1);\ \ \textcolor{comment}{//\ Completing\ the\ most\ recent\ task}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ReadLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00284}00284\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00285}00285\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Regular\ program\ flow...}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DisplayVersionInfo();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}countup"{}})}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskDescription\ =\ args.Length\ >\ i\ +\ 1\ ?\ args[i\ +\ 1]\ :\ \textcolor{stringliteral}{"{}Untitled\ Task"{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskTag\ =\ args.Length\ >\ i\ +\ 2\ ?\ args[i\ +\ 2]\ :\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(workInterval,\ breakInterval);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(soundSelection);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(sessions);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a1cc73e453f37091571b5265339ca8667}{StartCountUpTimer}}(taskManager,\ taskDescription,\ taskTag);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}stats"{}})}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DateTime?\ startDate\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DateTime?\ endDate\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ showTodayStats\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ showAllTimeStats\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ i\ +\ 1;\ j\ <\ args.Length;\ j++)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args[j]\ ==\ \textcolor{stringliteral}{"{}-\/-\/start"{}}\ \&\&\ j\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ startDate\ =\ DateTime.Parse(args[j\ +\ 1],\ CultureInfo.InvariantCulture);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[j]\ ==\ \textcolor{stringliteral}{"{}-\/-\/end"{}}\ \&\&\ j\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ endDate\ =\ DateTime.Parse(args[j\ +\ 1],\ CultureInfo.InvariantCulture);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[j]\ ==\ \textcolor{stringliteral}{"{}-\/p"{}}\ \&\&\ j\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (args[j\ +\ 1].ToLower()\ ==\ \textcolor{stringliteral}{"{}today"{}})}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ showTodayStats\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[j\ +\ 1].ToLower()\ ==\ \textcolor{stringliteral}{"{}all-\/time"{}})}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ showAllTimeStats\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (showTodayStats)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stats.\mbox{\hyperlink{class_focus_app_1_1_statistics_aeb6e088fa431de82aefd9962628f8df9}{ShowStatistics}}(\textcolor{stringliteral}{"{}today"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (showAllTimeStats)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stats.\mbox{\hyperlink{class_focus_app_1_1_statistics_aeb6e088fa431de82aefd9962628f8df9}{ShowStatistics}}(\textcolor{stringliteral}{"{}all-\/time"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (startDate.HasValue)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stats.\mbox{\hyperlink{class_focus_app_1_1_statistics_a119070c363176cc67aa29e9f94a78bfb}{ShowStatisticsByDateRange}}(startDate.Value,\ endDate);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Please\ provide\ a\ valid\ -\/-\/start\ date\ or\ use\ -\/p\ 'today'\ or\ -\/p\ 'all-\/time'."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/w"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ workInterval\ =\ \textcolor{keywordtype}{int}.Parse(args[i\ +\ 1]);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/b"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ breakInterval\ =\ \textcolor{keywordtype}{int}.Parse(args[i\ +\ 1]);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/s"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sessions\ =\ \textcolor{keywordtype}{int}.Parse(args[i\ +\ 1]);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/task"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskDescription\ =\ args[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00258}00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/tag"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00259}00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskTag\ =\ args[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/project"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ project\ =\ args[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00266}00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/client"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00268}00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ client\ =\ args[i\ +\ 1];}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (args[i]\ ==\ \textcolor{stringliteral}{"{}-\/-\/sound"{}}\ \&\&\ i\ +\ 1\ <\ args.Length)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ soundSelection\ =\ args[i\ +\ 1].ToUpper();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00275}00275\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(taskDescription))}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}{AddTask}}(taskDescription,\ taskTag,\ project,\ client);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Task\ '\{taskDescription\}'\ with\ tag\ '\{taskTag\}'\ added\ under\ project\ '\{project\}'\ for\ client\ '\{client\}'."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(workInterval,\ breakInterval);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(soundSelection);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(sessions);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a41e1eee87f91a4c25d1f39083e0a12b3}{Start}}();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}{CompleteTask}}(taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d72c9b6b9cfaf53bdbb6e58013bd24c}{Tasks}}.Count\ -\/\ 1);\ \ \textcolor{comment}{//\ Completing\ the\ most\ recent\ task}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00290}00290\ }
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00291}00291\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00292}00292\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00293}00293\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00295}00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Clear();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkCyan;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Regular\ program\ flow...}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00296}00296\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00297}00297\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00298}00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}███████╗\ ██████╗\ \ ██████╗██╗\ \ \ ██╗███████╗"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}██╔════╝██╔═══██╗██╔════╝██║\ \ \ ██║██╔════╝"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}█████╗\ \ ██║\ \ \ ██║██║\ \ \ \ \ ██║\ \ \ ██║███████╗"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}██╔══╝\ \ ██║\ \ \ ██║██║\ \ \ \ \ ██║\ \ \ ██║╚════██║"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}██║\ \ \ \ \ ╚██████╔╝╚██████╗╚██████╔╝███████║"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}╚═╝\ \ \ \ \ \ ╚═════╝\ \ ╚═════╝\ ╚═════╝\ ╚══════╝"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00305}00305\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ResetColor();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00308}00308\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ assembly\ that\ contains\ this\ code}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Assembly\ assembly\ =\ Assembly.GetExecutingAssembly();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Clear();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkCyan;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}███████╗\ ██████╗\ \ ██████╗██╗\ \ \ ██╗███████╗"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}██╔════╝██╔═══██╗██╔════╝██║\ \ \ ██║██╔════╝"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00307}00307\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}█████╗\ \ ██║\ \ \ ██║██║\ \ \ \ \ ██║\ \ \ ██║███████╗"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00308}00308\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}██╔══╝\ \ ██║\ \ \ ██║██║\ \ \ \ \ ██║\ \ \ ██║╚════██║"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00309}00309\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}██║\ \ \ \ \ ╚██████╔╝╚██████╗╚██████╔╝███████║"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00310}00310\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}╚═╝\ \ \ \ \ \ ╚═════╝\ \ ╚═════╝\ ╚═════╝\ ╚══════╝"{}});}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00311}00311\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ assembly\ title}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyTitleAttribute\ title\ =\ assembly.GetCustomAttribute<AssemblyTitleAttribute>();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ appName\ =\ title?.Title\ ??\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00312}00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ResetColor();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00314}00314\ }
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00315}00315\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ version}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Version\ version\ =\ assembly.GetName().Version;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ versionNumber\ =\ version\ !=\ \textcolor{keyword}{null}\ ?\ version.ToString()\ :\ \textcolor{stringliteral}{"{}Unknown"{}};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00319}00319\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ description}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyDescriptionAttribute\ Appdescription\ =\ assembly.GetCustomAttribute<AssemblyDescriptionAttribute>();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ appDescription\ =\ Appdescription?.Description\ ??\ \textcolor{stringliteral}{"{}No\ description\ available."{}};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00323}00323\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ build\ number\ (AssemblyFileVersion)}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyFileVersionAttribute\ fileVersion\ =\ assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ buildNumber\ =\ fileVersion?.Version\ ??\ \textcolor{stringliteral}{"{}Unknown"{}};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00327}00327\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ copyright\ information}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyCopyrightAttribute\ copyright\ =\ assembly.GetCustomAttribute<AssemblyCopyrightAttribute>();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ appCopyright\ =\ copyright?.Copyright\ ??\ \textcolor{stringliteral}{"{}No\ copyright\ information\ available."{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ DisplayVersionInfo();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00317}00317\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}1.\ Add\ Task"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}2.\ List\ Tasks"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}3.\ Complete\ Task"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00323}00323\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}4.\ Abandon\ Task"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}5.\ Delete\ Task"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}6.\ Start\ Pomodoro\ Timer"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}7.\ Start\ Count-\/Up\ Timer"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}8.\ Export\ Tasks"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}9.\ Exit"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Select\ an\ option:\ "{}});}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00331}00331\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00332}00332\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ option\ =\ Console.ReadLine();}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00333}00333\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ the\ information}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}-\/=\{appName\}=-\/"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Version:\ \{versionNumber\}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkGray;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Build:\ \{buildNumber\}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Description:\ \{appDescription\}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Copyright:\ \{appCopyright\}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00342}00342\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ResetColor();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}1.\ Add\ Task"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}2.\ List\ Tasks"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}3.\ Complete\ Task"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}4.\ Abandon\ Task"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}5.\ Delete\ Task"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}6.\ Start\ Pomodoro\ Timer"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}7.\ Start\ Count-\/Up\ Timer"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}8.\ Export\ Tasks"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}9.\ Exit"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Select\ an\ option:\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00356}00356\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ option\ =\ Console.ReadLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00358}00358\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (option)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ description:\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ description\ =\ Console.ReadLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ tag\ (optional):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ tag\ =\ Console.ReadLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}{AddTask}}(description,\ tag);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}{ListTasks}}();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ReadKey();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ number\ to\ complete:\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ completeTaskIndex\ =\ \textcolor{keywordtype}{int}.Parse(Console.ReadLine())\ -\/\ 1;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}{CompleteTask}}(completeTaskIndex);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}4"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ number\ to\ abandon:\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ abandonTaskIndex\ =\ \textcolor{keywordtype}{int}.Parse(Console.ReadLine())\ -\/\ 1;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ac248b348e3201542eda9870a3022de06}{AbandonTask}}(abandonTaskIndex);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}5"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ number\ to\ delete:\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ deleteTaskIndex\ =\ \textcolor{keywordtype}{int}.Parse(Console.ReadLine())\ -\/\ 1;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd}{DeleteTask}}(deleteTaskIndex);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}6"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ work\ interval\ in\ minutes\ (default\ 25):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ wInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ wInterval)\ ?\ wInterval\ :\ 25;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ break\ interval\ in\ minutes\ (default\ 5):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ bInterval)\ ?\ bInterval\ :\ 5;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ number\ of\ sessions\ before\ long\ break\ (default\ 4):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sessionCount\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ sessionCount)\ ?\ sessionCount\ :\ 4;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Select\ sound\ (1:\ coffee\_shop,\ 2:\ rainforest,\ 3:\ wind,\ 4:\ rain,\ 5:\ summer\_night,\ 6:\ fireplace,\ 7:\ frogs,\ 8:\ bird\_rain,\ OFF):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00395}00395\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ sound\ =\ Console.ReadLine().ToUpper();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(wInterval,\ bInterval);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(sound);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(sessionCount);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a41e1eee87f91a4c25d1f39083e0a12b3}{Start}}();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00401}00401\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}7"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ description:\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ countUpDescription\ =\ Console.ReadLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ tag\ (optional):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ countUpTag\ =\ Console.ReadLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ work\ interval\ in\ minutes\ (default\ 25):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cuwInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ wInterval)\ ?\ wInterval\ :\ 25;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ break\ interval\ in\ minutes\ (default\ 5):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cubInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ bInterval)\ ?\ bInterval\ :\ 5;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ number\ of\ sessions\ before\ long\ break\ (default\ 4):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cusessionCount\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ sessionCount)\ ?\ sessionCount\ :\ 4;}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Select\ sound\ (1:\ coffee\_shop,\ 2:\ rainforest,\ 3:\ wind,\ 4:\ rain,\ 5:\ summer\_night,\ 6:\ fireplace,\ 7:\ frogs,\ 8:\ bird\_rain,\ OFF):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ cusound\ =\ Console.ReadLine().ToUpper();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00414}00414\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(cuwInterval,\ cubInterval);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(cusound);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(cusessionCount);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a1cc73e453f37091571b5265339ca8667}{StartCountUpTimer}}(taskManager,\ countUpDescription,\ countUpTag);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00334}00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (option)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00335}00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}1"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ description:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ description\ =\ Console.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ tag\ (optional):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ tag\ =\ Console.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ab88782c4e956a2b1b261cb34f34f1bcb}{AddTask}}(description,\ tag);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}2"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a3d0725db6813019db0b4b93ef891820d}{ListTasks}}();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ReadKey();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}3"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ number\ to\ complete:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ completeTaskIndex\ =\ \textcolor{keywordtype}{int}.Parse(Console.ReadLine())\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a50ad21b9ac935e570035a346de436dcf}{CompleteTask}}(completeTaskIndex);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}4"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ number\ to\ abandon:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ abandonTaskIndex\ =\ \textcolor{keywordtype}{int}.Parse(Console.ReadLine())\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ac248b348e3201542eda9870a3022de06}{AbandonTask}}(abandonTaskIndex);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}5"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00358}00358\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ number\ to\ delete:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00359}00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ deleteTaskIndex\ =\ \textcolor{keywordtype}{int}.Parse(Console.ReadLine())\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00360}00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ad9e943c502985eea9c394075244b8bcd}{DeleteTask}}(deleteTaskIndex);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00361}00361\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00362}00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}6"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00363}00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ work\ interval\ in\ minutes\ (default\ 25):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00364}00364\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ wInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ wInterval)\ ?\ wInterval\ :\ 25;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00365}00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ break\ interval\ in\ minutes\ (default\ 5):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00366}00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ bInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ bInterval)\ ?\ bInterval\ :\ 5;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00367}00367\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ number\ of\ sessions\ before\ long\ break\ (default\ 4):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00368}00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ sessionCount\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ sessionCount)\ ?\ sessionCount\ :\ 4;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00369}00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Select\ sound\ (1:\ coffee\_shop,\ 2:\ rainforest,\ 3:\ wind,\ 4:\ rain,\ 5:\ summer\_night,\ 6:\ fireplace,\ 7:\ frogs,\ 8:\ bird\_rain,\ OFF):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00370}00370\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ sound\ =\ Console.ReadLine().ToUpper();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00371}00371\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(wInterval,\ bInterval);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00372}00372\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(sound);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00373}00373\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(sessionCount);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00374}00374\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a41e1eee87f91a4c25d1f39083e0a12b3}{Start}}();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00375}00375\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00376}00376\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}7"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ task\ description:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00378}00378\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ countUpDescription\ =\ Console.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ tag\ (optional):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00380}00380\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ countUpTag\ =\ Console.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00381}00381\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ work\ interval\ in\ minutes\ (default\ 25):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cuwInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ wInterval)\ ?\ wInterval\ :\ 25;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00383}00383\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ break\ interval\ in\ minutes\ (default\ 5):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00384}00384\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cubInterval\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ bInterval)\ ?\ bInterval\ :\ 5;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ number\ of\ sessions\ before\ long\ break\ (default\ 4):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00386}00386\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ cusessionCount\ =\ \textcolor{keywordtype}{int}.TryParse(Console.ReadLine(),\ out\ sessionCount)\ ?\ sessionCount\ :\ 4;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00387}00387\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Select\ sound\ (1:\ coffee\_shop,\ 2:\ rainforest,\ 3:\ wind,\ 4:\ rain,\ 5:\ summer\_night,\ 6:\ fireplace,\ 7:\ frogs,\ 8:\ bird\_rain,\ OFF):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00388}00388\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ cusound\ =\ Console.ReadLine().ToUpper();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00389}00389\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00390}00390\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a810b0ecf2734c726ca91ebd9331cbd91}{SetIntervals}}(cuwInterval,\ cubInterval);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00391}00391\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_af37aac7b13b0abcb722b5e66a130cb64}{SetSound}}(cusound);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00392}00392\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a8e34751a96a8982a5bdd4085041027ce}{SetSessions}}(cusessionCount);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00393}00393\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ timer.\mbox{\hyperlink{class_focus_app_1_1_pomodoro_timer_a1cc73e453f37091571b5265339ca8667}{StartCountUpTimer}}(taskManager,\ countUpDescription,\ countUpTag);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00394}00394\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00395}00395\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00396}00396\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}8"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00397}00397\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ export\ format\ (csv,\ xml,\ json):\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00398}00398\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ format\ =\ Console.ReadLine().ToLower();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00399}00399\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ file\ path\ to\ save\ the\ export:\ "{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00400}00400\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ filePath\ =\ Console.ReadLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00401}00401\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00402}00402\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (format)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00403}00403\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00404}00404\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}csv"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00405}00405\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d}{ExportTasksToCsv}}(filePath);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00406}00406\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Tasks\ exported\ to\ CSV\ file\ at\ \{filePath\}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00407}00407\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00408}00408\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}xml"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00409}00409\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a}{ExportTasksToXml}}(filePath);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00410}00410\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Tasks\ exported\ to\ XML\ file\ at\ \{filePath\}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00411}00411\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00412}00412\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}json"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00413}00413\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe}{ExportTasksToJson}}(filePath);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00414}00414\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Tasks\ exported\ to\ JSON\ file\ at\ \{filePath\}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00415}00415\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00416}00416\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00417}00417\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Unsupported\ export\ format.\ Please\ use\ 'csv',\ 'xml',\ or\ 'json'."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00418}00418\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00419}00419\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00420}00420\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}8"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00422}00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ export\ format\ (csv,\ xml,\ json):\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00423}00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ format\ =\ Console.ReadLine().ToLower();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00424}00424\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.Write(\textcolor{stringliteral}{"{}Enter\ file\ path\ to\ save\ the\ export:\ "{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00425}00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ filePath\ =\ Console.ReadLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00426}00426\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00427}00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (format)}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00428}00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00429}00429\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}csv"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00430}00430\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a4d58bc71340018bce53b9d92d0de204d}{ExportTasksToCsv}}(filePath);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00431}00431\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Tasks\ exported\ to\ CSV\ file\ at\ \{filePath\}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00432}00432\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00433}00433\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}xml"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00434}00434\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_afb3a0288f5fabc0b02dcffccea78d02a}{ExportTasksToXml}}(filePath);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00435}00435\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Tasks\ exported\ to\ XML\ file\ at\ \{filePath\}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00436}00436\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00437}00437\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}json"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00438}00438\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_ac985d94ffc14461f5a1161557d7bb7fe}{ExportTasksToJson}}(filePath);}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00439}00439\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Tasks\ exported\ to\ JSON\ file\ at\ \{filePath\}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00440}00440\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00441}00441\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00442}00442\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Unsupported\ export\ format.\ Please\ use\ 'csv',\ 'xml',\ or\ 'json'."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00443}00443\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00444}00444\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00445}00445\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Press\ any\ key\ to\ return\ to\ the\ main\ menu..."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ReadKey();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00449}00449\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}9"{}}:}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00454}00454\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00455}00455\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00456}00456\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00457}00457\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DisplayHelp()}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00458}00458\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00459}00459\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ Application\ -\/\ Command\ Line\ Options:"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00460}00460\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00461}00461\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}help\ or\ ?\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Display\ this\ help\ screen"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00462}00462\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}list\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ List\ all\ tasks"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00463}00463\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}countup\ [task]\ [tag]\ \ :\ Start\ a\ count-\/up\ timer.\ Press\ F10\ to\ stop\ and\ log\ the\ task."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}task\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Add,\ complete,\ list,\ and\ delete\ tasks\ without\ starting\ timer."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00465}00465\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ add\ [description]\ [tag]\ [project]\ [client]"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00466}00466\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Add\ a\ new\ task."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00467}00467\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ done\ [\#]\ \ \ \ \ \ \ \ \ \ \ \ :\ Complete\ the\ task\ with\ the\ given\ number."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00468}00468\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ list\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ List\ all\ tasks.(same\ as\ 'list'\ option."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00469}00469\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ delete\ [\#]\ \ \ \ \ \ \ \ \ \ :\ Deletes\ the\ task\ item\ in\ list\ with\ the\ number\ given."{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00470}00470\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/w\ [minutes]\ \ \ \ \ \ \ \ \ \ :\ Set\ the\ work\ interval\ in\ minutes\ (default\ 25)"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00471}00471\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/b\ [minutes]\ \ \ \ \ \ \ \ \ \ :\ Set\ the\ break\ interval\ in\ minutes\ (default\ 5)"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00472}00472\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/s\ [sessions]\ \ \ \ \ \ \ \ \ :\ Set\ the\ number\ of\ work\ sessions\ before\ a\ long\ break\ (default\ 4)"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00473}00473\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/task\ [description]\ \ :\ Set\ the\ task\ description"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00474}00474\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/tag\ [tag]\ \ \ \ \ \ \ \ \ \ \ :\ Set\ a\ tag\ for\ the\ task\ (optional)"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00475}00475\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/project\ [project]\ \ \ :\ Set\ the\ project\ associated\ with\ the\ task"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00476}00476\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/client\ [client]\ \ \ \ \ :\ Set\ the\ client\ associated\ with\ the\ task"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00477}00477\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/sound\ [option]\ \ \ \ \ \ :\ Set\ the\ ambient\ sound\ (1-\/8\ or\ OFF)"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00478}00478\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1:\ coffee\_shop,\ 2:\ rainforest,\ 3:\ wind"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00479}00479\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4:\ rain,\ 5:\ summer\_night,\ 6:\ fireplace,\ 7:\ frogs,\ 8:\ bird\_rain"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00480}00480\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}stats\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Display\ task\ statistics"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00481}00481\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ -\/-\/start\ [date]\ \ \ \ \ \ :\ Specify\ the\ start\ date\ for\ stats\ (format:\ yyyy-\/MM-\/dd)"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00482}00482\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ -\/-\/end\ [date]\ \ \ \ \ \ \ \ :\ Specify\ the\ end\ date\ for\ stats\ (format:\ yyyy-\/MM-\/dd)"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00483}00483\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/p\ [today|all-\/time]\ \ \ :\ Show\ statistics\ for\ today\ or\ all\ time"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00484}00484\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}export\ [format]\ [path]:\ Export\ tasks\ in\ the\ specified\ format\ (csv,\ xml,\ json)\ to\ the\ given\ file\ path"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00485}00485\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00486}00486\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00487}00487\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Examples:"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00488}00488\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ -\/w\ 20\ -\/b\ 5\ -\/s\ 4\ -\/-\/task\ \(\backslash\)"{}Work\ Entry\(\backslash\)"{}\ -\/-\/tag\ \(\backslash\)"{}Tag\ Entry\(\backslash\)"{}\ -\/-\/project\ \(\backslash\)"{}My\ Project\(\backslash\)"{}\ -\/-\/client\ \(\backslash\)"{}My\ Client\(\backslash\)"{}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00489}00489\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ stats\ -\/-\/start\ '2021-\/08-\/06'\ -\/-\/end\ '2021-\/08-\/07'"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00490}00490\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ countup\ \(\backslash\)"{}My\ Task\(\backslash\)"{}\ \(\backslash\)"{}Work\(\backslash\)"{}\ \(\backslash\)"{}My\ Project\(\backslash\)"{}\ \(\backslash\)"{}My\ Client\(\backslash\)"{}"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00491}00491\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ export\ csv\ C:\(\backslash\)\(\backslash\)tasks.csv"{}});}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00492}00492\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ list"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00421}00421\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Press\ any\ key\ to\ return\ to\ the\ main\ menu..."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00422}00422\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Console.ReadKey();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00423}00423\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00424}00424\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00425}00425\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \textcolor{stringliteral}{"{}9"{}}:}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00426}00426\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ taskManager.\mbox{\hyperlink{class_focus_app_1_1_task_manager_a642b07ae7ae3672a7e501ce9618c91cf}{SaveTasks}}(\textcolor{stringliteral}{"{}tasks.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00427}00427\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00428}00428\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00429}00429\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00430}00430\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00431}00431\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00432}00432\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00433}00433\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00437}00437\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/22/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00438}00438\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/22/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00439}00439\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00440}00440\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DisplayHelp()}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00441}00441\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00442}00442\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ Application\ -\/\ Command\ Line\ Options:"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00443}00443\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00444}00444\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}help\ or\ ?\ \ \ \ \ \ \ \ \ \ \ \ \ :\ Display\ this\ help\ screen"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00445}00445\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/v,\ ver,\ or\ version\ \ \ :\ Display\ the\ current\ file\ version\ and\ build\ information"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00446}00446\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/l\ or\ list\ \ \ \ \ \ \ \ \ \ \ \ :\ List\ all\ tasks"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00447}00447\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}countup\ [task]\ [tag]\ \ :\ Start\ a\ count-\/up\ timer.\ Press\ F10\ to\ stop\ and\ log\ the\ task."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00448}00448\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}task\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Add,\ complete,\ list,\ and\ delete\ tasks\ without\ starting\ timer."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ add\ [description]\ [tag]\ [project]\ [client]"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00450}00450\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Add\ a\ new\ task."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ done\ [\#]\ \ \ \ \ \ \ \ \ \ \ \ :\ Complete\ the\ task\ with\ the\ given\ number."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ list\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ List\ all\ tasks.(same\ as\ 'list'\ option."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ delete\ [\#]\ \ \ \ \ \ \ \ \ \ :\ Deletes\ the\ task\ item\ in\ list\ with\ the\ number\ given."{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00454}00454\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/w\ [minutes]\ \ \ \ \ \ \ \ \ \ :\ Set\ the\ work\ interval\ in\ minutes\ (default\ 25)"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00455}00455\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/b\ [minutes]\ \ \ \ \ \ \ \ \ \ :\ Set\ the\ break\ interval\ in\ minutes\ (default\ 5)"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00456}00456\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/s\ [sessions]\ \ \ \ \ \ \ \ \ :\ Set\ the\ number\ of\ work\ sessions\ before\ a\ long\ break\ (default\ 4)"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00457}00457\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/task\ [description]\ \ :\ Set\ the\ task\ description"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00458}00458\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/tag\ [tag]\ \ \ \ \ \ \ \ \ \ \ :\ Set\ a\ tag\ for\ the\ task\ (optional)"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00459}00459\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/project\ [project]\ \ \ :\ Set\ the\ project\ associated\ with\ the\ task"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00460}00460\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/client\ [client]\ \ \ \ \ :\ Set\ the\ client\ associated\ with\ the\ task"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00461}00461\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/-\/sound\ [option]\ \ \ \ \ \ :\ Set\ the\ ambient\ sound\ (1-\/8\ or\ OFF)"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00462}00462\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1:\ coffee\_shop,\ 2:\ rainforest,\ 3:\ wind"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00463}00463\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 4:\ rain,\ 5:\ summer\_night,\ 6:\ fireplace,\ 7:\ frogs,\ 8:\ bird\_rain"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}stats\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ Display\ task\ statistics"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00465}00465\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ -\/-\/start\ [date]\ \ \ \ \ \ :\ Specify\ the\ start\ date\ for\ stats\ (format:\ yyyy-\/MM-\/dd)"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00466}00466\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}\ \ -\/-\/end\ [date]\ \ \ \ \ \ \ \ :\ Specify\ the\ end\ date\ for\ stats\ (format:\ yyyy-\/MM-\/dd)"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00467}00467\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}-\/p\ [today|all-\/time]\ \ \ :\ Show\ statistics\ for\ today\ or\ all\ time"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00468}00468\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}export\ [format]\ [path]:\ Export\ tasks\ in\ the\ specified\ format\ (csv,\ xml,\ json)\ to\ the\ given\ file\ path"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00469}00469\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00470}00470\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00471}00471\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Examples:"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00472}00472\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ -\/w\ 20\ -\/b\ 5\ -\/s\ 4\ -\/-\/task\ \(\backslash\)"{}Work\ Entry\(\backslash\)"{}\ -\/-\/tag\ \(\backslash\)"{}Tag\ Entry\(\backslash\)"{}\ -\/-\/project\ \(\backslash\)"{}My\ Project\(\backslash\)"{}\ -\/-\/client\ \(\backslash\)"{}My\ Client\(\backslash\)"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00473}00473\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ stats\ -\/-\/start\ '2021-\/08-\/06'\ -\/-\/end\ '2021-\/08-\/07'"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00474}00474\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ countup\ \(\backslash\)"{}My\ Task\(\backslash\)"{}\ \(\backslash\)"{}Work\(\backslash\)"{}\ \(\backslash\)"{}My\ Project\(\backslash\)"{}\ \(\backslash\)"{}My\ Client\(\backslash\)"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00475}00475\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ export\ csv\ C:\(\backslash\)\(\backslash\)tasks.csv"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00476}00476\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}Focus\ list"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00477}00477\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00478}00478\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00479}00479\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00480}00480\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00481}00481\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00485}00485\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <created>PJM,8/22/2024</created>}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00486}00486\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ <changed>PJM,8/22/2024</changed>}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00487}00487\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ********************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00488}00488\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ DisplayVersionInfo()}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00489}00489\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00490}00490\ \ \ \ \ \ \ \ \ \ \ \ \ Console.ResetColor();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00491}00491\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00492}00492\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\textcolor{stringliteral}{"{}"{}});}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00493}00493\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00494}00494\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00495}00495\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00494}00494\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ assembly\ that\ contains\ this\ code}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00495}00495\ \ \ \ \ \ \ \ \ \ \ \ \ Assembly\ assembly\ =\ Assembly.GetExecutingAssembly();}
 \DoxyCodeLine{\Hypertarget{_program_8cs_source_l00496}00496\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00497}00497\ }
-\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00498}00498\ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00497}00497\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ assembly\ title}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00498}00498\ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyTitleAttribute\ title\ =\ assembly.GetCustomAttribute<AssemblyTitleAttribute>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00499}00499\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ appName\ =\ title?.Title\ ??\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00500}00500\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00501}00501\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ version}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00502}00502\ \ \ \ \ \ \ \ \ \ \ \ \ Version\ version\ =\ assembly.GetName().Version;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00503}00503\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ versionNumber\ =\ version\ !=\ \textcolor{keyword}{null}\ ?\ version.ToString()\ :\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00504}00504\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00505}00505\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ description}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00506}00506\ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyDescriptionAttribute\ Appdescription\ =\ assembly.GetCustomAttribute<AssemblyDescriptionAttribute>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00507}00507\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ appDescription\ =\ Appdescription?.Description\ ??\ \textcolor{stringliteral}{"{}No\ description\ available."{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00508}00508\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00509}00509\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ build\ number\ (AssemblyFileVersion)}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00510}00510\ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyFileVersionAttribute\ fileVersion\ =\ assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00511}00511\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ buildNumber\ =\ fileVersion?.Version\ ??\ \textcolor{stringliteral}{"{}Unknown"{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00512}00512\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00513}00513\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ copyright\ information}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00514}00514\ \ \ \ \ \ \ \ \ \ \ \ \ AssemblyCopyrightAttribute\ copyright\ =\ assembly.GetCustomAttribute<AssemblyCopyrightAttribute>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00515}00515\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ appCopyright\ =\ copyright?.Copyright\ ??\ \textcolor{stringliteral}{"{}No\ copyright\ information\ available."{}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00516}00516\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00517}00517\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00518}00518\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Display\ the\ information}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00519}00519\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}-\/=\{appName\}=-\/"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00520}00520\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Version:\ \{versionNumber\}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00521}00521\ \ \ \ \ \ \ \ \ \ \ \ \ Console.ForegroundColor\ =\ ConsoleColor.DarkGray;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00522}00522\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Build:\ \{buildNumber\}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00523}00523\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Description:\ \{appDescription\}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00524}00524\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine(\$\textcolor{stringliteral}{"{}Copyright:\ \{appCopyright\}"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00525}00525\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00526}00526\ \ \ \ \ \ \ \ \ \ \ \ \ Console.WriteLine();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00527}00527\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00528}00528\ \ \ \ \ \ \ \ \ \ \ \ \ Console.ResetColor();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00529}00529\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00530}00530\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00531}00531\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00532}00532\ }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00533}00533\ \}}
 
 \end{DoxyCode}
